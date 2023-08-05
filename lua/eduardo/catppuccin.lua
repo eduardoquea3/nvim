@@ -1,21 +1,14 @@
-require("catppuccin").setup({
+require("catppuccin").setup {
   flavour = "mocha",
   transparent_background = true,
   show_end_of_buffer = false,
   term_colors = true,
-  no_italic = true,
-  no_bold = true,
-  no_underline = true,
   styles = {
     comments = { "italic" },
     conditionals = { "italic" },
     loops = { "italic" },
     functions = { "italic" },
     keywords = { "italic" },
-    booleans = { "italic" },
-    properties = { "italic" },
-    types = { "italic" },
-    operators = { "italic" },
   },
   custom_highlights = function(colors)
     return {
@@ -38,5 +31,5 @@ require("catppuccin").setup({
     neotree = true,
     which_key = false,
   },
-})
-vim.cmd.colorscheme("catppuccin")
+}
+vim.cmd.colorscheme "catppuccin"

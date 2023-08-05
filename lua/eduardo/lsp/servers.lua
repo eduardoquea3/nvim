@@ -14,6 +14,7 @@ local default = {
 }
 
 lspconfig.tsserver.setup({
+  capabilities = capabilities,
   on_attach = lsp_attach,
   flags = lsp_flags,
   settings = {
@@ -77,6 +78,7 @@ lspconfig.emmet_ls.setup({
   },
 })
 lspconfig.lua_ls.setup({
+  capabilities = capabilities,
   on_attach = lsp_attach,
   flags = lsp_flags,
   settings = {
@@ -90,6 +92,7 @@ lspconfig.lua_ls.setup({
 lspconfig.pyright.setup(default)
 lspconfig.yamlls.setup(default)
 lspconfig.rust_analyzer.setup({
+  capabilities = capabilities,
   on_attach = lsp_attach,
   flags = lsp_flags,
   settings = {
@@ -109,7 +112,8 @@ lspconfig.rust_analyzer.setup({
   },
 })
 lspconfig.tailwindcss.setup({
+  capabilities = capabilities,
   on_attach = lsp_attach,
   flags = lsp_flags,
-  filetypes = { "html", "javascriptreact", "typescriptreact" },
+  filetypes = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact" },
 })

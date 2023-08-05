@@ -53,7 +53,7 @@ return {
             desc = "NeoTree",
             desc_hl = "String",
             key = "n",
-            action = "NeoTreeFloat",
+            action = "Neotree float",
           },
           {
             icon = "📄 ",

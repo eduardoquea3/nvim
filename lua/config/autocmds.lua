@@ -37,3 +37,20 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.cmd [[%s/\s\+$//e]]
   end,
 })
+
+local null_ls = require 'null-ls'
+local b = null_ls.builtins
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "html",
+    "css",
+  },
+  callback = function()
+    null_ls.setup({
+      sources = {
+        b.diagnostics.prettier,
+      }
+    })
+  end,
+})
