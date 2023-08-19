@@ -1,7 +1,7 @@
 -- resize splits if window got resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
   callback = function()
-    vim.cmd "tabdo wincmd ="
+    vim.cmd("tabdo wincmd =")
   end,
 })
 
@@ -34,23 +34,17 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
-    vim.cmd [[%s/\s\+$//e]]
+    vim.cmd([[%s/\s\+$//e]])
   end,
 })
 
-local null_ls = require 'null-ls'
-local b = null_ls.builtins
-
 vim.api.nvim_create_autocmd("FileType", {
   pattern = {
-    "html",
-    "css",
+    "sql",
+    "mysql",
+    "plsql",
   },
   callback = function()
-    null_ls.setup({
-      sources = {
-        b.diagnostics.prettier,
-      }
-    })
+    vim.cmd("lua require('cmp').setup.buffer({sources={{name='vim-dadbod-completion'}}})")
   end,
 })

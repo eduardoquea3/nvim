@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 
 local lsp_attach = require("eduardo.lsp.attach")
+local tailwind = require("eduardo.lsp.tailwind")
 
 local lsp_flags = {
   debounce_text_changes = 150,
@@ -113,7 +114,17 @@ lspconfig.rust_analyzer.setup({
 })
 lspconfig.tailwindcss.setup({
   capabilities = capabilities,
-  on_attach = lsp_attach,
+  on_attach = tailwind,
   flags = lsp_flags,
   filetypes = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+})
+lspconfig.astro.setup({
+  capabilities = capabilities,
+  on_attach = lsp_attach,
+  flags = lsp_flags,
+})
+lspconfig.jdtls.setup({
+  capabilities = capabilities,
+  on_attach = lsp_attach,
+  flags = lsp_flags,
 })

@@ -79,7 +79,7 @@ local mappings = {
   ["<C-m>"] = { require("ufo").peekFoldedLinesUnderCursor, "Previsualizar pliegue" },
   ["<C-s>"] = {
     function()
-      vim.lsp.buf.format { async = true }
+      vim.lsp.buf.format({ async = true })
     end,
     "Formateo con null-ls",
   },
@@ -105,12 +105,12 @@ local mappings = {
 }
 
 local topts = {
-  mode = "t",           -- TERMINAL mode
+  mode = "t",    -- TERMINAL mode
   prefix = "",
-  buffer = nil,         -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true,        -- use `silent` when creating keymaps
-  noremap = true,       -- use `noremap` when creating keymaps
-  nowait = true,        -- use `nowait` when creating keymaps
+  buffer = nil,  -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
 }
 
 local tmappings = {
@@ -119,12 +119,12 @@ local tmappings = {
 }
 
 local vopts = {
-  mode = "v",           -- VISUAL mode
+  mode = "v",    -- VISUAL mode
   prefix = "<leader>",
-  buffer = nil,         -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true,        -- use `silent` when creating keymaps
-  noremap = true,       -- use `noremap` when creating keymaps
-  nowait = true,        -- use `nowait` when creating keymaps
+  buffer = nil,  -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
 }
 
 local vmappings = {
@@ -134,26 +134,26 @@ local vmappings = {
 }
 
 local iopts = {
-  mode = "i",           -- INSERT mode
+  mode = "i",    -- INSERT mode
   prefix = "",
-  buffer = nil,         -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true,        -- use `silent` when creating keymaps
-  noremap = true,       -- use `noremap` when creating keymaps
-  nowait = true,        -- use `nowait` when creating keymaps
+  buffer = nil,  -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
 }
 
 local imappings = {
-  ["<C-a>"] = { "<left>", "Movements" },
-  ["<C-s>"] = { "<down>", "Movements" },
-  ["<C-w>"] = { "<up>", "Movements" },
-  ["<C-d>"] = { "<right>", "Movements" },
+  ["<A-h>"] = { "<left>", "Movements" },
+  ["<A-j>"] = { "<down>", "Movements" },
+  ["<A-k>"] = { "<up>", "Movements" },
+  ["<A-l>"] = { "<right>", "Movements" },
   ["<C-c>"] = { "<cmd>CccPick<cr><cr>", "Color-Picker" },
-  ["<A-j>"] = { "<Esc>:m .+1<cr>==", "Mover abajo linea" },
-  ["<A-k>"] = { "<Esc>:m .-2<cr>==", "Mover arriba linea" },
-  ["<C-q>"] = { ":Vista!!<cr>", "Vista" },
+  ["<C-j>"] = { "<Esc>:m .+1<cr>==", "Mover abajo linea" },
+  ["<C-k>"] = { "<Esc>:m .-2<cr>==", "Mover arriba linea" },
+  ["<C-s>"] = { "<Esc>:wa<cr>i", "Guardar archivo" },
 }
 
-local which_key = require "which-key"
+local which_key = require("which-key")
 
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)

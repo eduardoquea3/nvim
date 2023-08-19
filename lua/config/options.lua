@@ -42,7 +42,7 @@ opt.foldenable = true
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 opt.shell = "pwsh"
 
-vim.foldlevelstart = 999
+vim.foldlevelstart = 99
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"

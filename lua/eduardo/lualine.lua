@@ -73,14 +73,6 @@ end
 
 ins_left({
   function()
-    return "▊"
-  end,
-  color = { fg = colors.blue },     -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-})
-
-ins_left({
-  function()
     return ""
   end,
   color = function()
@@ -110,12 +102,6 @@ ins_left({
     return { fg = mode_color[vim.fn.mode()] }
   end,
   padding = { right = 1 },
-})
-
-ins_left({
-  -- filesize component
-  "filesize",
-  cond = conditions.buffer_not_empty,
 })
 
 ins_left({
@@ -164,14 +150,6 @@ ins_right({
     removed = { fg = colors.red },
   },
   cond = conditions.hide_in_width,
-})
-
-ins_right({
-  function()
-    return "▊"
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
 })
 
 lualine.setup(config)

@@ -69,6 +69,8 @@ return {
         },
       })
       require("telescope").load_extension("project")
+      require("telescope").load_extension("noice")
+      require("telescope").load_extension("notify")
       require("telescope").load_extension("file_browser")
     end,
   },
