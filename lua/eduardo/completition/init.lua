@@ -9,7 +9,7 @@ cmp.setup({
     end,
   },
   completion = {
-    completeopt = 'menuone,noselect,noinsert'
+    completeopt = "menuone,noselect,noinsert",
   },
   mapping = {
     ["<cr>"] = cmp.mapping.confirm({ select = true }),
@@ -44,9 +44,9 @@ cmp.setup({
     }),
   },
   sources = {
-    { name = "nerdfont" },
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
+    { name = "nerdfont", priority = 100 },
+    { name = "nvim_lsp", priority = 1000 },
+    { name = "luasnip",  priority = 1200 },
     {
       name = "buffer",
       option = {
@@ -54,24 +54,26 @@ cmp.setup({
           return vim.api.nvim_list_bufs()
         end,
       },
+      priority = 200,
     },
-    { name = "nvim_lua" },
+    { name = "nvim_lua",               priority = 600 },
     {
       name = "path",
       option = {
         trailing_slash = true,
         label_trailing_slash = false,
       },
+      priority = 500,
     },
     { name = "nvim_lsp_signarute_help" },
   },
   formatting = {
     format = lspkind.cmp_format({
       maxwidth = 50,
-      before = function (entry,vim_item)
+      before = function(entry, vim_item)
         return vim_item
-      end
-    })
+      end,
+    }),
   },
   experimental = {
     native_menu = false,

@@ -21,6 +21,7 @@ null_ls.setup({
         "yaml",
         "markdown",
       },
+      extra_args = { "--config-path",vim.fn.expand("~/AppData/Local/nvim/null-ls/.prettierrc") }
     }),
     b.formatting.stylua.with({
       filetypes = {
@@ -37,7 +38,9 @@ null_ls.setup({
         "typescriptreact",
       },
     }),
-    b.diagnostics.luacheck,
+    b.diagnostics.luacheck.with({
+      extra_args = { "--config-path",vim.fn.expand("~/AppData/Local/nvim/null-ls/.luacheckrc") }
+    }),
     b.diagnostics.flake8,
   },
 })

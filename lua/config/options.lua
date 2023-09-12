@@ -4,7 +4,7 @@ vim.opt.termguicolors = true
 
 local opt = vim.o
 
-opt.mouse = false
+opt.mouse = true
 opt.number = true
 opt.relativenumber = true
 opt.hidden = true
