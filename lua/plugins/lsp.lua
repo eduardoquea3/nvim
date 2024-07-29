@@ -9,6 +9,7 @@ return {
     "folke/neodev.nvim",
     { "b0o/schemastore.nvim" },
     { "hrsh7th/cmp-nvim-lsp" },
+    { "rachartier/tiny-code-action.nvim" },
     {
       "nvimdev/lspsaga.nvim",
       dependencies = {
@@ -54,13 +55,16 @@ return {
         map("K", "<cmd>Lspsaga hover_doc<cr>", "Hover Documentation")
         map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
         map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-        map("<leader>ca", "<cmd>Lspsaga code_action<cr>", "Code action")
+        map("<leader>ca", function()
+          require("tiny-code-action").code_action()
+        end, "Code action")
         map("<leader>r", "<cmd>Lspsaga rename<cr>", "Rename")
 
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
         map("<a-s>", function()
-          vim.lsp.buf.format { timeout_ms = 1000 }
+          -- vim.lsp.buf.format { timeout_ms = 1000 }
+          vim.lsp.buf.format()
         end, "Formatear archivo")
 
         -- Thank you teej
@@ -108,6 +112,7 @@ return {
     }
 
     require("nvim-treesitter.configs").setup {
+      sync_install = true,
       ensure_installed = {
         "javascript",
         "html",

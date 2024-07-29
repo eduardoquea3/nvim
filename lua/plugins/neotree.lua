@@ -7,12 +7,12 @@ return {
   },
   event = "VimEnter",
   keys = {
-    { "<leader>e",     ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
-    { "<leader><tab>", ":Neotree toggle left<CR>",  silent = true, desc = "Left File Explorer" },
+    -- { "<leader>e",     ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
+    { "<leader>e", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
   },
   config = function()
-    local icon = require("eduardo.icons")
-    require("neo-tree").setup({
+    local icon = require "eduardo.icons"
+    require("neo-tree").setup {
       close_if_last_window = true,
       popup_border_style = "single",
       enable_git_status = true,
@@ -56,7 +56,7 @@ return {
           if node.type == "file" then
             require("image_preview").PreviewImage(node.path)
           end
-        end
+        end,
       },
       window = {
         position = "float",
@@ -66,6 +66,8 @@ return {
           nowait = true,
         },
         mappings = {
+          ["<A-h>"] = "navigate_up",
+          ["<A-l>"] = "set_root",
           ["<leader>p"] = "image_wezterm",
           ["<leader>"] = {
             "toggle_node",
@@ -134,7 +136,7 @@ return {
           event = "neo_tree_window_after_open",
           handler = function(args)
             if args.position == "left" or args.position == "right" then
-              vim.cmd("wincmd =")
+              vim.cmd "wincmd ="
             end
           end,
         },
@@ -142,11 +144,11 @@ return {
           event = "neo_tree_window_after_close",
           handler = function(args)
             if args.position == "left" or args.position == "right" then
-              vim.cmd("wincmd =")
+              vim.cmd "wincmd ="
             end
           end,
         },
       },
-    })
+    }
   end,
 }

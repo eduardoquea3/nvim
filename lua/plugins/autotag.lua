@@ -9,7 +9,7 @@ return {
 
       npairs.setup()
 
-      local brackets = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
+      local brackets = { { "(", ")" }, { "[", "]" }, { "{", "}" }, { "<", ">" } }
       npairs.add_rules {
         -- Rule for a pair with left-side ' ' and right side ' '
         Rule(" ", " ")

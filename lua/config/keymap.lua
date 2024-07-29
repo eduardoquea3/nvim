@@ -37,7 +37,7 @@ nmap("<right>", "<cmd>vertical resize +2<cr>", "Resize vertical ++")
 nmap("sv", "<cmd>vsplit<cr>", "Vertical split")
 nmap("ss", "<cmd>split<cr>", "Split")
 nmap("<c-w>", "<cmd>bdelete<cr>", "Eliminar buffer")
-nmap("<c-s>", ":w<cr>", "Guardar archivo")
+nmap("<leader>w", ":w<cr>", "Guardar archivo")
 
 nmap("<leader>a", ":WhichKey<cr>", "Mostrar atajos")
 nmap("<leader>rr", ":luafile %<cr>", "Actualizar config")

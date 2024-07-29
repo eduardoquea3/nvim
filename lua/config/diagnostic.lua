@@ -1,9 +1,27 @@
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = false,
-  signs = true,
   underline = true,
-})
-local icon = require("eduardo.icons")
+  float = { border = "rounded" },
+  document_highlight = { enabled = true },
+  capabilities = {
+    workspace = {
+      fileOperations = {
+        didRename = true,
+        willRename = true,
+      },
+    },
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "",
+      [vim.diagnostic.severity.HINT] = "",
+    },
+  },
+  severity_sort = true,
+}
+local icon = require "eduardo.icons"
 local signs = {
   Error = icon.diagnostics.Error,
   Warn = icon.diagnostics.Warning,

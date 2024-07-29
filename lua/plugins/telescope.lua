@@ -2,8 +2,15 @@ return {
   "nvim-telescope/telescope.nvim",
   cmd = "Telescope",
   version = false,
-  lazy = true,
+  -- lazy = true,
   keys = {
+    {
+      "<leader>fc",
+      function()
+        require("telescope.builtin").colorscheme { enable_preview = true }
+      end,
+      desc = "Colorscheme",
+    },
     {
       "<leader>fn",
       function()
@@ -72,7 +79,7 @@ return {
       function()
         require("telescope").extensions.project.project()
       end,
-      desc = "Find Diagnostics",
+      desc = "Find Project",
     },
   },
   dependencies = {
@@ -80,7 +87,7 @@ return {
     "nvim-tree/nvim-web-devicons",
     "nvim-telescope/telescope-project.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
-    "nvim-telescope/telescope-ui-select.nvim",
+    -- "nvim-telescope/telescope-ui-select.nvim",
   },
   config = function()
     local actions = require "telescope.actions"
@@ -102,15 +109,15 @@ return {
             ["<C-e>"] = actions.select_default,
           },
         },
-        prompt_prefix = icon.ui.Forward .. " ",
-        selection_caret = "󰞘 ",
-        previewer = true,
+        prompt_prefix = icon.ui.Telescope .. " ",
+        selection_caret = icon.ui.BoldArrowRight .. " ",
+        previewer = false,
         initial_mode = "insert",
         select_strategy = "reset",
         sorting_strategy = "ascending",
         color_devicons = true,
         layout_config = {
-          prompt_position = "top",
+          prompt_position = "bottom",
           preview_cutoff = 120,
         },
         vimgrep_arguments = {
@@ -125,6 +132,23 @@ return {
           "--glob=!.git/",
         },
       },
+      pickers = {
+        find_files = {
+          previewer = true,
+          theme = "dropdown",
+        },
+        colorscheme = {
+          enable_preview = true,
+          previewer = false,
+        },
+        live_grep = {
+          only_sord_text = true,
+          theme = "dropdown",
+        },
+        oldfiles = {
+          previewer = false,
+        },
+      },
       extensions = {
         file_browser = {
           mappings = {
@@ -135,34 +159,13 @@ return {
           },
           theme = "dropdown",
           hidden = true,
-        },
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown(),
-          },
+          previewer = true,
         },
       },
     }
     require("telescope").load_extension "project"
     require("telescope").load_extension "file_browser"
-    require("telescope").load_extension "ui-select"
+    -- require("telescope").load_extension "ui-select"
     require("telescope").load_extension "notify"
-
-    require("nvim-web-devicons").setup {
-      override_by_extension = {
-        ["http"] = {
-          icon = "󰖟",
-          color = "#4d80ff",
-          name = "http",
-        },
-      },
-      override_by_filename = {
-        [".luacheckrc"] = {
-          icon = "",
-          color = "#69a6ff",
-          name = ".luacheckrc",
-        },
-      },
-    }
   end,
 }

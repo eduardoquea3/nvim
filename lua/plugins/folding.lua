@@ -4,7 +4,16 @@ return {
     event = "User FileOpened",
     dependencies = "kevinhwang91/promise-async",
     keys = {
-      { "<C-m>", "<cmd>lua require('ufo').peekFoldedLinesUnderCursor<cr>", desc = "Previsualizar pliegue" },
+      {
+        "<C-m>",
+        function()
+          local win = require("ufo").peekFoldedLinesUnderCursor()
+          if not win then
+            vim.notify "No se encontraron pliegues"
+          end
+        end,
+        desc = "Previsualizar pliegue",
+      },
     },
     opts = {
       open_fold_hl_timeout = 150,
@@ -45,10 +54,7 @@ return {
           },
         },
       }
+      -- require("statuscol").setup()
     end,
-  },
-  {
-    "OXY2DEV/foldtext.nvim",
-    config = true,
   },
 }
