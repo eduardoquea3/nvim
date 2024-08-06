@@ -5,7 +5,16 @@ return {
   dependencies = {
     { "williamboman/mason.nvim", config = true },
     "williamboman/mason-lspconfig.nvim",
-    { "j-hui/fidget.nvim", opts = {} },
+    {
+      "j-hui/fidget.nvim",
+      opts = {
+        notification = {
+          window = {
+            winblend = 0,
+          },
+        },
+      },
+    },
     "folke/neodev.nvim",
     { "b0o/schemastore.nvim" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -108,24 +117,6 @@ return {
       },
       lightbulb = {
         enable = false,
-      },
-    }
-
-    require("nvim-treesitter.configs").setup {
-      sync_install = true,
-      ensure_installed = {
-        "javascript",
-        "html",
-        "css",
-        "astro",
-        "http",
-        "markdown",
-        "markdown_inline",
-        "lua",
-        "python",
-        "xml",
-        "json",
-        "graphql",
       },
     }
   end,

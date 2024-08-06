@@ -54,7 +54,7 @@ return {
           { "fancy_searchcount" },
         },
         lualine_x = {
-          -- "fancy_lsp_servers",
+          "fancy_lsp_servers",
           -- component.lsp,
           component.spaces,
           "fancy_diff",

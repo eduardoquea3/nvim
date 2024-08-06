@@ -2,9 +2,10 @@ return {
   "simrat39/symbols-outline.nvim",
   lazy = true,
   cmd = { "SymbolsOutline" },
+  keys = { { "<leader>o", "<cmd>SymbolsOutline<cr>", desc = "Outline" } },
   config = function()
-    local icon = require("eduardo.icons")
-    require("symbols-outline").setup({
+    local icon = require "eduardo.icons"
+    require("symbols-outline").setup {
       highlight_hovered_item = true,
       show_guides = true,
       auto_preview = false,
@@ -66,6 +67,6 @@ return {
         Component = { icon = icon.ui.Code, hl = "@function" },
         Fragment = { icon = icon.ui.Stacks, hl = "@constant" },
       },
-    })
+    }
   end,
 }

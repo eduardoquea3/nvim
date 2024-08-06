@@ -96,7 +96,7 @@ return {
 
     telescope.setup {
       file_ignore_patterns = { "%.git/." },
-      path_display = { "filename_first" },
+      -- path_display = { "filename_first" },
       defaults = {
         mappings = {
           n = {
@@ -107,6 +107,8 @@ return {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-q>"] = actions.close,
             ["<C-e>"] = actions.select_default,
+            ["<A-j>"] = actions.preview_scrolling_down,
+            ["<A-k>"] = actions.preview_scrolling_up,
           },
         },
         prompt_prefix = icon.ui.Telescope .. " ",
@@ -115,10 +117,14 @@ return {
         initial_mode = "insert",
         select_strategy = "reset",
         sorting_strategy = "ascending",
+        layout_strategy = "vertical",
         color_devicons = true,
         layout_config = {
-          prompt_position = "bottom",
+          prompt_position = "top",
           preview_cutoff = 120,
+          vertical = {
+            mirror = true,
+          },
         },
         vimgrep_arguments = {
           "rg",

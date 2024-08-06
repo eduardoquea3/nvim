@@ -3,14 +3,38 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    enabled = false,
+    -- enabled = false,
     config = function()
       require("catppuccin").setup {
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           cmp = true,
           notify = true,
           treesitter = true,
+          fidget = true,
+          barbecue = {
+            dim_dirname = true,
+            bold_basename = true,
+            dim_context = false,
+            alt_background = false,
+          },
+          alpha = true,
+          gitsigns = true,
+          harpoon = true,
+          indent_blankline = {
+            enabled = true,
+            scope_color = "lavender",
+            colored_indent_levels = false,
+          },
+          neotree = true,
+          noice = true,
+          ufo = true,
+          symbols_outline = true,
+          telescope = {
+            enabled = true,
+          },
+          lsp_trouble = true,
+          which_key = true,
         },
       }
       vim.cmd.colorscheme "catppuccin"
@@ -41,7 +65,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    -- enabled = false,
+    enabled = false,
     opts = {
       on_highlights = function(hl, c)
         local prompt = "#2d3149"
@@ -75,6 +99,9 @@ return {
       end,
     },
     config = function(_, opts)
+      require("tokyonight").setup {
+        transparent = true,
+      }
       require("tokyonight").setup(opts)
       vim.cmd.colorscheme "tokyonight-night"
     end,

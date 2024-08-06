@@ -8,6 +8,7 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
+    theme = "catppuccin",
     show_dirname = false,
     show_basename = false,
     exclue_filetypes = {

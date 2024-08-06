@@ -16,7 +16,7 @@ return {
     vim.g.db_ui_force_echo_notifications = 1
     vim.g.db_ui_win_position = "left"
     vim.g.db_ui_winwidth = 20
-    vim.g.db_ui_save_location = "E:/sql"
+    vim.g.db_ui_save_location = "P:/sql"
 
     vim.g.db_ui_icons = {
       expanded = {

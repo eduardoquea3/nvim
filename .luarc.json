@@ -6,5 +6,11 @@
         "imap",
         "vmap",
         "cmap"
+    ],
+    "diagnostics.disable": [
+        "deprecated",
+        "missing-parameter",
+        "missing-fields",
+        "redefined-local"
     ]
 }
