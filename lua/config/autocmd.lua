@@ -102,9 +102,28 @@ function M.load_defaults()
             local stats = (vim.uv or vim.loop).fs_stat(vim.api.nvim_buf_get_name(0))
             if stats and stats.type == "directory" then
               require("lazy").load { plugins = { "neo-tree.nvim" } }
+              -- require("lazy").load { plugins = { "noice.nvim" } }
               return true
             end
           end
+        end,
+      },
+    },
+    {
+      { "FileType" },
+      {
+        group = "_alpha_tabline",
+        pattern = "alpha",
+        command = "set showtabline=0 laststatus=0 noruler",
+      },
+    },
+    {
+      { "FileType" },
+      {
+        group = "_alpha_tabline",
+        pattern = "alpha",
+        callback = function()
+          vim.wo.statuscolumn = ""
         end,
       },
     },

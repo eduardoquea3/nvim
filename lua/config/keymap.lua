@@ -19,6 +19,7 @@ function cmap(r, l, d)
 end
 
 -- Maps without <leader>
+nmap("<Esc>", "nohlsearch", "No mostrar resultados de busqueda")
 nmap("<C-a>", "zozz", "Abrir pliege")
 nmap("<C-c>", "zczz", "Cerrar pliege")
 nmap("<C-h>", "<C-w>h", "Movements")

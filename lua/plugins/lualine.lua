@@ -37,15 +37,12 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
-          { "fancy_filetype", ts_icon = "" },
-          "fancy_branch",
+          "fancy_mode",
           {
-            "filename",
-            path = 0,
-            symbols = {
-              modified = "  ",
-            },
+            "fancy_filetype",
+            ts_icon = "",
           },
+          "fancy_branch",
           {
             "fancy_diagnostics",
             sources = { "nvim_lsp" },
@@ -54,6 +51,7 @@ return {
           { "fancy_searchcount" },
         },
         lualine_x = {
+          "fancy_macro",
           "fancy_lsp_servers",
           -- component.lsp,
           component.spaces,

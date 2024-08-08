@@ -10,12 +10,13 @@ return {
   opts = {
     theme = "catppuccin",
     show_dirname = false,
-    show_basename = false,
+    show_basename = true,
     exclue_filetypes = {
       "gitcommit",
       "toggleterm",
       "neo-tree",
       "dashboard",
+      "alpha",
     },
   },
 }

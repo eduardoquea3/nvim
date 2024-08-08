@@ -4,7 +4,7 @@ return {
     version = "*",
     event = "User FileOpened",
     config = function()
-      require("nvim-surround").setup({})
+      require("nvim-surround").setup {}
     end,
   },
   {
@@ -19,11 +19,11 @@ return {
     cmd = { "MCstart", "MCvisual", "Mcclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
     keys = {
       {
-        mode = { "v","n" },
-        "<leader>m",
+        mode = { "v", "n" },
+        "<c-d>",
         "<cmd>MCstart<cr>",
-        desc = "Create a selection for selected text or word under the cursor"
-      }
-    }
-  }
+        desc = "Create a selection for selected text or word under the cursor",
+      },
+    },
+  },
 }
