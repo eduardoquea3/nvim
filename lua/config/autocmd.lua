@@ -18,7 +18,7 @@ function M.load_defaults()
       {
         group = "_space_end",
         callback = function()
-          vim.cmd([[%s/\s\+$//e]])
+          vim.cmd [[%s/\s\+$//e]]
         end,
       },
     },
@@ -32,9 +32,7 @@ function M.load_defaults()
           "plsql",
         },
         callback = function()
-          vim.cmd(
-            "lua require('cmp').setup.buffer({sources={{name='vim-dadbod-completion'},{ name = 'buffer' },}})"
-          )
+          vim.cmd "lua require('cmp').setup.buffer({sources={{name='vim-dadbod-completion'},{ name = 'buffer' },}})"
           vim.opt.wrap = true
         end,
       },
@@ -85,11 +83,28 @@ function M.load_defaults()
         nested = true,
         callback = function(args)
           local buftype = vim.api.nvim_get_option_value("buftype", { buf = args.buf })
-          if not (vim.fn.expand("%") == "" or buftype == "nofile") then
-            vim.api.nvim_del_augroup_by_name("_file_opened")
+          if not (vim.fn.expand "%" == "" or buftype == "nofile") then
+            vim.api.nvim_del_augroup_by_name "_file_opened"
             vim.api.nvim_exec_autocmds("User", { pattern = "FileOpened" })
           end
           --require("colorizer").attach_to_buffer(0, { mode = "background", css = true })
+        end,
+      },
+    },
+    {
+      { "BufEnter" },
+      {
+        group = "_neotree_start",
+        callback = function()
+          if package.loaded["neo-tree"] then
+            return true
+          else
+            local stats = (vim.uv or vim.loop).fs_stat(vim.api.nvim_buf_get_name(0))
+            if stats and stats.type == "directory" then
+              require("lazy").load { plugins = { "neo-tree.nvim" } }
+              return true
+            end
+          end
         end,
       },
     },

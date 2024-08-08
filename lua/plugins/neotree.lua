@@ -9,9 +9,8 @@ return {
       config = true,
     },
   },
-  event = "VimEnter",
+  cmd = "Neotree",
   keys = {
-    -- { "<leader>e",     ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
     { "<leader>e", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
   },
   config = function()
@@ -19,9 +18,7 @@ return {
     require("neo-tree").setup {
       close_if_last_window = true,
       popup_border_style = "single",
-      enable_git_status = true,
       enable_modified_markers = true,
-      enable_diagnostics = true,
       sort_case_insensitive = true,
       default_component_configs = {
         indent = {
