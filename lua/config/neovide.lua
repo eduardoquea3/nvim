@@ -3,7 +3,7 @@ local default_font = "DankMono Nerd Font"
 local default_size = 10
 
 vim.g.neovide_scale_factor = 1.3
-vim.g.neovide_transparency = 0.9
+vim.g.neovide_transparency = 0.8
 vim.g.neovide_refresh_rate = 60
 vim.g.neovide_refresh_rate_idle = 60
 vim.g.neovide_confirm_quit = true
@@ -32,7 +32,3 @@ for key, value in pairs(maps) do
     set_font(nil, value)
   end, { desc = "Font size " .. value })
 end
-
--- require("cyberdream").setup {
---   transparent = false,
--- }

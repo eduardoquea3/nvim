@@ -21,8 +21,9 @@ return {
           "stylua",
           "black",
           "pylint",
-          "biome",
+          -- "biome",
           "selene",
+          "phpcbf",
         },
       }
 
@@ -34,24 +35,37 @@ return {
       null_ls.setup {
 
         sources = {
+          formatting.phpcbf,
           formatting.black,
-          formatting.biome.with {
+          -- formatting.biome.with {
+          --   filetypes = {
+          --     "javascript",
+          --     "javascriptreact",
+          --     "typescript",
+          --     "typescriptreact",
+          --   },
+          -- },
+          formatting.prettier.with {
             filetypes = {
               "javascript",
               "javascriptreact",
               "typescript",
               "typescriptreact",
-            },
-          },
-          formatting.prettier.with {
-            filetypes = {
+              "vue",
               "css",
+              "scss",
+              "less",
               "html",
               "json",
+              "jsonc",
               "yaml",
-              -- "toml",
               "markdown",
+              "markdown.mdx",
+              "graphql",
+              "handlebars",
+              "svelte",
               "astro",
+              "htmlangular",
             },
             extra_args = { "--config", vim.fn.expand(config .. "/.prettierrc") },
           },

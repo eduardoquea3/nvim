@@ -3,8 +3,15 @@ return {
   dependencies = {
     "meuter/lualine-so-fancy.nvim",
   },
+  init = function()
+    vim.g.lualine_laststatus = vim.o.laststatus
+    if vim.fn.argc(-1) > 0 then
+      vim.o.statusline = " "
+    else
+      vim.o.laststatus = 0
+    end
+  end,
   enabled = true,
-  -- lazy = false,
   event = "VeryLazy",
   -- event = { "BufReadPost", "BufNewFile", "VeryLazy" },
   config = function()
@@ -17,7 +24,6 @@ return {
         globalstatus = true,
         icons_enabled = true,
         component_separators = { left = "|", right = "|" },
-        section_separators = { left = "", right = "" },
         disabled_filetypes = {
           statusline = {
             "alfa-nvim",
@@ -30,7 +36,6 @@ return {
             "TelescopePrompt",
             "lazy",
           },
-          winbar = {},
         },
       },
       sections = {
@@ -56,11 +61,12 @@ return {
           -- component.lsp,
           component.spaces,
           "fancy_diff",
-          "progress",
+          "fancy_location",
         },
         lualine_y = {},
         lualine_z = {},
       },
+      extensions = { "neo-tree", "lazy" },
     }
   end,
 }

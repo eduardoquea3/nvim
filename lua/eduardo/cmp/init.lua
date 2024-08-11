@@ -82,9 +82,9 @@ cmp.setup {
     completion = {
       winhighlight = "Normal:CmpNormal",
     },
-    documentation = {
-      winhighlight = "Normal:CmpDocNormal",
-    },
+    -- documentation = {
+    -- winhighlight = "Normal:CmpDocNormal",
+    -- },
     -- documentation = cmp.config.window.bordered(),
   },
   sources = {
@@ -93,6 +93,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "lazydev" },
     { name = "nerdfonts" },
   },
   formatting = {

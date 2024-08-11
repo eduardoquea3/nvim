@@ -12,7 +12,8 @@ return {
       },
       {
         "<A-m>",
-        "<cmd>exe v:count . 'ToggleTerm direction=float'<cr>",
+        "<cmd>exe v:count . 'ToggleTerm direction=horizontal'<cr>",
+        -- "<cmd>exe v:count . 'ToggleTerm direction=float'<cr>",
         mode = { "n", "t" },
         desc = "Open Terminal",
       },

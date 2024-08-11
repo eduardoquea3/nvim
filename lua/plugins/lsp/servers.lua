@@ -27,14 +27,15 @@ return {
     filetypes = { "yaml" },
   },
   astro = {},
-  biome = {},
+  -- biome = {},
   cssls = {},
   emmet_ls = {
-    filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact" },
+    filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact", "php" },
   },
   html = {
-    filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact" },
+    -- filetypes = { "html" },
   },
   tailwindcss = {},
   jdtls = {},
+  intelephense = {},
 }

@@ -6,16 +6,9 @@ return {
     { "williamboman/mason.nvim", config = true },
     "williamboman/mason-lspconfig.nvim",
     {
-      "j-hui/fidget.nvim",
-      opts = {
-        notification = {
-          window = {
-            winblend = 0,
-          },
-        },
-      },
+      "folke/lazydev.nvim",
+      config = true,
     },
-    "folke/neodev.nvim",
     { "b0o/schemastore.nvim" },
     { "hrsh7th/cmp-nvim-lsp" },
     { "rachartier/tiny-code-action.nvim" },
@@ -41,9 +34,7 @@ return {
     require("mason-lspconfig").setup {
       ensure_installed = vim.tbl_keys(require "plugins.lsp.servers"),
     }
-    require("lspconfig.ui.windows").default_options.border = "single"
-
-    require("neodev").setup()
+    require("lspconfig.ui.windows").default_options.border = "rounded"
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
@@ -72,8 +63,8 @@ return {
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
         map("<a-s>", function()
-          -- vim.lsp.buf.format { timeout_ms = 1000 }
-          vim.lsp.buf.format()
+          vim.lsp.buf.format { timeout_ms = 1000 }
+          -- vim.lsp.buf.format()
         end, "Formatear archivo")
 
         -- Thank you teej
@@ -107,13 +98,17 @@ return {
           -- on_attach = require("plugins.lsp.on_attach").on_attach,
           settings = require("plugins.lsp.servers")[server_name],
           filetypes = (require("plugins.lsp.servers")[server_name] or {}).filetypes,
+          root_dir = function()
+            return vim.loop.cwd()
+          end,
         }
       end,
     }
 
     require("lspsaga").setup {
       symbol_in_winbar = {
-        enable = false,
+        enable = true,
+        folder_level = 0,
       },
       lightbulb = {
         enable = false,
