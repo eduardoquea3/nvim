@@ -95,9 +95,18 @@ return {
     local icon = require "eduardo.icons"
 
     telescope.setup {
-      file_ignore_patterns = { "%.git/." },
       -- path_display = { "filename_first" },
       defaults = {
+        file_ignore_patterns = {
+          "node_modules/.*",
+          "%.env",
+          "yarn.lock",
+          "package-lock.json",
+          "lazy-lock.json",
+          "init.sql",
+          "target/.*",
+          ".git/.*",
+        },
         mappings = {
           n = {
             ["q"] = actions.close,
@@ -113,12 +122,6 @@ return {
         },
         prompt_prefix = icon.ui.Telescope .. " ",
         selection_caret = icon.ui.BoldArrowRight .. " ",
-        previewer = false,
-        initial_mode = "insert",
-        select_strategy = "reset",
-        sorting_strategy = "ascending",
-        layout_strategy = "vertical",
-        color_devicons = true,
         layout_config = {
           prompt_position = "top",
           preview_cutoff = 120,
@@ -135,7 +138,7 @@ return {
           "--column",
           "--smart-case",
           "--hidden",
-          "--glob=!.git/",
+          -- "--glob=!.git/",
         },
       },
       pickers = {
@@ -153,6 +156,10 @@ return {
         },
         oldfiles = {
           previewer = false,
+        },
+        builtin = {
+          previewer = true,
+          theme = "dropdown",
         },
       },
       extensions = {

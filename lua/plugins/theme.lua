@@ -5,9 +5,8 @@ return {
     priority = 1000,
     -- enabled = false,
     config = function()
-      local cat = require "catppuccin"
       require("catppuccin").setup {
-        transparent_background = true,
+        transparent_background = false,
         integrations = {
           cmp = true,
           notify = true,

@@ -38,4 +38,5 @@ return {
   tailwindcss = {},
   jdtls = {},
   intelephense = {},
+  -- phpfactor = {},
 }

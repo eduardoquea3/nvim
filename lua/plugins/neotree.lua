@@ -11,7 +11,7 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    { "<leader>e", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
+    { "<leader>e", ":Neotree toggle reveal left<CR>", silent = true, desc = "Left File Explorer" },
   },
   config = function()
     local icon = require "eduardo.icons"
@@ -60,7 +60,7 @@ return {
         end,
       },
       window = {
-        position = "float",
+        position = "right",
         width = 35,
         mapping_options = {
           noremap = true,
@@ -147,6 +147,13 @@ return {
             if args.position == "left" or args.position == "right" then
               vim.cmd "wincmd ="
             end
+          end,
+        },
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function(arg)
+            vim.opt_local.relativenumber = false
+            vim.opt_local.number = false
           end,
         },
       },

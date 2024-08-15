@@ -39,7 +39,7 @@ nmap("sv", "<cmd>vsplit<cr>", "Vertical split")
 nmap("ss", "<cmd>split<cr>", "Split")
 -- nmap("<leader>bd", "<cmd>bdelete<cr>", "Eliminar buffer")
 nmap("<c-w>", "<cmd>bd<cr>", "Eliminar buffer")
-nmap("<leader>bd", "<cmd>bp | bd #<cr>", "Eliminar buffer")
+nmap("<leader>bd", "<cmd>bp | bd #<cr>", "Eliminar file in split")
 nmap("<leader>w", ":w<cr>", "Guardar archivo")
 
 nmap("<leader>a", ":WhichKey<cr>", "Mostrar atajos")

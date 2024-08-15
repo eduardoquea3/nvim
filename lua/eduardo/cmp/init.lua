@@ -39,7 +39,12 @@ lspkind.init {
   },
 }
 
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load {
+-- paths = {
+--   vim.fn.stdpath "config" .. "/snippets",
+-- },
+-- }
+require("luasnip.loaders.from_vscode").lazy_load {}
 luasnip.config.setup {}
 
 cmp.setup {
@@ -78,14 +83,14 @@ cmp.setup {
     end, { "i", "s" }),
   },
   window = {
-    -- completion = cmp.config.window.bordered(),
-    completion = {
-      winhighlight = "Normal:CmpNormal",
-    },
+    completion = cmp.config.window.bordered(),
+    -- completion = {
+    -- winhighlight = "Normal:CmpNormal",
+    -- },
     -- documentation = {
     -- winhighlight = "Normal:CmpDocNormal",
     -- },
-    -- documentation = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   sources = {
     { name = "nvim_lsp" },

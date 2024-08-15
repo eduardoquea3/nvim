@@ -29,7 +29,7 @@ return {
             "alfa-nvim",
             "alpha",
             "help",
-            "neo-tree",
+            -- "neo-tree",
             "Trouble",
             "spectre_panel",
             "toggleterm",

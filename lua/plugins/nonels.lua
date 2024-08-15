@@ -67,7 +67,7 @@ return {
               "astro",
               "htmlangular",
             },
-            extra_args = { "--config", vim.fn.expand(config .. "/.prettierrc") },
+            -- extra_args = { "--config", vim.fn.expand(config .. "/.prettierrc") },
           },
           formatting.stylua.with {
             extra_args = { "--config-path", vim.fn.expand(config .. "/stylua.toml") },

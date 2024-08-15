@@ -25,7 +25,7 @@ return {
         "luckasRanarison/tailwind-tools.nvim",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
         opts = true,
-        ft = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "astro" },
+        ft = { "html", "javascriptreact", "typescriptreact", "astro" },
       },
     },
     config = function()
