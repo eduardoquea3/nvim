@@ -30,13 +30,15 @@ return {
   -- biome = {},
   cssls = {},
   emmet_ls = {
-    filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact", "php" },
+    filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact", "php", "jsp" },
   },
   html = {
     -- filetypes = { "html" },
   },
   tailwindcss = {},
-  jdtls = {},
+  -- jdtls = {
+    -- filetypes = { "java", "jsp" },
+  -- },
   intelephense = {},
   -- phpfactor = {},
 }

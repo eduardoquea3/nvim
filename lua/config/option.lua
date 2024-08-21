@@ -32,7 +32,8 @@ local global = {
     mouse = "a",
     number = false,
     preserveindent = true,
-    pumblend = 10,
+    -- pumblend = 10,
+    pumblend = 0,
     pumheight = 10,
     relativenumber = false,
     scrolloff = 4,
@@ -53,6 +54,7 @@ local global = {
     updatetime = 200,
     virtualedit = "block",
     wrap = true,
+    winblend = 0,
     writebackup = false,
   },
   g = {

@@ -21,11 +21,14 @@ return {
       dashboard.button("f", " " .. " Find file", function()
         require("telescope.builtin").find_files { hidden = true }
       end),
-      -- dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("b", " " .. " Find Browser", ":Telescope file_browser<cr>"),
       dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
       dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
       dashboard.button("s", " " .. "Restore Session", '<cmd>lua require("persistence").load()<cr>'),
-      -- dashboard.button("c", " " .. " Config", ":e ~/.config/nvim/ <CR>"),
+      dashboard.button("c", " " .. " Config", function()
+        require("telescope").extensions.file_browser.file_browser { path = "~/AppData/Local/nvim/" }
+      end),
       dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
       dashboard.button("q", " " .. " Quit", ":qa<CR>"),
     }

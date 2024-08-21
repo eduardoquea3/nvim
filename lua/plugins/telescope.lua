@@ -2,7 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   cmd = "Telescope",
   version = false,
-  -- lazy = true,
+  lazy = true,
   keys = {
     {
       "<leader>fc",

@@ -2,8 +2,8 @@
 return {
   {
     "nvimtools/none-ls.nvim",
-    event = "User FileOpened",
-    -- event = { "BufReadPre", "BufNewFile" },
+    -- event = "User FileOpened",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "jay-babu/mason-null-ls.nvim",
       "nvim-lua/plenary.nvim",
@@ -67,7 +67,7 @@ return {
               "astro",
               "htmlangular",
             },
-            -- extra_args = { "--config", vim.fn.expand(config .. "/.prettierrc") },
+            extra_args = { "--config", vim.fn.expand(config .. "/.prettierrc") },
           },
           formatting.stylua.with {
             extra_args = { "--config-path", vim.fn.expand(config .. "/stylua.toml") },

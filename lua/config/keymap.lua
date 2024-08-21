@@ -1,21 +1,21 @@
 function nmap(r, l, d)
-	vim.keymap.set("n", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+  vim.keymap.set("n", r, l, { noremap = true, nowait = true, silent = true, desc = d })
 end
 
 function tmap(r, l, d)
-	vim.keymap.set("t", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+  vim.keymap.set("t", r, l, { noremap = true, nowait = true, silent = true, desc = d })
 end
 
 function imap(r, l, d)
-	vim.keymap.set("i", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+  vim.keymap.set("i", r, l, { noremap = true, nowait = true, silent = true, desc = d })
 end
 
 function vmap(r, l, d)
-	vim.keymap.set("v", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+  vim.keymap.set("v", r, l, { noremap = true, nowait = true, silent = true, desc = d })
 end
 
 function cmap(r, l, d)
-	vim.keymap.set("c", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+  vim.keymap.set("c", r, l, { noremap = true, nowait = true, silent = true, desc = d })
 end
 
 -- Maps without <leader>
@@ -37,15 +37,15 @@ nmap("<left>", "<cmd>vertical resize -2<cr>", "Resize vertical --")
 nmap("<right>", "<cmd>vertical resize +2<cr>", "Resize vertical ++")
 nmap("sv", "<cmd>vsplit<cr>", "Vertical split")
 nmap("ss", "<cmd>split<cr>", "Split")
--- nmap("<leader>bd", "<cmd>bdelete<cr>", "Eliminar buffer")
-nmap("<c-w>", "<cmd>bd<cr>", "Eliminar buffer")
-nmap("<leader>bd", "<cmd>bp | bd #<cr>", "Eliminar file in split")
+nmap("<leader>bd", "<cmd>bd<cr>", "Eliminar buffer")
+-- nmap("<c-w>", "<cmd>bd<cr>", "Eliminar buffer")
+nmap("<c-w>", "<cmd>bp | bd #<cr>", "Eliminar file in split")
 nmap("<leader>w", ":w<cr>", "Guardar archivo")
+nmap("<leader>bs", "<c-w>q", "Cerrar split")
 
-nmap("<leader>a", ":WhichKey<cr>", "Mostrar atajos")
+-- nmap("<leader>a", ":WhichKey<cr>", "Mostrar atajos")
 nmap("<leader>rr", ":luafile %<cr>", "Actualizar config")
 nmap("<leader>q", ":confirm qall<cr>", "Cerrar neovim")
-nmap("<leader>bs", "<c-w>q", "Cerrar split")
 nmap("<leader>ll", "<cmd>Lazy<cr>", "Lazy")
 nmap("<leader>li", "<cmd>Lazy install<cr>", "Lazy install")
 nmap("<leader>lu", "<cmd>Lazy update<cr>", "Lazy update")
@@ -72,16 +72,16 @@ imap("<up>", "", "No use")
 
 cmap("<c-l>", "<Esc>", "Mode Normal")
 
-nmap("<leader>m", function()
-	local src = require("null-ls").get_source { filetype = vim.bo.filetype }
-	if src then
-		for _, source in ipairs(src) do
-			vim.notify(source.name)
-		end
-	else
-		vim.notify "no se encontro nada"
-	end
-end, "ff")
+-- nmap("<leader>m", function()
+--   local src = require("null-ls").get_source { filetype = vim.bo.filetype }
+--   if src then
+--     for _, source in ipairs(src) do
+--       vim.notify(source.name)
+--     end
+--   else
+--     vim.notify "no se encontro nada"
+--   end
+-- end, "ff")
 
 -- local opts = {
 --   mode = "n",

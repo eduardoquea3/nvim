@@ -47,6 +47,7 @@ function M.load_defaults()
           "man",
           "floaterm",
           "lspinfo",
+          "dbout",
           "lir",
           "lsp-installer",
           "null-ls-info",

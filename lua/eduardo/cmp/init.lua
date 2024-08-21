@@ -2,9 +2,9 @@ local cmp = require "cmp"
 local luasnip = require "luasnip"
 local lspkind = require "lspkind"
 local kind = require("eduardo.icons").kind
-local color = require("catppuccin.palettes").get_palette()
+-- local color = require("catppuccin.palettes").get_palette()
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = color.surface0 })
+-- vim.api.nvim_set_hl(0, "CmpNormal", { bg = color.surface0 })
 -- vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = color.surface0 })
 
 lspkind.init {

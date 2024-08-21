@@ -63,8 +63,8 @@ return {
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
         map("<a-s>", function()
-          vim.lsp.buf.format { timeout_ms = 1000 }
-          -- vim.lsp.buf.format()
+          -- vim.lsp.buf.format { timeout_ms = 1000 }
+          vim.lsp.buf.format { async = true }
         end, "Formatear archivo")
 
         -- Thank you teej
@@ -98,9 +98,6 @@ return {
           -- on_attach = require("plugins.lsp.on_attach").on_attach,
           settings = require("plugins.lsp.servers")[server_name],
           filetypes = (require("plugins.lsp.servers")[server_name] or {}).filetypes,
-          root_dir = function()
-            return vim.loop.cwd()
-          end,
         }
       end,
     }

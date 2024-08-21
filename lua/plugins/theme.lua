@@ -3,10 +3,10 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    -- enabled = false,
+    enabled = false,
     config = function()
       require("catppuccin").setup {
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           cmp = true,
           notify = true,
@@ -32,6 +32,7 @@ return {
           symbols_outline = true,
           telescope = {
             enabled = true,
+            style = "nvchad",
           },
           lsp_trouble = true,
           which_key = true,
@@ -41,77 +42,30 @@ return {
     end,
   },
   {
-    "navarasu/onedark.nvim",
-    priority = 1000,
-    enabled = false,
-    config = function()
-      require("onedark").setup {
-        style = "deep",
-        toggle_style_key = "<leader><tab>",
-      }
-      vim.cmd.colorscheme "onedark"
-    end,
-  },
-  {
-    "Shatur/neovim-ayu",
-    name = "ayu",
-    enabled = false,
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme "ayu-mirage"
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
+    "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
-    enabled = false,
-    opts = {
-      on_highlights = function(hl, c)
-        local prompt = "#2d3149"
-        hl.TelescopeNormal = {
-          bg = c.bg_dark,
-          fg = c.fg_dark,
-        }
-        hl.TelescopeBorder = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopePromptNormal = {
-          bg = prompt,
-        }
-        hl.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePromptTitle = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePreviewTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopeResultsTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-      end,
-    },
-    config = function(_, opts)
-      require("tokyonight").setup {
-        transparent = true,
-      }
-      require("tokyonight").setup(opts)
-      vim.cmd.colorscheme "tokyonight-night"
-    end,
-  },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
-    enabled = false,
     config = function()
-      vim.cmd.colorscheme "onedark_vivid"
+      require("cyberdream").setup {
+        transparent = true,
+        extensions = {
+          telescope = true,
+          cmp = true,
+          alpha = true,
+          gitsigns = true,
+          indentblankline = true,
+          -- lualine = true,
+          noice = true,
+          notify = true,
+          treesitter = true,
+          rainbow_delimiters = true,
+          trouble = true,
+          whichkey = true,
+          helpview = true,
+          markview = true,
+        },
+      }
+      vim.cmd.colorscheme "cyberdream"
     end,
   },
 }
