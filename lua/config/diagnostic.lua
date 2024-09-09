@@ -1,7 +1,5 @@
 vim.diagnostic.config {
   virtual_text = false,
-  -- underline = true,
-  -- update_in_insert = false,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "",
@@ -11,6 +9,7 @@ vim.diagnostic.config {
     },
   },
   severity_sort = true,
+  float = { border = "rounded" },
 }
 local icon = require "eduardo.icons"
 local signos = {
@@ -20,12 +19,6 @@ local signos = {
   Info = icon.diagnostics.Information,
 }
 
--- local signs = {
--- Error = "E",
--- Warn = "W",
--- Hint = "H",
--- Info = "I",
--- }
 for type, img in pairs(signos) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = img, texthl = hl, numhl = "" })
@@ -36,7 +29,6 @@ local function goto_definition(split_cmd)
   local log = require "vim.lsp.log"
   local api = vim.api
 
-  -- note, this handler style is for neovim 0.5.1/0.6, if on 0.5, call with function(_, method, result)
   local handler = function(_, result, ctx)
     if result == nil or vim.tbl_isempty(result) then
       local _ = log.info() and log.info(ctx.method, "No location found")
@@ -64,23 +56,3 @@ local function goto_definition(split_cmd)
 end
 
 vim.lsp.handlers["textDocument/definition"] = goto_definition "split"
-
--- local config = {
---   virtual_text = true,
---   signs = {
---     active = signos, -- Here I am calling the signs
---   },
---   update_in_insert = true,
---   underline = true,
---   severity_sort = true,
---   float = {
---     focusable = true,
---     style = "minimal",
---     border = "rounded",
---     source = "always",
---     header = "",
---     prefix = "",
---   },
--- }
---
--- vim.diagnostic.config(config)

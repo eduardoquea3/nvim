@@ -15,6 +15,10 @@ return {
     },
     opts = {
       hint_config = false,
+      normal_keys = {
+        -- ["<C-l>"] = { method = require("multicursors.normal_mode").skip_create_up }
+        -- ['<C-q>'] = { method = nil },
+      },
     },
     cmd = { "MCstart", "MCvisual", "Mcclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
     keys = {

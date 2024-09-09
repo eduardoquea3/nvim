@@ -2,10 +2,6 @@ local cmp = require "cmp"
 local luasnip = require "luasnip"
 local lspkind = require "lspkind"
 local kind = require("eduardo.icons").kind
--- local color = require("catppuccin.palettes").get_palette()
-
--- vim.api.nvim_set_hl(0, "CmpNormal", { bg = color.surface0 })
--- vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = color.surface0 })
 
 lspkind.init {
   mode = "symbol_text",
@@ -39,12 +35,12 @@ lspkind.init {
   },
 }
 
--- require("luasnip.loaders.from_vscode").lazy_load {
--- paths = {
---   vim.fn.stdpath "config" .. "/snippets",
--- },
--- }
-require("luasnip.loaders.from_vscode").lazy_load {}
+require("luasnip.loaders.from_vscode").lazy_load {
+  paths = {
+    vim.fn.stdpath "config" .. "/snippets",
+  },
+}
+-- require("luasnip.loaders.from_vscode").lazy_load {}
 luasnip.config.setup {}
 
 cmp.setup {
@@ -84,12 +80,6 @@ cmp.setup {
   },
   window = {
     completion = cmp.config.window.bordered(),
-    -- completion = {
-    -- winhighlight = "Normal:CmpNormal",
-    -- },
-    -- documentation = {
-    -- winhighlight = "Normal:CmpDocNormal",
-    -- },
     documentation = cmp.config.window.bordered(),
   },
   sources = {

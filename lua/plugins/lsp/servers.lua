@@ -21,6 +21,7 @@ return {
   },
   tsserver = {},
   pylsp = {},
+  -- pyright = {},
 
   yamlls = {
     cmd = { "yaml-language-server", "--stdio" },
@@ -37,8 +38,10 @@ return {
   },
   tailwindcss = {},
   -- jdtls = {
-    -- filetypes = { "java", "jsp" },
+  -- filetypes = { "java", "jsp" },
   -- },
   intelephense = {},
-  -- phpfactor = {},
+  -- phpactor = {},
+  powershell_es = {},
+  -- sqlls = {},
 }

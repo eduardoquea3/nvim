@@ -20,3 +20,13 @@ require("lazy").setup {
     border = "rounded",
   },
 }
+
+function nmap(r, l, d)
+  vim.keymap.set("n", r, l, { noremap = true, nowait = true, silent = true, desc = d })
+end
+
+nmap("<leader>ll", "<cmd>Lazy<cr>", "Lazy")
+nmap("<leader>li", "<cmd>Lazy install<cr>", "Lazy install")
+nmap("<leader>lu", "<cmd>Lazy update<cr>", "Lazy update")
+nmap("<leader>lc", "<cmd>Lazy clean<cr>", "Lazy clean")
+nmap("<leader>lp", "<cmd>Lazy profile<cr>", "Lazy profile")

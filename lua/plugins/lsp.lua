@@ -55,7 +55,25 @@ return {
         map("K", "<cmd>Lspsaga hover_doc<cr>", "Hover Documentation")
         map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
         map("gD", vim.lsp.buf.declaration, "Goto Declaration")
+        -- map("<leader>ca", function()
+        --   require("tiny-code-action").code_action()
+        -- end, "Code action")
         map("<leader>ca", function()
+          local context = { diagnostics = vim.lsp.diagnostic.get_line_diagnostics() }
+          local params = vim.lsp.util.make_range_params()
+          params.context = context
+
+          vim.lsp.buf_request(0, "textDocument/codeAction", params, function(err, result, ctx)
+            if err then
+              vim.notify("Error checking code actions: " .. err.message)
+              return
+            end
+            if result and next(result) then
+              require("tiny-code-action").code_action()
+            else
+              vim.notify "No code action available or file does not support code actions"
+            end
+          end)
           require("tiny-code-action").code_action()
         end, "Code action")
         map("<leader>r", "<cmd>Lspsaga rename<cr>", "Rename")
@@ -63,24 +81,22 @@ return {
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
         map("<a-s>", function()
-          -- vim.lsp.buf.format { timeout_ms = 1000 }
           vim.lsp.buf.format { async = true }
+          vim.notify "Formateado"
         end, "Formatear archivo")
 
-        -- Thank you teej
-        -- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua#L502
-        local client = vim.lsp.get_client_by_id(event.data.client_id)
-        if client and client.server_capabilities.documentHighlightProvider then
-          vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-            buffer = event.buf,
-            callback = vim.lsp.buf.document_highlight,
-          })
-
-          vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-            buffer = event.buf,
-            callback = vim.lsp.buf.clear_references,
-          })
-        end
+        -- local client = vim.lsp.get_client_by_id(event.data.client_id)
+        -- if client and client.server_capabilities.documentHighlightProvider then
+        --   vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+        --     buffer = event.buf,
+        --     callback = vim.lsp.buf.document_highlight,
+        --   })
+        --
+        --   vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+        --     buffer = event.buf,
+        --     callback = vim.lsp.buf.clear_references,
+        --   })
+        -- end
       end,
     })
 

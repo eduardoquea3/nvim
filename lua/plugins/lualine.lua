@@ -12,7 +12,8 @@ return {
     end
   end,
   enabled = true,
-  event = "VeryLazy",
+  -- event = "VeryLazy",
+  event = "User FileOpened",
   -- event = { "BufReadPost", "BufNewFile", "VeryLazy" },
   config = function()
     local component = require "eduardo.lualine.component"

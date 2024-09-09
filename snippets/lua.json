@@ -1,1 +1,1 @@
-[]
+{"nkey":{"prefix":"nkey","body":["local wk = require \"which-key\"","wk.add {","  { \"${1:key}\", group = \"${2:name_group}\" },","  { \"${3:keymap}\", ${4:action}, desc= \"${5:desc}\" },","}"]}}

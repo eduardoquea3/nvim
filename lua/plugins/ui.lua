@@ -10,6 +10,7 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
           ["cmp.entry.get_documentation"] = true,
         },
+        progress = { enabled = false },
       },
       routes = {
         {
@@ -36,10 +37,10 @@ return {
         "rcarriga/nvim-notify",
         config = function()
           local notify = require "notify"
-          require("notify").setup {
+          notify.setup {
             fps = 60,
-            background_colour = "NormalFloat",
-            render = "wrapped-compact",
+            -- background_colour = "NormalFloat",
+            -- render = "wrapped-compact",
             stages = "slide",
             timeout = 1000,
             max_height = function()
@@ -56,6 +57,5 @@ return {
         end,
       },
     },
-    -- opts = true,
   },
 }
