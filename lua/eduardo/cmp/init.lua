@@ -93,6 +93,8 @@ cmp.setup {
   },
   formatting = {
     format = require("lspkind").cmp_format {
+      maxwidth = 20,
+      ellipsis_char = "...",
       before = require("tailwind-tools.cmp").lspkind_format,
     },
   },
