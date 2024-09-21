@@ -1,2 +1,5 @@
-GET https://pokeapi.co/api/v2/pokemon/ditto HTTP/1.0
-accept: application/json
+@URL = https://pokeapi.co/api/v2/pokemon
+
+###
+GET {{URL}}/pikachu HTTP/1.0
+
