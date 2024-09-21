@@ -9,7 +9,7 @@ return {
     },
     { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
   },
-  ft = { "py" },
+  ft = "python",
   branch = "regexp", -- This is the regexp branch, use this for the new version
   config = function()
     require("venv-selector").setup()

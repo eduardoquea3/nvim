@@ -11,13 +11,13 @@ return {
           cmp = true,
           notify = true,
           treesitter = true,
-          fidget = true,
-          barbecue = {
-            dim_dirname = true,
-            bold_basename = true,
-            dim_context = false,
-            alt_background = false,
-          },
+          -- fidget = true,
+          -- barbecue = {
+          -- dim_dirname = true,
+          -- bold_basename = true,
+          -- dim_context = false,
+          -- alt_background = false,
+          -- },
           alpha = true,
           gitsigns = true,
           harpoon = true,
@@ -44,6 +44,11 @@ return {
           variables = { "italic" },
         },
       }
+      if vim.g.neovide then
+        require("catppuccin").setup {
+          transparent_background = false,
+        }
+      end
       vim.cmd.colorscheme "catppuccin"
     end,
   },
