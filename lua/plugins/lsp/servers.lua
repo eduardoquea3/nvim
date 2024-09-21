@@ -1,12 +1,12 @@
 return {
-  jsonls = {
-    settings = {
-      json = {
-        schema = require("schemastore").json.schemas(),
-        validate = { enable = true },
-      },
-    },
-  },
+  -- jsonls = {
+  --   settings = {
+  --     json = {
+  --       schema = require("schemastore").json.schemas(),
+  --       validate = { enable = true },
+  --     },
+  --   },
+  -- },
   lua_ls = {
     settings = {
       Lua = {
@@ -23,10 +23,10 @@ return {
   pylsp = {},
   -- pyright = {},
 
-  yamlls = {
-    cmd = { "yaml-language-server", "--stdio" },
-    filetypes = { "yaml" },
-  },
+  -- yamlls = {
+    -- cmd = { "yaml-language-server", "--stdio" },
+    -- filetypes = { "yaml" },
+  -- },
   astro = {},
   -- biome = {},
   cssls = {},
