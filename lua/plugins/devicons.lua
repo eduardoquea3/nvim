@@ -1,6 +1,6 @@
 return {
   "nvim-tree/nvim-web-devicons",
-  event = "VeryLazy",
+  event = "User FileOpened",
   config = function()
     require("nvim-web-devicons").setup {
       override_by_extension = {
