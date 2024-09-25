@@ -1,14 +1,16 @@
 return {
   "stevearc/oil.nvim",
-  lazy = true,
+  -- lazy = true,
   keys = {
     { "-", "<cmd>Oil<cr>", desc = "Oil" },
   },
   opts = {
     keymaps = {
-      ["<c-l>"] = "actions.select",
-      ["<c-h>"] = "actions.parent",
-      -- ["<c-e>"] = "actions.select",
+      ["<C-r>"] = "actions.refresh",
+      ["<C-l>"] = "actions.select",
+      ["<C-h>"] = "actions.parent",
+      ["q"] = "actions.close",
+      ["."] = "actions.toggle_hidden",
     },
   },
   dependencies = { "nvim-tree/nvim-web-devicons" },

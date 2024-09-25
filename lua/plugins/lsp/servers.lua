@@ -19,7 +19,7 @@ return {
   bashls = {
     filetypes = { "sh", "zsh" },
   },
-  tsserver = {},
+  ts_ls = {},
   pylsp = {},
   -- pyright = {},
 
