@@ -15,7 +15,10 @@ return {
   {
     "sindrets/diffview.nvim",
     -- event = "User FileOpened",
-    -- cmd
+    cmd = { "DiffviewOpen" },
     config = true,
+    keys = {
+      { "<leader>gm", "<cmd>DiffviewOpen<cr>", desc = "Open Merge tool" },
+    },
   },
 }
