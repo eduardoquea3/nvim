@@ -11,7 +11,20 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    { "<leader>e", ":Neotree toggle reveal left<CR>", silent = true, desc = "Left File Explorer" },
+    -- { "<leader>e", ":Neotree toggle reveal left<CR>", silent = true, desc = "Left File Explorer" },
+    {
+      "<leader>e",
+      function()
+        local current_buf = vim.api.nvim_get_current_buf()
+        if vim.bo[current_buf].filetype == "neo-tree" then
+          vim.cmd "Neotree toggle reveal left"
+        else
+          vim.cmd "Neotree focus"
+        end
+      end,
+      silent = true,
+      desc = "Left File Explorer",
+    },
   },
   config = function()
     local icon = require "eduardo.icons"
