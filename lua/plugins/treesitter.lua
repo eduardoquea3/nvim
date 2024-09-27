@@ -17,9 +17,6 @@ return {
         },
       },
       ensure_installed = {
-        "javascript",
-        "typescript",
-        "tsx",
         "html",
         "css",
         "astro",
@@ -29,7 +26,6 @@ return {
         "java",
         "kotlin",
         "latex",
-        "lua",
         "luadoc",
         "xml",
         "json",
