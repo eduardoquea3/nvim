@@ -1,7 +1,7 @@
 return {
   {
     "mistweaverco/kulala.nvim",
-    ft = "http",
+    opts = {},
     keys = {
       {
         "<leader>hr",
