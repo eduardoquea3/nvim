@@ -3,21 +3,14 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    -- enabled = false,
+    enabled = false,
     config = function()
       require("catppuccin").setup {
-        transparent_background = true,
+        transparent_background = false,
         integrations = {
           cmp = true,
           notify = true,
           treesitter = true,
-          -- fidget = true,
-          -- barbecue = {
-          -- dim_dirname = true,
-          -- bold_basename = true,
-          -- dim_context = false,
-          -- alt_background = false,
-          -- },
           alpha = true,
           gitsigns = true,
           harpoon = true,
@@ -30,10 +23,10 @@ return {
           noice = true,
           ufo = true,
           symbols_outline = true,
-          telescope = {
-            enabled = true,
-            style = "nvchad",
-          },
+          -- telescope = {
+          -- enabled = true,
+          -- style = "nvchad",
+          -- },
           lsp_trouble = true,
           which_key = true,
         },
@@ -78,6 +71,19 @@ return {
         },
       }
       vim.cmd.colorscheme "cyberdream"
+    end,
+  },
+  {
+    "olivercederborg/poimandres.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("poimandres").setup {
+        disable_background = true,
+      }
+    end,
+    init = function()
+      vim.cmd "colorscheme poimandres"
     end,
   },
 }

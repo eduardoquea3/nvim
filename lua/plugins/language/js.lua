@@ -1,17 +1,5 @@
 return {
   {
-    "nvim-treesitter/nvim-treesitter",
-    ft = { "javascript", "typescript", "javascriptreact", "typescriptreact", "json", "jsonc" },
-    opts = {
-      ensure_installed = {
-        "javascript",
-        "typescript",
-        "tsx",
-        "json",
-      },
-    },
-  },
-  {
     "mfussenegger/nvim-lint",
     dependencies = {
       "williamboman/mason.nvim",

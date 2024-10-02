@@ -20,15 +20,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter",
-    ft = "python",
-    opts = {
-      ensure_installed = {
-        "python",
-      },
-    },
-  },
-  {
     "mfussenegger/nvim-lint",
     dependencies = {
       "williamboman/mason.nvim",

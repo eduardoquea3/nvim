@@ -1,0 +1,5 @@
+@URL = https://pokeapi.co/api/v2/pokemon
+
+###
+GET {{URL}}/ditto HTTP/1.0
+Accept: application/json

@@ -103,7 +103,6 @@ function M.load_defaults()
             local stats = (vim.uv or vim.loop).fs_stat(vim.api.nvim_buf_get_name(0))
             if stats and stats.type == "directory" then
               require("lazy").load { plugins = { "neo-tree.nvim" } }
-              -- require("lazy").load { plugins = { "noice.nvim" } }
               return true
             end
           end
@@ -128,6 +127,15 @@ function M.load_defaults()
         end,
       },
     },
+    -- {
+    --   { "BufWritePre" },
+    --   {
+    --     pattern = "*",
+    --     callback = function(args)
+    --       require("conform").format { bufnr = args.buf }
+    --     end,
+    --   },
+    -- },
     {
       { "LspAttach" },
       {
@@ -172,7 +180,7 @@ function M.load_defaults()
           map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
           map("<a-s>", function()
-            vim.lsp.buf.format { async = true }
+            require("conform").format { async = true }
             vim.notify "Formateado"
           end, "Formatear archivo")
         end,

@@ -1,7 +1,7 @@
 return {
   {
     "b0o/schemastore.nvim",
-    ft = { "yaml" },
+    ft = "yaml",
     dependencies = {
       "neovim/nvim-lspconfig",
     },

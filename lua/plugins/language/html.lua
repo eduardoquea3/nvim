@@ -1,19 +1,27 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "html",
+      },
+    },
+  },
+  {
     "stevearc/conform.nvim",
-    ft = "toml",
+    ft = { "html" },
     dependencies = {
       "williamboman/mason.nvim",
       {
         "zapling/mason-conform.nvim",
         opts = {
-          ensure_installed = { "taplo" },
+          ensure_installed = { "prettier" },
         },
       },
     },
     opts = {
       formatters_by_ft = {
-        toml = { "taplo" },
+        html = { "prettier" },
       },
     },
   },
