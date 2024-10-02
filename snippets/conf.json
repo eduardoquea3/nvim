@@ -1,1 +1,1 @@
-{"post":{"prefix":"post","body":["###","POST ${1:url} HTTP\/1.0","content-type: application\/json","","{","\t${2:key}:${3:value}","}"]},"get":{"prefix":"get","body":["###","GET ${1:url} HTTP\/1.0"]}}
+{"post":{"prefix":"post","body":["###","POST ${1:url} HTTP\/1.0","content-type: application\/json","","{","\t${2:key}:${3:value}","}"]},"var":{"body":"@${1:name} = ${2:url}","prefix":"var"},"get":{"prefix":"get","body":["###","GET ${1:url} HTTP\/1.0"]}}

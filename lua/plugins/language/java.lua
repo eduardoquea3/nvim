@@ -1,27 +1,19 @@
 return {
   {
-    "folke/lazydev.nvim",
-    config = true,
-    ft = "lua",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-    },
-  },
-  {
     "mfussenegger/nvim-lint",
     dependencies = {
       "williamboman/mason.nvim",
       {
         "rshkarin/mason-nvim-lint",
         opts = {
-          ensure_installed = { "selene" },
+          ensure_installed = { "checkstyle" },
         },
       },
     },
-    ft = "lua",
+    ft = "java",
     config = function()
       require("lint").linters_by_ft = {
-        lua = { "selene" },
+        java = { "checkstyle" },
       }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function()
@@ -32,19 +24,19 @@ return {
   },
   {
     "stevearc/conform.nvim",
-    ft = "lua",
+    ft = "java",
     dependencies = {
       "williamboman/mason.nvim",
       {
         "zapling/mason-conform.nvim",
         opts = {
-          ensure_installed = { "stylua" },
+          ensure_installed = { "google-java-format" },
         },
       },
     },
     opts = {
       formatters_by_ft = {
-        lua = { "stylua" },
+        java = { "google-java-format" },
       },
     },
   },

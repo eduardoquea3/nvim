@@ -1,5 +1,0 @@
-@URL = https://pokeapi.co/api/v2/pokemon
-
-###
-GET {{URL}}/pikachu HTTP/1.0
-
