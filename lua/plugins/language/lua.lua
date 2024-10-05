@@ -47,5 +47,13 @@ return {
         lua = { "stylua" },
       },
     },
+    config = function(_, opts)
+      local format = require "conform"
+      format.setup(opts)
+      local conf = vim.fn.stdpath "config"
+      format.formatters.stylua = {
+        prepend_args = { "--config-path", conf .. "/stylua.toml" },
+      }
+    end,
   },
 }
