@@ -1,9 +1,16 @@
 return {
-  { "nvchad/volt" },
+  { "nvchad/volt", lazy = true },
   {
     "nvchad/minty",
-    -- keys = {
-    -- {}
-    -- },
+    lazy = true,
+    keys = {
+      {
+        "cp",
+        function()
+          require("minty.huefy").open()
+        end,
+        desc = "Color Picker",
+      },
+    },
   },
 }

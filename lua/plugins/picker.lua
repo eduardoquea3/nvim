@@ -36,7 +36,7 @@ return {
     "uga-rosa/ccc.nvim",
     lazy = true,
     keys = {
-      { "cp", "<cmd>CccPick<cr>", desc = "Color Picker" },
+      -- { "cp", "<cmd>CccPick<cr>", desc = "Color Picker" },
       { "cc", "<cmd>CccConvert<cr>", desc = "Color Convert" },
       { "<C-c>", "<cmd>CccPick<cr>", desc = "Color Picker", mode = { "i" } },
     },
