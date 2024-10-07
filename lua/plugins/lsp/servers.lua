@@ -25,5 +25,5 @@ return {
   tailwindcss = {},
   intelephense = {},
   -- phpactor = {},
-  powershell_es = {},
+  -- powershell_es = {},
 }

@@ -45,7 +45,7 @@ return {
         "vim",
         "vimdoc",
         "rust",
-        "powershell",
+        -- "powershell",
       },
     }
   end,
