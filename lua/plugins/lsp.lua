@@ -5,10 +5,6 @@ return {
   dependencies = {
     { "williamboman/mason.nvim", config = true, cmd = "Mason" },
     "williamboman/mason-lspconfig.nvim",
-    -- {
-    --   "folke/lazydev.nvim",
-    --   config = true,
-    -- },
     { "hrsh7th/cmp-nvim-lsp" },
     { "rachartier/tiny-code-action.nvim" },
     {
