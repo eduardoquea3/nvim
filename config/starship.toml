@@ -64,8 +64,8 @@ format = "[$read_only](blue)[$path](bold green)"
 
 [git_status]
 stashed = "  \\(${count}\\) "
-ahead = " ﲗ\\(${count}\\)"
-behind = " ﲔ\\(${count}\\)"
+ahead = "  \\(${count}\\)"
+behind = "  \\(${count}\\)"
 diverged = "  ${ahead_count} ${behind_count}"
 conflicted = "  \\(${count}\\)"
 deleted = "  \\(${count}\\)"
