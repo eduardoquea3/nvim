@@ -41,7 +41,7 @@ return {
         { "<C-k>", "<up>", desc = "Movement" },
       },
       {
-      	mode = "i",
+        mode = "i",
         { "<A-h>", "<left>", desc = "Movement" },
         { "<A-j>", "<down>", desc = "Movement" },
         { "<A-k>", "<up>", desc = "Movement" },
@@ -52,7 +52,7 @@ return {
         { "<left>", "", desc = "Null" },
         { "<down>", "", desc = "Null" },
         { "<up>", "", desc = "Null" },
-      }
+      },
     }
     -- require "config.keymap"
   end,

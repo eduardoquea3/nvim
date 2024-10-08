@@ -5,6 +5,7 @@ return {
     require("supermaven-nvim").setup {
       keymaps = {
         accept_suggestion = "<C-c>",
+        accept_word = "<A-w>",
       },
     }
   end,

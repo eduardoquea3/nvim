@@ -1,7 +1,7 @@
 return {
   {
     "OXY2DEV/markview.nvim",
-    lazy = false,
+    -- lazy = false,
     -- enabled = false,
     ft = "markdown",
     dependencies = {
