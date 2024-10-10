@@ -3,7 +3,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    enabled = false,
+    -- enabled = false,
     -- lazy = true,
     config = function()
       require("catppuccin").setup {
@@ -76,7 +76,7 @@ return {
   },
   {
     "olivercederborg/poimandres.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require("poimandres").setup {}
