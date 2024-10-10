@@ -44,10 +44,11 @@ return {
         lualine_b = {},
         lualine_c = {
           "fancy_mode",
-          {
-            "fancy_filetype",
-            ts_icon = "",
-          },
+          "filetype",
+          -- {
+            -- "fancy_filetype",
+            -- ts_icon = "",
+          -- },
           "fancy_branch",
           {
             "fancy_diagnostics",
