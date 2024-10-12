@@ -25,6 +25,8 @@ return {
       { "<C-j>", "<C-w>j", desc = "Movement split" },
       { "<C-k>", "<C-w>k", desc = "Movement split" },
       { "<C-l>", "<C-w>l", desc = "Movement split" },
+      { "<A-a>", "ggVG", desc = "Select all" },
+      { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
       {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
