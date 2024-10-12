@@ -1,3 +1,4 @@
+Invoke-Expression (&starship init powershell)
 # import extras of me
 . C:\Users\eduar\OneDrive\Documentos\PowerShell\alias.ps1
 
@@ -28,4 +29,3 @@ Set-Alias -Name tree -Value tre.exe
 
 $env:BAT_THEME="Catppuccin Mocha"
 
-Invoke-Expression (&starship init powershell)

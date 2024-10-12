@@ -18,7 +18,7 @@ config.font = wezterm.font_with_fallback {
   { family = "JetBrainsMono Nerd Font", scale = 0.90 },
 }
 config.font_size = 12
-config.window_background_opacity = 0.90
+-- config.window_background_opacity = 0.90
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
@@ -118,9 +118,9 @@ config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
 
 config.window_padding = {
-  left = 0,
+  left = 2,
   right = 0,
-  top = 0,
+  top = 4,
   bottom = 0,
 }
 
