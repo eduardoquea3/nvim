@@ -2,8 +2,8 @@
 local default_font = "JetBrainsMono Nerd Font"
 local default_size = 10
 
-vim.g.neovide_scale_factor = 1.3
-vim.g.neovide_transparency = 1
+vim.g.neovide_scale_factor = 1.0
+vim.g.neovide_transparency = 0.9
 vim.g.neovide_refresh_rate = 60
 vim.g.neovide_refresh_rate_idle = 60
 vim.g.neovide_confirm_quit = true
