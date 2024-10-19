@@ -30,7 +30,7 @@ return {
             "alfa-nvim",
             "alpha",
             "help",
-            -- "neo-tree",
+            "neo-tree",
             "Trouble",
             "spectre_panel",
             "toggleterm",
@@ -44,7 +44,7 @@ return {
         lualine_b = {},
         lualine_c = {
           "fancy_mode",
-          "filetype",
+          -- "filetype",
           -- {
             -- "fancy_filetype",
             -- ts_icon = "",
