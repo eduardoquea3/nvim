@@ -49,8 +49,9 @@ return {
           notify.setup {
             fps = 60,
             -- background_colour = "NormalFloat",
-            -- render = "wrapped-compact",
-            stages = "slide",
+            top_down = false,
+            render = "minimal",
+            stages = "fade",
             timeout = 1000,
             max_height = function()
               return math.floor(vim.o.lines * 0.75)
