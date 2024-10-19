@@ -20,6 +20,7 @@ return {
         jsonc = { "biome" },
         json = { "biome" },
       }
+      require("lint").linters.biome.args = { "--config-path", vim.fn.stdpath "config" .. "/biome.json" }
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function()
           require("lint").try_lint()
@@ -41,13 +42,21 @@ return {
     },
     opts = {
       formatters_by_ft = {
-        javascript = { "biome", "biome-check" },
-        typescript = { "biome", "biome-check" },
-        javascriptreact = { "biome", "biome-check" },
-        typescriptreact = { "biome", "biome-check" },
-        jsonc = { "biome", "biome-check" },
-        json = { "biome", "biome-check" },
+        javascript = { "biome" },
+        typescript = { "biome" },
+        javascriptreact = { "biome" },
+        typescriptreact = { "biome" },
+        jsonc = { "biome" },
+        json = { "biome" },
       },
     },
+    config = function(_, opts)
+      local format = require "conform"
+      format.setup(opts)
+      local conf = vim.fn.stdpath "config"
+      format.formatters.biome = {
+        prepend_args = { "--config-path", conf .. "/biome.json" },
+      }
+    end,
   },
 }
