@@ -11,6 +11,7 @@
         "deprecated",
         "missing-parameter",
         "missing-fields",
-        "redefined-local"
+        "redefined-local",
+        "unused-local"
     ]
 }

@@ -158,23 +158,11 @@ function M.load_defaults()
           map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
           map("gD", vim.lsp.buf.declaration, "Goto Declaration")
           map("<leader>ca", function()
-            local context = { diagnostics = vim.lsp.diagnostic.get_line_diagnostics() }
-            local params = vim.lsp.util.make_range_params()
-            params.context = context
-
-            vim.lsp.buf_request(0, "textDocument/codeAction", params, function(err, result, ctx)
-              if err then
-                vim.notify("Error checking code actions: " .. err.message)
-                return
-              end
-              if result and next(result) then
-                require("tiny-code-action").code_action()
-              else
-                vim.notify "No code action available or file does not support code actions"
-              end
-            end)
-            require("tiny-code-action").code_action()
+            require("fastaction").code_action()
           end, "Code action")
+          vim.keymap.set("v", "<leader>ca", function()
+            require("fastaction").range_code_action()
+          end, { noremap = true, silent = true, buffer = event.buf, desc = "LSP: Code Action" })
           map("<leader>r", "<cmd>Lspsaga rename<cr>", "Rename")
 
           map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")

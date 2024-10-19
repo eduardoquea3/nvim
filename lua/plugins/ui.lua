@@ -11,6 +11,14 @@ return {
           ["cmp.entry.get_documentation"] = true,
         },
         progress = { enabled = false },
+        signature = {
+          opts = {
+            size = {
+              width = 40,
+              height = 15,
+            }
+          },
+        },
       },
       routes = {
         {
@@ -29,6 +37,7 @@ return {
         bottom_search = true,
         command_palette = true,
         long_message_to_split = true,
+        lsp_doc_border = true,
       },
     },
     dependencies = {
@@ -40,8 +49,9 @@ return {
           notify.setup {
             fps = 60,
             -- background_colour = "NormalFloat",
-            -- render = "wrapped-compact",
-            stages = "slide",
+            top_down = false,
+            render = "minimal",
+            stages = "fade",
             timeout = 1000,
             max_height = function()
               return math.floor(vim.o.lines * 0.75)

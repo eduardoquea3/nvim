@@ -34,6 +34,7 @@ return {
     Unit = "",
     Value = "",
     Variable = "",
+    Supermaven = "",
   },
   git = {
     LineAdded = "",

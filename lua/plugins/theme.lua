@@ -3,8 +3,8 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    -- enabled = false,
-    lazy = true,
+    enabled = false,
+    -- lazy = true,
     config = function()
       require("catppuccin").setup {
         transparent_background = true,
@@ -76,7 +76,7 @@ return {
   },
   {
     "olivercederborg/poimandres.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     -- enabled = false,
     config = function()

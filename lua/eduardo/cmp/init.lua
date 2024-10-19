@@ -32,8 +32,10 @@ lspkind.init {
     Event = kind.Event,
     Operator = kind.Operator,
     TypeParameter = kind.TypeParameter,
+    Supermaven = kind.Supermaven,
   },
 }
+vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = "#7590d0" })
 
 require("luasnip.loaders.from_vscode").lazy_load {}
 require("luasnip.loaders.from_vscode").lazy_load {
@@ -83,9 +85,10 @@ cmp.setup {
     documentation = cmp.config.window.bordered(),
   },
   sources = {
-    { name = "nvim_lsp" },
+    -- { name = "supermaven", priority = 1000 },
+    { name = "luasnip", priority = 900 },
+    { name = "nvim_lsp", priority = 800 },
     { name = "nvim_lua" },
-    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
     { name = "lazydev" },

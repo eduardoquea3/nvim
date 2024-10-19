@@ -5,10 +5,6 @@ return {
   dependencies = {
     { "williamboman/mason.nvim", config = true, cmd = "Mason" },
     "williamboman/mason-lspconfig.nvim",
-    -- {
-    --   "folke/lazydev.nvim",
-    --   config = true,
-    -- },
     { "hrsh7th/cmp-nvim-lsp" },
     { "rachartier/tiny-code-action.nvim" },
     {
@@ -40,9 +36,11 @@ return {
 
     local mason_lspconfig = require "mason-lspconfig"
 
+    local handlers = require("plugins.lsp.handlers")
     mason_lspconfig.setup_handlers {
       function(server_name)
         require("lspconfig")[server_name].setup {
+          handlers = handlers,
           capabilities = capabilities,
           -- on_attach = require("plugins.lsp.on_attach").on_attach,
           settings = require("plugins.lsp.servers")[server_name],

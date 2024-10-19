@@ -4,16 +4,8 @@ return {
     event = "User FileOpened",
     dependencies = "kevinhwang91/promise-async",
     keys = {
-      {
-        "<C-m>",
-        function()
-          local win = require("ufo").peekFoldedLinesUnderCursor()
-          if not win then
-            vim.notify "No se encontraron pliegues"
-          end
-        end,
-        desc = "Previsualizar pliegue",
-      },
+      { "<C-c>", "zc", desc = "Cerrar en el pliegue" },
+      { "<C-a>", "zo", desc = "Abrir en el pliegue" },
     },
     opts = {
       open_fold_hl_timeout = 150,
@@ -30,7 +22,7 @@ return {
         },
       },
       -- provider_selector = function(bufnr, filetype, buftype)
-      --   return { "treesitter", "indent" }
+      -- return { "treesitter", "indent" }
       -- end,
       provider_selector = function(_, filetype, buftype)
         local function handleFallbackException(bufnr, err, providerName)
@@ -54,28 +46,37 @@ return {
           end
       end,
     },
+    config = function(_, opts)
+      require("ufo").setup(opts)
+      vim.keymap.set("n", "<C-m>", function()
+        local win = require("ufo").peekFoldedLinesUnderCursor()
+        if not win then
+          vim.notify "No se encontraron pliegues"
+        end
+      end, { desc = "Previsualizar pliegue", silent = true, noremap = true })
+    end,
   },
   -- {
   --   "luukvbaal/statuscol.nvim",
   --   event = "User FileOpened",
   --   config = function()
-  --     -- local builtin = require "statuscol.builtin"
-  --     -- require("statuscol").setup {
-  --     --   relculright = true,
-  --     --   segments = {
-  --     --     { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
-  --     --     {
-  --     --       sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
-  --     --       click = "v:lua.ScSa",
-  --     --     },
-  --     --     { text = { builtin.lnumfunc }, click = "v:lua.ScLa" },
-  --     --     {
-  --     --       sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
-  --     --       click = "v:lua.ScSa",
-  --     --     },
-  --     --   },
-  --     -- }
-  --     require("statuscol").setup()
+  --     local builtin = require "statuscol.builtin"
+  --     require("statuscol").setup {
+  --       relculright = true,
+  --       segments = {
+  --         { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+  --         {
+  --           sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
+  --           click = "v:lua.ScSa",
+  --         },
+  --         { text = { builtin.lnumfunc }, click = "v:lua.ScLa" },
+  --         {
+  --           sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
+  --           click = "v:lua.ScSa",
+  --         },
+  --       },
+  --     }
+  --     -- require("statuscol").setup()
   --   end,
   -- },
 }

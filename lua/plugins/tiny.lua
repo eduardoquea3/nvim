@@ -7,26 +7,16 @@ return {
     end,
   },
   {
-    "rachartier/tiny-code-action.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope.nvim" },
-    },
-    event = "LspAttach",
+    "Chaitanyabsprip/fastaction.nvim",
+    event = "User FileOpened",
     config = function()
-      require("tiny-code-action").setup {
-        backend = "delta",
-      }
+      require("fastaction").setup {}
+      -- vim.keymap.set("n", "<leader>ca", function()
+        -- require("fastaction").code_action()
+      -- end, { noremap = true, silent = true })
+      -- vim.keymap.set("v", "<leader>ca", function()
+        -- require("fastaction").range_code_action()
+      -- end, { noremap = true, silent = true })
     end,
   },
-  -- {
-  --   "rachartier/tiny-devicons-auto-colors.nvim",
-  --   branch = "main",
-  --   dependencies = { "nvim-tree/nvim-web-devicons" },
-  --   event = "VeryLazy",
-  --   -- enabled = false,
-  --   config = function()
-  --     require("tiny-devicons-auto-colors").setup()
-  --   end,
-  -- },
 }
