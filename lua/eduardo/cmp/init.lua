@@ -85,7 +85,7 @@ cmp.setup {
     documentation = cmp.config.window.bordered(),
   },
   sources = {
-    { name = "supermaven", priority = 1000 },
+    -- { name = "supermaven", priority = 1000 },
     { name = "luasnip", priority = 900 },
     { name = "nvim_lsp", priority = 800 },
     { name = "nvim_lua" },
