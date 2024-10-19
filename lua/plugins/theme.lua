@@ -3,7 +3,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    -- enabled = false,
+    enabled = false,
     -- lazy = true,
     config = function()
       require("catppuccin").setup {
@@ -78,8 +78,11 @@ return {
     "olivercederborg/poimandres.nvim",
     lazy = true,
     priority = 1000,
+    -- enabled = false,
     config = function()
-      require("poimandres").setup {}
+      require("poimandres").setup {
+        disable_background = true,
+      }
     end,
     init = function()
       vim.cmd "colorscheme poimandres"
