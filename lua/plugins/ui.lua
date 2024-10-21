@@ -48,7 +48,7 @@ return {
           local notify = require "notify"
           notify.setup {
             fps = 60,
-            -- background_colour = "NormalFloat",
+            background_colour = "NormalFloat",
             top_down = false,
             render = "minimal",
             stages = "fade",

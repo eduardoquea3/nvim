@@ -88,4 +88,16 @@ for scope, table in pairs(global) do
     vim[scope][setting] = value
   end
 end
-vim.opt.fillchars:append({ eob = " " })
+vim.opt.fillchars:append { eob = " " }
+
+vim.g.clipboard = {
+  name = "wl-clipboard",
+  copy = {
+    ["+"] = "wl-copy",
+    ["*"] = "wl-copy",
+  },
+  paste = {
+    ["+"] = "wl-paste",
+    ["*"] = "wl-paste",
+  },
+}
