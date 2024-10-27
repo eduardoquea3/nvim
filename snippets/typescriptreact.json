@@ -1,1 +1,1 @@
-{"rafce":{"prefix":"rafce","body":["const combo-box = () => {","  return (","    <div>combo-box<\/div>","  )","}","","export default combo-box"]}}
+{"rafce":{"body":["const ${1:${TM_FILENAME_BASE}} = () => {","  return (","    <div>${2:content}<\/div>","  )","}","","export default ${1:${TM_FILENAME_BASE}}"],"prefix":"comp"}}
