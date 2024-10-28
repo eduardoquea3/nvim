@@ -76,16 +76,14 @@ return {
   },
   {
     "olivercederborg/poimandres.nvim",
-    lazy = true,
+    -- lazy = true,
     priority = 1000,
     -- enabled = false,
-    config = function()
-      require("poimandres").setup {
-        disable_background = true,
-      }
-    end,
+    opts = {
+      disable_background = true,
+    },
     init = function()
-      vim.cmd "colorscheme poimandres"
+      vim.cmd.colorscheme "poimandres"
     end,
   },
 }

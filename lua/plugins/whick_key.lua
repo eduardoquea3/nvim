@@ -12,6 +12,7 @@ return {
       { "s", group = "New splits" },
       { "ss", "<cmd>split<cr>", desc = "Split buffer" },
       { "sv", "<cmd>vsplit<cr>", desc = "Vertical Split buffer" },
+      { "<leader>/", "gcc", desc = "Toggle Comment", remap = true },
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
       { "<leader>bs", "<C-w>q", desc = "Split delete" },
@@ -40,6 +41,10 @@ return {
         { "<C-l>", "<C-\\><C-n>", desc = "Mode Normal" },
         { "<C-j>", "<down>", desc = "Movement" },
         { "<C-k>", "<up>", desc = "Movement" },
+      },
+      {
+        mode = "v",
+        { "<leader>/", "gc", desc = "Toggle Comment", remap = true },
       },
       {
         mode = "i",

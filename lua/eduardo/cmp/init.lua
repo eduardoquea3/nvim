@@ -86,8 +86,8 @@ cmp.setup {
   },
   sources = {
     -- { name = "supermaven", priority = 1000 },
-    { name = "luasnip", priority = 900 },
-    { name = "nvim_lsp", priority = 800 },
+    { name = "nvim_lsp", priority = 900 },
+    { name = "luasnip", priority = 800 },
     { name = "nvim_lua" },
     { name = "buffer" },
     { name = "path" },
