@@ -80,7 +80,7 @@ return {
     priority = 1000,
     -- enabled = false,
     opts = {
-      disable_background = true,
+      disable_background = false,
     },
     init = function()
       vim.cmd.colorscheme "poimandres"

@@ -9,24 +9,45 @@ return {
     wk.setup {}
     wk.add {
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
-      { "s", group = "New splits" },
-      { "ss", "<cmd>split<cr>", desc = "Split buffer" },
+      { "ss", "<cmd>split<cr>", desc = "Horizontal Split buffer" },
       { "sv", "<cmd>vsplit<cr>", desc = "Vertical Split buffer" },
       { "<leader>/", "gcc", desc = "Toggle Comment", remap = true },
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
-      { "<leader>bs", "<C-w>q", desc = "Split delete" },
-      { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
+      { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
+      {
+        "<C-w>",
+        function()
+          local splits = vim.fn.winnr "$"
+          local bufs = #vim.fn.getbufinfo { loaded = true }
+          if bufs > 1 then
+            vim.cmd "bp | bd #"
+          elseif splits > 1 then
+            vim.cmd "close"
+          else
+            vim.cmd "bd"
+          end
+        end,
+        desc = "Split delete",
+      },
+      -- { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
       { "<Tab>", "<cmd>bn<cr>", desc = "Tab next" },
       { "<S-Tab>", "<cmd>bp<cr>", desc = "Tab previous" },
-      { "<A-j>", ":m .+7<cr>==", desc = "Move down line" },
-      { "<A-k>", ":m .4<cr>==", desc = "Move up line" },
+      { "<A-j>", ":m .+1<cr>==", desc = "Move down line" },
+      { "<A-k>", ":m .-2<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
       { "<C-j>", "<C-w>j", desc = "Movement split" },
       { "<C-k>", "<C-w>k", desc = "Movement split" },
       { "<C-l>", "<C-w>l", desc = "Movement split" },
       { "<A-a>", "ggVG", desc = "Select all" },
       { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
+      {
+        "<leader>m",
+        function()
+          vim.notify "hola"
+          print(tostring(#vim.fn.getbufinfo { buflisted = 1 }))
+        end,
+      },
       {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
