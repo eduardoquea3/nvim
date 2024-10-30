@@ -9,16 +9,30 @@ return {
     wk.setup {}
     wk.add {
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
-      { "s", group = "New splits" },
-      { "ss", "<cmd>split<cr>", desc = "Split buffer" },
+      { "ss", "<cmd>split<cr>", desc = "Horizontal Split buffer" },
       { "sv", "<cmd>vsplit<cr>", desc = "Vertical Split buffer" },
+      { "<leader>/", "gcc", desc = "Toggle Comment", remap = true },
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
-      { "<leader>bs", "<C-w>q", desc = "Split delete" },
-      { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
+      { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
+      {
+        "<C-w>",
+        function()
+          local splits = vim.fn.winnr "$"
+          local bufs = #vim.fn.getbufinfo { loaded = true }
+          if bufs > 1 then
+            vim.cmd "bp | bd #"
+          elseif splits > 1 then
+            vim.cmd "close"
+          else
+            vim.cmd "bd"
+          end
+        end,
+        desc = "Split delete",
+      },
+      -- { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
       { "<Tab>", "<cmd>bn<cr>", desc = "Tab next" },
       { "<S-Tab>", "<cmd>bp<cr>", desc = "Tab previous" },
-      { "<C-a>", "ggVG", desc = "Select all" },
       { "<A-j>", ":m .+1<cr>==", desc = "Move down line" },
       { "<A-k>", ":m .-2<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
@@ -27,6 +41,13 @@ return {
       { "<C-l>", "<C-w>l", desc = "Movement split" },
       { "<A-a>", "ggVG", desc = "Select all" },
       { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
+      {
+        "<leader>m",
+        function()
+          vim.notify "hola"
+          print(tostring(#vim.fn.getbufinfo { buflisted = 1 }))
+        end,
+      },
       {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
@@ -43,13 +64,17 @@ return {
         { "<C-k>", "<up>", desc = "Movement" },
       },
       {
+        mode = "v",
+        { "<leader>/", "gc", desc = "Toggle Comment", remap = true },
+      },
+      {
         mode = "i",
         { "<A-h>", "<left>", desc = "Movement" },
         { "<A-j>", "<down>", desc = "Movement" },
         { "<A-k>", "<up>", desc = "Movement" },
         { "<A-l>", "<right>", desc = "Movement" },
-        { "<C-j>", "<Esc><cmd>m .+1<cr>==a", desc = "Movement down line" },
-        { "<C-k>", "<Esc><cmd>m .-2<cr>==a", desc = "Movement up line" },
+        { "<C-j>", "<Esc><cmd>m .+7<cr>==a", desc = "Movement down line" },
+        { "<C-k>", "<Esc><cmd>m .4<cr>==a", desc = "Movement up line" },
         { "<right>", "", desc = "Null" },
         { "<left>", "", desc = "Null" },
         { "<down>", "", desc = "Null" },

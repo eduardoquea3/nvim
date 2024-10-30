@@ -24,6 +24,12 @@ return {
       silent = true,
       desc = "Left File Explorer",
     },
+    {
+      "<C-b>",
+      "<cmd>Neotree toggle<cr>",
+      silent = true,
+      desc = "Toggle Explorer",
+    },
   },
   config = function()
     local icon = require "eduardo.icons"
@@ -120,6 +126,7 @@ return {
           ["?"] = "show_help",
           ["<S-Tab>"] = "prev_source",
           ["<Tab>"] = "next_source",
+          ["<c-b>"] = false,
         },
       },
       filesystem = {

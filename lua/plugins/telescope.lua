@@ -6,79 +6,57 @@ return {
   keys = {
     {
       "<leader>fc",
-      function()
-        require("telescope.builtin").colorscheme { enable_preview = true }
-      end,
+      "<cmd>Telescope colorscheme<cr>",
       desc = "Colorscheme",
     },
     {
       "<leader>fn",
-      function()
-        require("telescope").extensions.notify.notify()
-      end,
+      "<cmd>Telescope notify<cr>",
       desc = "notify",
     },
     {
       "<leader>fm",
-      function()
-        require("telescope.builtin").keymaps()
-      end,
+      "<cmd>Telescope keymaps<cr>",
       desc = "Keymaps",
     },
     {
       "<leader><leader>",
-      function()
-        require("telescope.builtin").buffers()
-      end,
+      "<cmd>Telescope buffers<cr>",
       desc = "Buffers",
     },
     {
       "<leader>ff",
-      function()
-        require("telescope.builtin").find_files { hidden = true }
-      end,
+      "<cmd>Telescope find_files<cr>",
       desc = "Find Files",
     },
     {
       "<leader>fw",
-      function()
-        require("telescope.builtin").live_grep()
-      end,
+      "<cmd>Telescope live_grep<cr>",
       desc = "Find Word",
     },
     {
       "<leader>fo",
-      function()
-        require("telescope.builtin").oldfiles()
-      end,
+      "<cmd>Telescope oldfiles<cr>",
       desc = "Find Recent",
     },
     {
       "<leader>fB",
-      function()
-        require("telescope.builtin").builtin()
-      end,
+      "<cmd>Telescope builtin<cr>",
       desc = "Builtin",
     },
     {
       "<leader>fb",
-      function()
-        require("telescope").extensions.file_browser.file_browser { path = "%:h:p", select_buffer = true }
-      end,
+      "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
       desc = "File browser",
     },
     {
       "<leader>fd",
-      function()
-        require("telescope.builtin").diagnostics()
-      end,
+      "<cmd>Telescope diagnostics<cr>",
       desc = "Find Diagnostics",
     },
     {
       "<leader>fp",
-      function()
-        require("telescope").extensions.project.project()
-      end,
+      "<cmd>Telescope project<cr>",
       desc = "Find Project",
     },
   },
@@ -87,7 +65,6 @@ return {
     "nvim-tree/nvim-web-devicons",
     "nvim-telescope/telescope-project.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
-    -- "nvim-telescope/telescope-ui-select.nvim",
   },
   config = function()
     local actions = require "telescope.actions"
@@ -95,17 +72,15 @@ return {
     local icon = require "eduardo.icons"
 
     telescope.setup {
-      -- path_display = { "filename_first" },
       defaults = {
         file_ignore_patterns = {
-          "node_modules/.*",
-          "%.env",
+          "node_modules/*",
           "yarn.lock",
+          "bun.lockb",
           "package-lock.json",
           "lazy-lock.json",
-          "init.sql",
-          "target/.*",
-          ".git/.*",
+          "target/*",
+          ".git/*",
         },
         mappings = {
           n = {
@@ -124,21 +99,10 @@ return {
         selection_caret = icon.ui.BoldArrowRight .. " ",
         layout_config = {
           prompt_position = "top",
-          preview_cutoff = 120,
+          preview_cutoff = 160,
           vertical = {
             mirror = true,
           },
-        },
-        vimgrep_arguments = {
-          "rg",
-          "--color=never",
-          "--no-heading",
-          "--with-filename",
-          "--line-number",
-          "--column",
-          "--smart-case",
-          "--hidden",
-          -- "--glob=!.git/",
         },
       },
       pickers = {
@@ -178,7 +142,6 @@ return {
     }
     require("telescope").load_extension "project"
     require("telescope").load_extension "file_browser"
-    -- require("telescope").load_extension "ui-select"
     require("telescope").load_extension "notify"
   end,
 }
