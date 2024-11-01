@@ -48,7 +48,7 @@ return {
           local notify = require "notify"
           notify.setup {
             fps = 60,
-            background_colour = "NormalFloat",
+            background_colour = "#000000",
             top_down = false,
             render = "minimal",
             stages = "fade",
@@ -59,9 +59,9 @@ return {
             max_width = function()
               return math.floor(vim.o.columns * 0.75)
             end,
-            on_open = function(win)
-              vim.api.nvim_win_set_config(win, { zindex = 100 })
-            end,
+            -- on_open = function(win)
+            --   vim.api.nvim_win_set_config(win, { zindex = 100 })
+            -- end,
           }
           vim.notify = notify
         end,

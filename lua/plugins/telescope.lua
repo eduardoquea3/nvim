@@ -73,6 +73,7 @@ return {
 
     telescope.setup {
       defaults = {
+        path_display = { "filename_first" },
         file_ignore_patterns = {
           "node_modules/*",
           "yarn.lock",
@@ -140,6 +141,19 @@ return {
         },
       },
     }
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "TelescopeResults",
+      callback = function(ctx)
+        vim.api.nvim_buf_call(ctx.buf, function()
+          vim.fn.matchadd("TelescopeParent", "\t\t.*$")
+          vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
+        end)
+      end,
+    })
+
+    vim.cmd [[highlight TelescopeSymbolKind guifg=#61AFEF]]
+
     require("telescope").load_extension "project"
     require("telescope").load_extension "file_browser"
     require("telescope").load_extension "notify"

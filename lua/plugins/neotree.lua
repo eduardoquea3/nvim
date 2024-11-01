@@ -34,8 +34,8 @@ return {
   config = function()
     local icon = require "eduardo.icons"
     require("neo-tree").setup {
-      -- close_if_last_window = true,
-      -- popup_border_style = "single",
+      close_if_last_window = true,
+      popup_border_style = "single",
       enable_modified_markers = true,
       sort_case_insensitive = true,
       default_component_configs = {

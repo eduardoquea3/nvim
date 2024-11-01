@@ -3,11 +3,41 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    enabled = false,
-    -- lazy = true,
+    -- enabled = false,
     config = function()
       require("catppuccin").setup {
-        transparent_background = true,
+        color_overrides = {
+          mocha = {
+            rosewater = "#ea6962",
+            flamingo = "#ea6962",
+            red = "#ea6962",
+            maroon = "#ea6962",
+            pink = "#d3869b",
+            mauve = "#d3869b",
+            peach = "#e78a4e",
+            yellow = "#d8a657",
+            green = "#a9b665",
+            teal = "#89b482",
+            sky = "#89b482",
+            sapphire = "#89b482",
+            blue = "#7daea3",
+            lavender = "#7daea3",
+            text = "#ebdbb2",
+            subtext1 = "#d5c4a1",
+            subtext0 = "#bdae93",
+            overlay2 = "#a89984",
+            overlay1 = "#928374",
+            overlay0 = "#595959",
+            surface2 = "#4d4d4d",
+            surface1 = "#404040",
+            surface0 = "#292929",
+            base = "#1d2021",
+            mantle = "#191b1c",
+            crust = "#141617",
+          },
+        },
+        no_italic = true,
+        transparent_background = false,
         integrations = {
           cmp = true,
           notify = true,
@@ -24,10 +54,10 @@ return {
           noice = true,
           ufo = true,
           symbols_outline = true,
-          -- telescope = {
-          -- enabled = true,
-          -- style = "nvchad",
-          -- },
+          telescope = {
+            enabled = true,
+            style = "nvchad",
+          },
           lsp_trouble = true,
           which_key = true,
         },
@@ -38,52 +68,7 @@ return {
           variables = { "italic" },
         },
       }
-      if vim.g.neovide then
-        require("catppuccin").setup {
-          transparent_background = false,
-        }
-      end
-      vim.cmd.colorscheme "catppuccin"
-    end,
-  },
-  {
-    "scottmckendry/cyberdream.nvim",
-    lazy = false,
-    priority = 1000,
-    enabled = false,
-    config = function()
-      require("cyberdream").setup {
-        transparent = true,
-        extensions = {
-          telescope = true,
-          cmp = true,
-          alpha = true,
-          gitsigns = true,
-          indentblankline = true,
-          -- lualine = true,
-          noice = true,
-          notify = true,
-          treesitter = true,
-          rainbow_delimiters = true,
-          trouble = true,
-          whichkey = true,
-          helpview = true,
-          markview = true,
-        },
-      }
-      vim.cmd.colorscheme "cyberdream"
-    end,
-  },
-  {
-    "olivercederborg/poimandres.nvim",
-    -- lazy = true,
-    priority = 1000,
-    -- enabled = false,
-    opts = {
-      disable_background = true,
-    },
-    init = function()
-      vim.cmd.colorscheme "poimandres"
+      vim.cmd.colorscheme "catppuccin-mocha"
     end,
   },
 }

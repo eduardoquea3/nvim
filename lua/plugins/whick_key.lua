@@ -24,7 +24,7 @@ return {
             vim.cmd "bp | bd #"
           elseif splits > 1 then
             vim.cmd "close"
-          else
+          elseif bufs == 1 then
             vim.cmd "bd"
           end
         end,
