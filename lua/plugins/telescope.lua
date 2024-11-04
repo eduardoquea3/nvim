@@ -126,6 +126,13 @@ return {
           previewer = true,
           theme = "dropdown",
         },
+        buffers = {
+          mappings = {
+            i = {
+              ["<M-d>"] = actions.delete_buffer,
+            },
+          },
+        },
       },
       extensions = {
         file_browser = {
