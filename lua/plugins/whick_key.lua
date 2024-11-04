@@ -19,13 +19,13 @@ return {
         "<C-w>",
         function()
           local splits = vim.fn.winnr "$"
-          local bufs = #vim.fn.getbufinfo { loaded = true }
-          if bufs > 1 then
-            vim.cmd "bp | bd #"
+          local bufs = #vim.fn.getbufinfo { buflisted = 1 }
+          if bufs == 1 and splits == 1 then
+            vim.cmd "bdelete"
           elseif splits > 1 then
             vim.cmd "close"
-          elseif bufs == 1 then
-            vim.cmd "bd"
+          elseif bufs > 1 then
+            vim.cmd "bp | bd #"
           end
         end,
         desc = "Split delete",
@@ -79,6 +79,10 @@ return {
         { "<left>", "", desc = "Null" },
         { "<down>", "", desc = "Null" },
         { "<up>", "", desc = "Null" },
+      },
+      {
+        mode = "c",
+        { "<C-l>", "<Esc>", desc = "Escape" },
       },
     }
     -- require "config.keymap"
