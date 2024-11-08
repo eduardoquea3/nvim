@@ -43,7 +43,7 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
-          "fancy_mode",
+          -- "fancy_mode",
           -- "filetype",
           -- {
             -- "fancy_filetype",

@@ -65,7 +65,7 @@ return {
     "kdheepak/lazygit.nvim",
     lazy = true,
     keys = {
-      { "<leader>gg", ":LazyGit<cr>", desc = "Abrir lazygit" },
+      -- { "<leader>gg", ":LazyGit<cr>", desc = "Abrir lazygit" },
     },
     config = function()
       vim.g.lazygit_floating_window_winblend = 0

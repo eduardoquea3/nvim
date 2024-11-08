@@ -6,6 +6,13 @@ return {
   },
   config = function()
     local wk = require "which-key"
+    local function has_neotree()
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_option(buf, "filetype") == "neo-tree" then
+          return true
+        end
+      end
+    end
     wk.setup {}
     wk.add {
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
@@ -20,10 +27,13 @@ return {
         function()
           local splits = vim.fn.winnr "$"
           local bufs = #vim.fn.getbufinfo { buflisted = 1 }
+          local neotree = has_neotree()
           if bufs == 1 and splits == 1 then
             vim.cmd "bdelete"
           elseif splits > 1 then
-            vim.cmd "close"
+            if not neotree then
+              vim.cmd "close"
+            end
           elseif bufs > 1 then
             vim.cmd "bp | bd #"
           end

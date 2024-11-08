@@ -37,7 +37,7 @@ return {
           },
         },
         no_italic = true,
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           cmp = true,
           notify = true,
@@ -56,7 +56,7 @@ return {
           symbols_outline = true,
           telescope = {
             enabled = true,
-            style = "nvchad",
+            -- style = "nvchad",
           },
           lsp_trouble = true,
           which_key = true,

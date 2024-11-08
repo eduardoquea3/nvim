@@ -7,13 +7,13 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    -- opts = {
-    -- workspaces = {
-    -- {
-    -- name = "Notes",
-    -- path = "N:/notes_obsidian"
-    -- }
-    -- }
-    -- },
+    opts = {
+      workspaces = {
+        {
+          name = "Notes",
+          path = "G:/Obsidian",
+        },
+      },
+    },
   },
 }
