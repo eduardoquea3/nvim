@@ -1,7 +1,7 @@
 local wezterm = require "wezterm"
 local act = wezterm.action
 
-local powershell = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+local powershell = "U:\\Applications\\Scoop\\apps\\pwsh\\current\\pwsh.exe"
 
 local config = {}
 if wezterm.config_builder then
@@ -10,15 +10,15 @@ end
 
 config.default_prog = { powershell }
 
+-- config.colors = require("cyberdream")
 config.color_scheme = "Poimandres"
-config.line_height = 1.4
+config.line_height = 1.0
 config.cell_width = 1.1
 config.font = wezterm.font_with_fallback {
-  -- { family = "DankMono Nerd Font", scale = 0.90 },
-  { family = "JetBrainsMono Nerd Font", scale = 0.90 },
+  { family = "JetBrainsMono Nerd Font", scale = 1.00 },
 }
 config.font_size = 12
--- config.window_background_opacity = 0.90
+config.window_background_opacity = 0.90
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000

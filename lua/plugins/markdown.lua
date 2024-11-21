@@ -16,10 +16,11 @@ return {
     },
     config = function()
       local mark = require "markview"
-      local presets = require "markview.presets"
+      -- local presets = require "markview.presets"
+      local headings = require "eduardo.markdown.heading"
 
       mark.setup {
-        headings = presets.headings.glow_labels,
+        headings = headings,
       }
       vim.cmd "Markview enableAll"
     end,

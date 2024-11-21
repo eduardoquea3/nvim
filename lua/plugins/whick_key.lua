@@ -6,6 +6,9 @@ return {
   },
   config = function()
     local wk = require "which-key"
+    local function has_neotree()
+      return vim.fn.bufwinnr "neo-tree" ~= -1
+    end
     wk.setup {}
     wk.add {
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
@@ -20,19 +23,39 @@ return {
         function()
           local splits = vim.fn.winnr "$"
           local bufs = #vim.fn.getbufinfo { buflisted = 1 }
+          local neotree = has_neotree()
+
+          if bufs > 1 and neotree then
+            vim.cmd "Neotree toggle"
+            vim.api.nvim_buf_delete(0, { force = true })
+            return
+          end
+
           if bufs == 1 and splits == 1 then
-            vim.cmd "bdelete"
-          elseif splits > 1 then
+            vim.api.nvim_buf_delete(0, { force = true })
+            return
+          end
+
+          if bufs == 1 and neotree then
+            vim.cmd "Neotree toggle"
+            vim.api.nvim_buf_delete(0, { force = true })
+            return
+          end
+
+          if bufs == 1 and splits > 1 and not neotree then
             vim.cmd "close"
-          elseif bufs > 1 then
+            return
+          end
+
+          if bufs > 1 then
             vim.cmd "bp | bd #"
           end
         end,
         desc = "Split delete",
       },
       -- { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
-      { "<Tab>", "<cmd>bn<cr>", desc = "Tab next" },
-      { "<S-Tab>", "<cmd>bp<cr>", desc = "Tab previous" },
+      -- { "<Tab>", "<cmd>bn<cr>", desc = "Tab next" },
+      -- { "<S-Tab>", "<cmd>bp<cr>", desc = "Tab previous" },
       { "<A-j>", ":m .+1<cr>==", desc = "Move down line" },
       { "<A-k>", ":m .-2<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
@@ -40,7 +63,7 @@ return {
       { "<C-k>", "<C-w>k", desc = "Movement split" },
       { "<C-l>", "<C-w>l", desc = "Movement split" },
       { "<A-a>", "ggVG", desc = "Select all" },
-      { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
+      -- { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
       {
         "<leader>m",
         function()

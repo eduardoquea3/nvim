@@ -56,7 +56,7 @@ return {
           symbols_outline = true,
           telescope = {
             enabled = true,
-            style = "nvchad",
+            -- style = "nvchad",
           },
           lsp_trouble = true,
           which_key = true,

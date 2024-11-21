@@ -12,6 +12,9 @@
         "missing-parameter",
         "missing-fields",
         "redefined-local",
-        "unused-local"
+        "unused-local",
+        "return-type-mismatch",
+        "undefined-field",
+        "assign-type-mismatch"
     ]
 }

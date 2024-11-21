@@ -26,6 +26,16 @@ Set-PSReadLineKeyHandler -Key "Ctrl+e" -Function Acceptline
 
 Set-Alias -Name which -Value where.exe
 Set-Alias -Name tree -Value tre.exe
+Set-Alias -Name ls -Value list
+Set-Alias -Name la -Value listAll
+
+function list () {
+  eza --icons $args
+}
+
+function listAll () {
+  eza --icons -a $args
+}
 
 $env:BAT_THEME="Catppuccin Mocha"
 

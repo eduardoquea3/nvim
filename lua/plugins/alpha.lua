@@ -18,19 +18,15 @@ return {
 
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
-      dashboard.button("f", " " .. " Find file", function()
-        require("telescope.builtin").find_files { hidden = true }
-      end),
-      dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("b", " " .. " Find Browser", ":Telescope file_browser<cr>"),
-      dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
-      dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
+      dashboard.button("f", " " .. " Find file", "<cmd>Telescope find_files<CR>"),
+      dashboard.button("n", " " .. " New file", "<cmd>ene <BAR> startinsert <CR>"),
+      dashboard.button("b", " " .. " Find Browser", "<cmd>Telescope file_browser<cr>"),
+      dashboard.button("r", " " .. " Recent files", "<cmd>Telescope oldfiles <CR>"),
+      dashboard.button("g", " " .. " Find text", "<cmd>Telescope live_grep <CR>"),
       dashboard.button("s", " " .. "Restore Session", '<cmd>lua require("persistence").load()<cr>'),
-      dashboard.button("c", " " .. " Config", function()
-        require("telescope").extensions.file_browser.file_browser { path = "~/AppData/Local/nvim/" }
-      end),
-      dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
-      dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+      dashboard.button("c", " " .. " Config", "<cmd>Telescope find_browser path=~/AppData/Local/nvim/<cr>"),
+      dashboard.button("l", "󰒲 " .. " Lazy", "<cmd>Lazy<CR>"),
+      dashboard.button("q", " " .. " Quit", "<cmd>qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButtons"
