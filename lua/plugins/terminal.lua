@@ -19,24 +19,19 @@ return {
       },
     },
     config = function()
-      -- local powershell_options = {
-      --   shell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell",
-      --   shellcmdflag =
-      --   "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
-      --   shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
-      --   shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
-      --   shellquote = "",
-      --   shellxquote = "",
-      -- }
-      --
-      -- for option, value in pairs(powershell_options) do
-      --   vim.opt[option] = value
-      -- end
-      -- vim.opt.shell = "nu"
-      -- vim.opt.shellcmdflag = "-c"
-      -- vim.opt.shellquote = ""
-      -- vim.opt.shellxquote = ""
-      require("toggleterm").setup({
+      local powershell_options = {
+        shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+        shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+        shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+        shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+        shellquote = "",
+        shellxquote = "",
+      }
+
+      for option, value in pairs(powershell_options) do
+        vim.opt[option] = value
+      end
+      require("toggleterm").setup {
         size = 20,
         -- open_mapping = [[<a-m>]],
         hide_numbers = true,
@@ -58,7 +53,7 @@ return {
             return math.floor(vim.o.lines * 0.7)
           end,
         },
-      })
+      }
     end,
   },
   {

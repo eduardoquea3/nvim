@@ -2,6 +2,7 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+  event = "User FileOpened",
   opts = {
     bigfile = { enabled = true },
     quickfile = { enabled = true },
