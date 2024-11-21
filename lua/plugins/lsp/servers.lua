@@ -13,8 +13,12 @@ return {
   bashls = {
     filetypes = { "sh", "zsh" },
   },
-  ts_ls = {},
+  -- ts_ls = {},
+  vtsls = {},
   pylsp = {},
+  -- pyright = {},
+
+  kotlin_language_server = {},
 
   astro = {},
   cssls = {},
