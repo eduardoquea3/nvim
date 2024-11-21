@@ -4,7 +4,7 @@ local global = {
     autowrite = true,
     backup = false,
     breakindent = true,
-    clipboard = "unnamed",
+    clipboard = "unnamedplus",
     cmdheight = 0,
     completeopt = { "menu", "menuone", "noselect" },
     -- conceallevel = 3,
@@ -90,14 +90,14 @@ for scope, table in pairs(global) do
 end
 vim.opt.fillchars:append { eob = " " }
 
-vim.g.clipboard = {
-  name = "wl-clipboard",
-  copy = {
-    ["+"] = "wl-copy",
-    ["*"] = "wl-copy",
-  },
-  paste = {
-    ["+"] = "wl-paste",
-    ["*"] = "wl-paste",
-  },
-}
+-- vim.g.clipboard = {
+--   name = "wl-clipboard",
+--   copy = {
+--     ["+"] = "wl-copy",
+--     ["*"] = "wl-copy",
+--   },
+--   paste = {
+--     ["+"] = "wl-paste",
+--     ["*"] = "wl-paste",
+--   },
+-- }
