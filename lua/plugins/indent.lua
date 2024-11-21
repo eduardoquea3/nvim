@@ -1,11 +1,20 @@
 return {
-  "lukas-reineke/indent-blankline.nvim",
+  "shellRaining/hlchunk.nvim",
   event = "User FileOpened",
-  enabled = false,
   config = function()
-    require("ibl").setup {
+    require("hlchunk").setup {
       indent = {
-        char = { "|", "╎", "┆", "┊" },
+        enable = true,
+        use_treesitter = false,
+      },
+      chunk = {
+        enable = true,
+        style = {
+          { fg = "#a9b665" },
+        },
+        use_treesitter = true,
+        textobject = "",
+        delay = 0,
       },
     }
   end,
