@@ -43,8 +43,8 @@ return {
           handlers = handlers,
           capabilities = capabilities,
           -- on_attach = require("plugins.lsp.on_attach").on_attach,
-          settings = require("plugins.lsp.servers")[server_name],
-          filetypes = (require("plugins.lsp.servers")[server_name] or {}).filetypes,
+          -- settings = require("plugins.lsp.servers")[server_name],
+          -- filetypes = (require("plugins.lsp.servers")[server_name] or {}).filetypes,
         }
       end,
     }
