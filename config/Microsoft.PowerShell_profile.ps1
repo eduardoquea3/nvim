@@ -28,6 +28,7 @@ Set-Alias -Name which -Value where.exe
 Set-Alias -Name tree -Value tre.exe
 Set-Alias -Name ls -Value list
 Set-Alias -Name la -Value listAll
+Set-Alias -Name icat -Value img
 
 function list () {
   eza --icons $args
@@ -35,6 +36,10 @@ function list () {
 
 function listAll () {
   eza --icons -a $args
+}
+
+function img () {
+  wezterm imgcat $args
 }
 
 $env:BAT_THEME="Catppuccin Mocha"

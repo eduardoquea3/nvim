@@ -2,6 +2,7 @@ local wezterm = require "wezterm"
 local act = wezterm.action
 
 local powershell = "U:\\Applications\\Scoop\\apps\\pwsh\\current\\pwsh.exe"
+local arch = "C:\\Users\\eduar\\AppData\\Local\\Microsoft\\WindowsApps\\arch.exe"
 
 local config = {}
 if wezterm.config_builder then
@@ -9,22 +10,26 @@ if wezterm.config_builder then
 end
 
 config.default_prog = { powershell }
+-- config.default_prog = { arch }
 
 -- config.colors = require("cyberdream")
 config.color_scheme = "Poimandres"
 config.line_height = 1.0
 config.cell_width = 1.1
 config.font = wezterm.font_with_fallback {
-  { family = "JetBrainsMono Nerd Font", scale = 1.00 },
+  { family = "DankMono Nerd Font", scale = 1.00 },
+  -- { family = "JetBrainsMono Nerd Font", scale = 1.00 },
 }
-config.font_size = 12
-config.window_background_opacity = 0.90
+config.font_size = 14
+config.window_background_opacity = 1.00
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 config.disable_default_key_bindings = true
 config.hide_tab_bar_if_only_one_tab = true
+config.front_end = "OpenGL"
+config.default_cursor_style = "SteadyBar"
 
 config.inactive_pane_hsb = {
   saturation = 0.50,
@@ -35,7 +40,8 @@ config.leader = { key = "o", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
   { key = "a", mods = "LEADER|CTRL", action = act.SendKey { key = "a", mods = "CTRL" } },
   { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
-  { key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
+  -- "phys:Space" <- key "space"
+  { key = "p", mods = "CTRL|SHIFT", action = act.ActivateCommandPalette },
 
   { key = "v", mods = "CTRL|SHIFT", action = act.PasteFrom "Clipboard" },
   { key = "c", mods = "LEADER", action = act.CopyTo "ClipboardAndPrimarySelection" },
@@ -83,7 +89,17 @@ config.keys = {
   { key = "}", mods = "LEADER|SHIFT", action = act.MoveTabRelative(1) },
 
   { key = "w", mods = "LEADER", action = act.ShowLauncherArgs { flags = "FUZZY|WORKSPACES" } },
+  { key = "f", mods = "LEADER", action = act.Search { CaseSensitiveString = "" } },
 }
+
+config.mouse_bindings = {
+  {
+    event = { Down = { streak = 1, button = "Right" } },
+    mods = "NONE",
+    action = act.PasteFrom "Clipboard",
+  },
+}
+
 for i = 1, 9 do
   table.insert(config.keys, {
     key = tostring(i),
@@ -118,9 +134,9 @@ config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
 
 config.window_padding = {
-  left = 2,
+  left = 0,
   right = 0,
-  top = 4,
+  top = 0,
   bottom = 0,
 }
 
