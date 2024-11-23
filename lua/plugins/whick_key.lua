@@ -67,8 +67,12 @@ return {
       {
         "<leader>m",
         function()
-          vim.notify "hola"
-          print(tostring(#vim.fn.getbufinfo { buflisted = 1 }))
+          local uname = vim.loop.os_uname().sysname
+          if uname == "Windows_NT" then
+            vim.notify("windows")
+          else
+            vim.notify("linux")
+          end
         end,
       },
       {
