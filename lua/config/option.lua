@@ -90,3 +90,4 @@ for scope, table in pairs(global) do
   end
 end
 vim.opt.fillchars:append { eob = " " }
+vim.o.clipboard = "unnamedplus"
