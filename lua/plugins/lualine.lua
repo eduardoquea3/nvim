@@ -2,6 +2,7 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
     "meuter/lualine-so-fancy.nvim",
+    event = "User FileOpened",
   },
   init = function()
     vim.g.lualine_laststatus = vim.o.laststatus
@@ -46,8 +47,8 @@ return {
           -- "fancy_mode",
           -- "filetype",
           -- {
-            -- "fancy_filetype",
-            -- ts_icon = "",
+          -- "fancy_filetype",
+          -- ts_icon = "",
           -- },
           "fancy_branch",
           {
