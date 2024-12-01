@@ -11,7 +11,7 @@ return {
       workspaces = {
         {
           name = "Notes",
-          path = "G:/Obsidian",
+          path = "F:/Obsidian",
         },
       },
     },

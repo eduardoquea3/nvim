@@ -4,9 +4,13 @@ local headings = {
   shift_width = 1,
 
   heading_1 = {
-    style = "simple",
+    style = "icon",
 
     hl = "MarkviewHeading1",
+
+    sign = "󰌕 ",
+
+    sign_hl = "MarkviewHeading1Sign",
   },
   heading_2 = {
     style = "icon",
@@ -21,7 +25,7 @@ local headings = {
 
     sign_hl = "MarkviewHeading2Sign",
 
-    icon = "󰼏  ",
+    -- icon = "󰼏  ",
 
     icon_hl = "MarkviewHeading2",
   },
