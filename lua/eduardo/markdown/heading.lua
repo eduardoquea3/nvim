@@ -30,25 +30,25 @@ local headings = {
     icon_hl = "MarkviewHeading2",
   },
   heading_3 = {
-    style = "label",
+    style = "icon",
 
-    align = "center",
+    -- align = "center",
 
     hl = "MarkviewHeading3",
 
-    corner_left = "",
+    -- corner_left = "",
 
-    padding_left = " ",
+    -- padding_left = " ",
 
-    padding_right = " ",
+    -- padding_right = " ",
 
-    corner_right = "",
+    -- corner_right = "",
 
     corner_left_hl = "MarkviewHeading3Sign",
-    padding_left_hl = nil,
+    -- padding_left_hl = nil,
 
     ---@type string?
-    padding_right_hl = nil,
+    -- padding_right_hl = nil,
     ---@type string?
     corner_right_hl = "MarkviewHeading3Sign",
 
@@ -62,7 +62,7 @@ local headings = {
 
     --- Icon to show before the heading text.
     ---@type string?
-    icon = "",
+    -- icon = "",
 
     --- Highlight group for the Icon.
     ---@type string?

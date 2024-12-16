@@ -13,7 +13,7 @@ return {
       mode = "buffers",
       show_tab_indicators = false,
       diagnostics = "nvim_lsp",
-      always_show_bufferline = true,
+      always_show_bufferline = false,
       indicator = {
         icon = "▎",
         style = "icon",

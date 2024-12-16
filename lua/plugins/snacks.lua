@@ -1,7 +1,7 @@
 return {
   "folke/snacks.nvim",
   -- priority = 1000,
-  lazy = true,
+  -- lazy = true,
   event = "User FileOpened",
   opts = {
     bigfile = { enabled = true },
@@ -13,8 +13,23 @@ return {
         wo = { wrap = true }, -- Wrap notifications
       },
     },
+    dim = { enabled = true },
   },
   keys = {
+    {
+      "<leader>t",
+      function()
+        require("snacks").toggle.dim():toggle()
+      end,
+      desc = "Dim",
+    },
+    {
+      "<leader>z",
+      function()
+        require("snacks").toggle.zen():toggle()
+      end,
+      desc = "Zen Mode",
+    },
     {
       "<leader>gg",
       function()
@@ -42,13 +57,6 @@ return {
         require("snacks").lazygit.log()
       end,
       desc = "Lazygit Log (cwd)",
-    },
-    {
-      "<leader>cR",
-      function()
-        require("snacks").rename()
-      end,
-      desc = "Rename File",
     },
     {
       "]]",
@@ -82,35 +90,63 @@ return {
         }
       end,
     },
-  },
-  init = function()
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "VeryLazy",
-      callback = function()
-        -- Setup some globals for debugging (lazy-loaded)
-        _G.dd = function(...)
-          require("snacks").debug.inspect(...)
-        end
-        _G.bt = function()
-          require("snacks").debug.backtrace()
-        end
-        vim.print = _G.dd -- Override print to use require("snacks") for `:=` command
-
-        -- Create some toggle mappings
-        require("snacks").toggle.option("spell", { name = "Spelling" }):map "<leader>us"
-        require("snacks").toggle.option("wrap", { name = "Wrap" }):map "<leader>uw"
-        require("snacks").toggle.option("relativenumber", { name = "Relative Number" }):map "<leader>uL"
-        require("snacks").toggle.diagnostics():map "<leader>ud"
-        require("snacks").toggle.line_number():map "<leader>ul"
+    {
+      "<leader>us",
+      desc = "Toggle Spell",
+      function()
+        require("snacks").toggle.option("spell", { name = "Spelling" }):toggle()
+      end,
+    },
+    {
+      "<leader>uw",
+      desc = "Toggle Wrap",
+      function()
+        require("snacks").toggle.option("wrap", { name = "Wrap" }):toggle()
+      end,
+    },
+    {
+      "<leader>uL",
+      desc = "Toggle Relative Line Numbers",
+      function()
+        require("snacks").toggle.option("relativenumber", { name = "Relative Number" }):toggle()
+      end,
+    },
+    {
+      "<leader>ud",
+      desc = "Toggle Diagnostics",
+      function()
+        require("snacks").toggle.diagnostics():toggle()
+      end,
+    },
+    {
+      "<leader>ul",
+      desc = "Toggle Line Numbers",
+      function()
+        require("snacks").toggle.line_number():toggle()
+      end,
+    },
+    {
+      "<leader>uc",
+      desc = "Toggle Conceal",
+      function()
         require("snacks").toggle
           .option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
-          :map "<leader>uc"
-        require("snacks").toggle.treesitter():map "<leader>uT"
-        require("snacks").toggle
-          .option("background", { off = "light", on = "dark", name = "Dark Background" })
-          :map "<leader>ub"
-        require("snacks").toggle.inlay_hints():map "<leader>uh"
+          :toggle()
       end,
-    })
-  end,
+    },
+    {
+      "<leader>uh",
+      desc = "Toggle Inlay Hints",
+      function()
+        require("snacks").toggle.inlay_hints():toggle()
+      end,
+    },
+    {
+      "<leader>ut",
+      desc = "Toggle Treesitter",
+      function()
+        require("snacks").toggle.treesitter():toggle()
+      end,
+    },
+  },
 }

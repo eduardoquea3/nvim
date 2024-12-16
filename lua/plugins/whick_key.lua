@@ -65,17 +65,6 @@ return {
       { "<A-a>", "ggVG", desc = "Select all" },
       -- { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
       {
-        "<leader>m",
-        function()
-          local uname = vim.loop.os_uname().sysname
-          if uname == "Windows_NT" then
-            vim.notify("windows")
-          else
-            vim.notify("linux")
-          end
-        end,
-      },
-      {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
         { "<leader>w", "<cmd>w<cr>", desc = "Write" },

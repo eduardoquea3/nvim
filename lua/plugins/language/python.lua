@@ -59,5 +59,13 @@ return {
         python = { "ruff_format", "ruff_organize_imports" },
       },
     },
+    config = function(_, opts)
+      local format = require "conform"
+      format.setup(opts)
+      local conf = vim.fn.stdpath "config"
+      format.formatters.ruff_format = {
+        prepend_args = { "--config", conf .. "/ruff.toml" },
+      }
+    end,
   },
 }

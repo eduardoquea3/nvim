@@ -23,6 +23,11 @@ return {
         headings = headings,
       }
       vim.cmd "Markview enableAll"
+
+      vim.keymap.set("n", "<leader>m", function()
+        vim.cmd "Markview toggleAll"
+        vim.notify "Markview toggled"
+      end, { desc = "Toggle Markview" })
     end,
   },
   {

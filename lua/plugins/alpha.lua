@@ -6,25 +6,22 @@ return {
   opts = function()
     local dashboard = require "alpha.themes.dashboard"
     local logo = [[
-                                                    
-             ████ ██████           █████      ██
-            ███████████             █████ 
-            █████████ ███████████████████ ███   ███████████
-           █████████  ███    █████████████ █████ ██████████████
-          █████████ ██████████ █████████ █████ █████ ████ █████
-        ███████████ ███    ███ █████████ █████ █████ ████ █████
-       ██████  █████████████████████ ████ █████ █████ ████ ██████
+                                                 
+          ████ ██████           █████      ██
+         ███████████             █████ 
+         █████████ ███████████████████ ███   ███████████
+        █████████  ███    █████████████ █████ ██████████████
+       █████████ ██████████ █████████ █████ █████ ████ █████
+     ███████████ ███    ███ █████████ █████ █████ ████ █████
+    ██████  █████████████████████ ████ █████ █████ ████ ██████
     ]]
 
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
       dashboard.button("f", " " .. " Find file", "<cmd>Telescope find_files<CR>"),
       dashboard.button("n", " " .. " New file", "<cmd>ene <BAR> startinsert <CR>"),
-      dashboard.button("b", " " .. " Find Browser", "<cmd>Telescope file_browser<cr>"),
-      dashboard.button("r", " " .. " Recent files", "<cmd>Telescope oldfiles <CR>"),
-      dashboard.button("g", " " .. " Find text", "<cmd>Telescope live_grep <CR>"),
       dashboard.button("s", " " .. "Restore Session", '<cmd>lua require("persistence").load()<cr>'),
-      dashboard.button("c", " " .. " Config", "<cmd>Telescope find_browser path=~/AppData/Local/nvim/<cr>"),
+      dashboard.button("c", " " .. " Config", "<cmd>Telescope file_browser path=~/AppData/Local/nvim/<cr>"),
       dashboard.button("l", "󰒲 " .. " Lazy", "<cmd>Lazy<CR>"),
       dashboard.button("q", " " .. " Quit", "<cmd>qa<CR>"),
     }
