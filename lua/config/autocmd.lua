@@ -92,23 +92,23 @@ function M.load_defaults()
         end,
       },
     },
-    {
-      { "BufEnter" },
-      {
-        group = "_neotree_start",
-        callback = function()
-          if package.loaded["neo-tree"] then
-            return true
-          else
-            local stats = (vim.uv or vim.loop).fs_stat(vim.api.nvim_buf_get_name(0))
-            if stats and stats.type == "directory" then
-              require("lazy").load { plugins = { "neo-tree.nvim" } }
-              return true
-            end
-          end
-        end,
-      },
-    },
+    -- {
+    --   { "BufEnter" },
+    --   {
+    --     group = "_neotree_start",
+    --     callback = function()
+    --       if package.loaded["neo-tree"] then
+    --         return true
+    --       else
+    --         local stats = (vim.uv or vim.loop).fs_stat(vim.api.nvim_buf_get_name(0))
+    --         if stats and stats.type == "directory" then
+    --           require("lazy").load { plugins = { "neo-tree.nvim" } }
+    --           return true
+    --         end
+    --       end
+    --     end,
+    --   },
+    -- },
     {
       { "FileType" },
       {

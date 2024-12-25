@@ -9,7 +9,7 @@ vim.diagnostic.config {
     },
   },
   severity_sort = true,
-  float = { border = "rounded" },
+  float = { border = "single" },
 }
 local icon = require "eduardo.icons"
 local signos = {
