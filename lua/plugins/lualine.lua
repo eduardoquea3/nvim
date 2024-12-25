@@ -21,8 +21,8 @@ return {
     require("lualine").setup {
       options = {
         -- theme = require("neofusion.lualine"),
-        -- theme = "catppuccin",
-        theme = "auto",
+        theme = "catppuccin",
+        -- theme = "auto",
         globalstatus = true,
         icons_enabled = true,
         component_separators = { left = "|", right = "|" },
@@ -44,12 +44,7 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
-          -- "fancy_mode",
-          -- "filetype",
-          -- {
-          -- "fancy_filetype",
-          -- ts_icon = "",
-          -- },
+          "fancy_mode",
           "fancy_branch",
           {
             "fancy_diagnostics",

@@ -1,10 +1,14 @@
 return {
   {
     "folke/lazydev.nvim",
-    config = true,
+    event = "User FileOpened",
     ft = "lua",
     dependencies = {
       "neovim/nvim-lspconfig",
+      "justinsgithub/wezterm-types",
+    },
+    opts = {
+      { path = "wezterm-types", mods = { "wezterm" } },
     },
   },
   {
