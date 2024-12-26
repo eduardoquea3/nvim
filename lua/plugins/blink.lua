@@ -3,6 +3,8 @@ return {
   event = "InsertEnter",
   dependencies = { "rafamadriz/friendly-snippets" },
   version = "*",
+  --@module "blink.cmp"
+  --@type blink.cmp.config
   opts = function()
     local icons = require "eduardo.icons"
     return {
@@ -24,16 +26,18 @@ return {
       },
       completion = {
         menu = {
+          border = "rounded",
           draw = {
             columns = {
-              { "label", "label_description", gap = 1 },
-              { "kind_icon", "kind", gap = 2 },
+              { "kind_icon", "label", gap = 1 },
+              { "kind" },
             },
           },
         },
       },
       appearance = {
         use_nvim_cmp_as_default = true,
+        nerd_font_variant = "mono",
         kind_icons = {
           Text = icons.kind.Text,
           Method = icons.kind.Method,
@@ -65,6 +69,12 @@ return {
           Event = icons.kind.Event,
           Operator = icons.kind.Operator,
           TypeParameter = icons.kind.TypeParameter,
+        },
+      },
+      signature = {
+        enabled = true,
+        window = {
+          border = "rounded",
         },
       },
     }

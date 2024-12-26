@@ -37,7 +37,7 @@ return {
           },
         },
         no_italic = true,
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           cmp = true,
           notify = true,

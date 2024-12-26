@@ -11,6 +11,7 @@ return {
     end
     wk.setup {}
     wk.add {
+      { "/", "<cmd>SearchBoxIncSearch<cr>", desc = "Search", remap = true },
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
       { "ss", "<cmd>split<cr>", desc = "Horizontal Split buffer" },
       { "sv", "<cmd>vsplit<cr>", desc = "Vertical Split buffer" },
