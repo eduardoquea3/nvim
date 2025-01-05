@@ -8,6 +8,7 @@ return {
   {
     "saghen/blink.cmp",
     event = "InsertEnter",
+    keys = { { ":" } },
     dependencies = {
       "rafamadriz/friendly-snippets",
       {
