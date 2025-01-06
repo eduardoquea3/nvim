@@ -29,18 +29,6 @@ return {
       "davidmh/cmp-nerdfonts",
       "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-nvim-lua",
-      "saadparwaiz1/cmp_luasnip",
-      {
-        "L3MON4D3/LuaSnip",
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load()
-          require("luasnip.loaders.from_vscode").lazy_load {
-            paths = {
-              vim.fn.stdpath "config" .. "/snippets",
-            },
-          }
-        end,
-      },
     },
     version = "*",
     opts = function()
@@ -63,9 +51,13 @@ return {
             "nerdfonts",
             "cmdline",
             "nvim_lua",
-            "luasnip",
           },
           providers = {
+            snippets = {
+              opts = {
+                search_path = vim.fn.stdpath "config" .. "/snippets",
+              },
+            },
             lazydev = {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
@@ -78,6 +70,7 @@ return {
             nerdfonts = {
               name = "nerdfonts",
               module = "blink.compat.source",
+              min_keyword_length = 5,
             },
             cmdline = {
               name = "cmdline",
@@ -87,17 +80,17 @@ return {
               name = "nvim_lua",
               module = "blink.compat.source",
             },
-            luasnip = {
-              name = "luasnip",
-              module = "blink.compat.source",
-            },
           },
         },
         completion = {
+          documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 200,
+            window = {
+              border = "rounded",
+            },
+          },
           menu = {
-            -- auto_show = function(ctx)
-            --   return ctx.mode ~= "cmdline"
-            -- end,
             border = "rounded",
             draw = {
               columns = {

@@ -79,6 +79,7 @@ return {
         { "<C-l>", "<C-\\><C-n>", desc = "Mode Normal" },
         { "<C-j>", "<down>", desc = "Movement" },
         { "<C-k>", "<up>", desc = "Movement" },
+        { "<C-e>", "<CR>", desc = "Movement" },
       },
       {
         mode = "v",
