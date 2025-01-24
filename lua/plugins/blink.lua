@@ -50,14 +50,9 @@ return {
             "dadbod",
             "nerdfonts",
             "cmdline",
-            "nvim_lua",
+            -- "nvim_lua",
           },
           providers = {
-            snippets = {
-              opts = {
-                search_path = vim.fn.stdpath "config" .. "/snippets",
-              },
-            },
             lazydev = {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
@@ -70,16 +65,16 @@ return {
             nerdfonts = {
               name = "nerdfonts",
               module = "blink.compat.source",
-              min_keyword_length = 5,
+              min_keyword_length = 7,
             },
             cmdline = {
               name = "cmdline",
               module = "blink.compat.source",
             },
-            nvim_lua = {
-              name = "nvim_lua",
-              module = "blink.compat.source",
-            },
+            -- nvim_lua = {
+            --   name = "nvim_lua",
+            --   module = "blink.compat.source",
+            -- },
           },
         },
         completion = {

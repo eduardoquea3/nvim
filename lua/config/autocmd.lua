@@ -146,6 +146,7 @@ function M.load_defaults()
           end
 
           -- map("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
+          map("gd", vim.lsp.buf.definition, "Goto Definition")
           -- map("gr", require("telescope.builtin").lsp_references, "Goto References")
           -- map("gi", require("telescope.builtin").lsp_implementations, "Goto Implementation")
           -- map("go", require("telescope.builtin").lsp_type_definitions, "Type Definition")

@@ -18,7 +18,7 @@ return {
   pylsp = {},
   -- pyright = {},
 
-  kotlin_language_server = {},
+  -- kotlin_language_server = {},
 
   astro = {},
   cssls = {},
@@ -27,7 +27,7 @@ return {
   },
   html = {},
   tailwindcss = {},
-  intelephense = {},
+  -- intelephense = {},
   -- phpactor = {},
   -- powershell_es = {},
 }

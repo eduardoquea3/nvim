@@ -7,5 +7,6 @@ return {
     },
     cmd = { "Dotnet" },
     opts = true,
+    enabled = false,
   },
 }
