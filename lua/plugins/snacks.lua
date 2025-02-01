@@ -5,6 +5,8 @@ return {
   event = "User FileOpened",
   opts = {
     bigfile = { enabled = true },
+    explorer = { enabled = true },
+    notifier = { enabled = true },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
@@ -16,6 +18,13 @@ return {
     dim = { enabled = true },
   },
   keys = {
+    {
+      "<c-e>",
+      function()
+        require("snacks").picker.explorer()
+      end,
+      desc = "Dim",
+    },
     {
       "<leader>t",
       function()

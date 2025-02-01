@@ -1,14 +1,15 @@
 return {
   "shellRaining/hlchunk.nvim",
+  enabled = false,
   event = "User FileOpened",
   config = function()
     require("hlchunk").setup {
       indent = {
-        enable = true,
+        enable = false,
         use_treesitter = false,
       },
       chunk = {
-        enable = true,
+        enable = false,
         style = {
           { fg = "#a9b665" },
         },
