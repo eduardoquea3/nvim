@@ -54,9 +54,6 @@ return {
         end,
         desc = "Split delete",
       },
-      -- { "<C-w>", "<cmd>bp | bd #<cr>", desc = "Close file in  split" },
-      -- { "<Tab>", "<cmd>bn<cr>", desc = "Tab next" },
-      -- { "<S-Tab>", "<cmd>bp<cr>", desc = "Tab previous" },
       { "<A-j>", ":m .+1<cr>==", desc = "Move down line" },
       { "<A-k>", ":m .-2<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
@@ -64,11 +61,9 @@ return {
       { "<C-k>", "<C-w>k", desc = "Movement split" },
       { "<C-l>", "<C-w>l", desc = "Movement split" },
       { "<A-a>", "ggVG", desc = "Select all" },
-      -- { "<C-k>w", "<cmd>bufdo bd<cr>", desc = "Close all buffers" },
       {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
-        { "<leader>w", "<cmd>w<cr>", desc = "Write" },
       },
       {
         mode = { "v", "i" },
@@ -101,6 +96,17 @@ return {
       {
         mode = "c",
         { "<C-l>", "<Esc>", desc = "Escape" },
+      },
+      {
+        mode = { "n", "v", "i" },
+        {
+          "<c-s>",
+          function()
+            vim.cmd "w"
+            vim.notify "Saved"
+          end,
+          desc = "Save",
+        },
       },
     }
     -- require "config.keymap"

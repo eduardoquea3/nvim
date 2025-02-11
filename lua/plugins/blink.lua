@@ -49,8 +49,8 @@ return {
             "lazydev",
             "dadbod",
             "nerdfonts",
-            "cmdline",
-            -- "nvim_lua",
+            -- "cmdline",
+            "nvim_lua",
           },
           providers = {
             lazydev = {
@@ -67,14 +67,14 @@ return {
               module = "blink.compat.source",
               min_keyword_length = 7,
             },
-            cmdline = {
-              name = "cmdline",
-              module = "blink.compat.source",
-            },
-            -- nvim_lua = {
-            --   name = "nvim_lua",
+            -- cmdline = {
+            --   name = "cmdline",
             --   module = "blink.compat.source",
             -- },
+            nvim_lua = {
+              name = "nvim_lua",
+              module = "blink.compat.source",
+            },
           },
         },
         completion = {
