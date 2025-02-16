@@ -1,10 +1,30 @@
 return {
   "folke/snacks.nvim",
-  event = "User FileOpened",
+  event = "VimEnter",
   opts = {
     bufdelete = { enabled = true },
     scroll = { enabled = true },
     bigfile = { enabled = true },
+    terminal = { enabled = true },
+    dashboard = {
+      enabled = true,
+      preset = {
+        keys = {
+          { icon = "", key = "f", desc = "Find File", action = ":lua Snacks.picker.smart({filter = {cwd = true}})" },
+          { icon = "󰬴", key = "w", desc = "Live Grep", action = ":lua Snacks.picker.recent()" },
+          { icon = "󰒲", key = "l", desc = "Lazy", action = ":Lazy" },
+          { icon = "", key = "s", desc = "Restart Session", action = ":lua require('persistence').load()" },
+          { icon = "", key = "q", desc = "Quit Neovim", action = ":qa" },
+        },
+      },
+      sections = {
+        { section = "header" },
+        { icon = "", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+        { icon = "", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+        { icon = "", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        { section = "startup" },
+      },
+    },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
@@ -32,6 +52,13 @@ return {
   },
   keys = {
     {
+      "<leader>fB",
+      function()
+        Snacks.picker.help() {}
+      end,
+      desc = "Help Tag Picker",
+    },
+    {
       "<leader>fb",
       function()
         Snacks.picker.buffers() {}
@@ -57,7 +84,7 @@ return {
       function()
         Snacks.picker.recent()
       end,
-      desc = "Grep Picker",
+      desc = "Recent Picker",
     },
     {
       "<leader>fw",
