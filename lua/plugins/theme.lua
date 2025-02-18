@@ -42,7 +42,7 @@ return {
           cmp = true,
           notify = true,
           treesitter = true,
-          alpha = true,
+          -- alpha = true,
           gitsigns = true,
           harpoon = true,
           indent_blankline = {
@@ -54,10 +54,10 @@ return {
           noice = true,
           ufo = true,
           symbols_outline = true,
-          telescope = {
-            enabled = true,
-            -- style = "nvchad",
-          },
+          -- telescope = {
+          -- enabled = true,
+          -- style = "nvchad",
+          -- },
           lsp_trouble = true,
           which_key = true,
         },
