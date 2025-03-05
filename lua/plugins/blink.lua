@@ -1,16 +1,28 @@
 return {
   {
-    "saghen/blink.compat",
-    version = "*",
-    opts = {},
-    lazy = true,
-  },
-  {
     "saghen/blink.cmp",
-    event = "InsertEnter",
-    keys = { { ":" } },
+    event = { "User FileOpened", "CmdlineEnter" },
     dependencies = {
+      {
+        "saghen/blink.compat",
+        version = "*",
+        opts = {},
+        lazy = true,
+      },
+      {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {
+          library = {
+            { path = "wezterm-types", mods = { "wezterm" } },
+          },
+        },
+      },
       "rafamadriz/friendly-snippets",
+      {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+      },
       {
         "xzbdmw/colorful-menu.nvim",
         opts = {
@@ -34,11 +46,19 @@ return {
     opts = function()
       local icons = require "eduardo.icons"
       return {
+        cmdline = {
+          enabled = true,
+          completion = {
+            ghost_text = { enabled = false },
+            menu = { auto_show = true },
+          },
+        },
         keymap = {
           preset = "default",
           ["<Tab>"] = { "select_next", "fallback" },
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Cr>"] = { "accept", "fallback" },
+          ["<C-n>"] = { "show", "fallback" },
         },
         sources = {
           default = {
@@ -46,13 +66,26 @@ return {
             "path",
             "snippets",
             "buffer",
-            "lazydev",
-            "dadbod",
             "nerdfonts",
-            -- "cmdline",
-            "nvim_lua",
+          },
+          per_filetype = {
+            sql = { "snippets", "dadbod", "buffer" },
+            lua = {
+              "lazydev",
+              "lsp",
+              "path",
+              "snippets",
+              "buffer",
+              "nerdfonts",
+              "nvim_lua",
+            },
           },
           providers = {
+            snippets = {
+              opts = {
+                search_path = vim.fn.stdpath "config" .. "/snippets",
+              },
+            },
             lazydev = {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
@@ -65,12 +98,12 @@ return {
             nerdfonts = {
               name = "nerdfonts",
               module = "blink.compat.source",
-              min_keyword_length = 7,
+              min_keyword_length = 5,
             },
-            -- cmdline = {
-            --   name = "cmdline",
-            --   module = "blink.compat.source",
-            -- },
+            cmdline = {
+              name = "cmdline",
+              module = "blink.compat.source",
+            },
             nvim_lua = {
               name = "nvim_lua",
               module = "blink.compat.source",
@@ -164,6 +197,5 @@ return {
         },
       }
     end,
-    opts_extend = { "sources.default" },
   },
 }
