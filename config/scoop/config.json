@@ -1,5 +1,7 @@
 {
-  "last_update": "2024-11-22T16:43:07.7455185-05:00",
+  "root_path": "U:\\Scoop",
+  "global_path": "C:\\Users\\eduar\\.scoop\\",
+  "last_update": "2025-03-04T22:21:22.6409701-05:00",
   "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
   "scoop_branch": "master"
 }

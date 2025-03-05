@@ -1,16 +1,11 @@
 command_timeout = 1000
 add_newline = true
 
-# [╭─](sky)\
-# [│ ](sky)\
-# [╰─](sky)\
-# [【](sky)\
-# [】](sky)\
 format = """
   $directory\
   $git_branch\
-  $git_status
-  $package\
+  $git_status\
+  $fill\
   $python\
   $nodejs\
   $lua\
@@ -18,7 +13,8 @@ format = """
   $php\
   $java\
   $kotlin\
-  $dotnet
+  $dotnet\
+  $package
   $character"""
 
 palette = "catppuccin_mocha"
@@ -51,6 +47,9 @@ mantle = "#181825"
 crust = "#11111b"
 
 
+[fill]
+symbol = ' '
+
 [character]
 success_symbol = '[](bold green) '
 error_symbol = '[](bold red) '
@@ -60,7 +59,7 @@ disabled = false
 read_only = " "
 truncation_length = 4
 truncate_to_repo = false
-format = "[$read_only](blue)[$path](bold green)"
+format = "[$read_only](blue)[$path](lavender)"
 
 [git_status]
 stashed = "  \\(${count}\\) "
@@ -73,43 +72,37 @@ renamed = " 󰑕 \\(${count}\\)"
 modified = "  \\(${count}\\)"
 staged = "  \\(${count}\\)"
 untracked = "  \\(${count}\\)"
-format = "([$all_status$ahead_behind](white)) "
+format = "( [](peach)[$all_status$ahead_behind](bg:peach fg:surface0)[](peach)) "
 
 [git_branch]
 symbol = " "
-format = " [$symbol$branch](peach)"
+format = " [](peach)[$symbol$branch](bg:peach fg:surface0)[](peach)"
 
 [package]
-symbol = " "
 display_private = true
 version_format = "v${raw}"
-format = "[$symbol](yellow)[$version](text)"
+format = " [ ](yellow)[$version](text)"
 
 #=== languages ===
 
 [nodejs]
-symbol = "  "
-format = "[$symbol $version](bold green)"
+format = " [](bold green)[ ($version )](bg:green fg:surface0)[](bold green)"
 
 [python]
-symbol = " [   ](fg:blue)"
-pyenv_prefix = 'pyenv '
+pyenv_prefix = 'venv '
 python_binary = ["python", "python2", "python3"]
-format = '${symbol}${pyenv_prefix}(${version})([ \($virtualenv\)](peach))'
+format = '([ \($virtualenv\)](peach)) [](bold blue)[ ${pyenv_prefix}(${version})](bg:blue fg:surface0)[](bold blue)'
 
 [lua]
-format = '[   $version ](blue)'
+format = ' [](bold blue)[  ($version )](bg:blue fg:surface0)[](bold blue)'
 
 [rust]
-symbol = "  "
-format = '[$symbol ($version) ](red)'
+format = ' [](bold red)[ ($version )](bg:red fg:surface0)[](bold red)'
 
 [java]
-symbol = "  "
-format = '[$symbol ($version) ](red)'
+format = ' [](bold red)[ ($version )](bg:red fg:surface0)[](bold red)'
 
 [kotlin]
-symbol = "  "
 detect_files = [
   'pom.xml',
   'build.gradle.kts',
@@ -120,16 +113,14 @@ detect_files = [
   'build.boot',
   '.sdkmanrc',
 ]
-format = '[$symbol ($version) ](mauve)'
+format = ' [](bold mauve)[ ($version )](bg:mauve fg:surface0)[](bold mauve)'
 
 [dotnet]
-symbol = "󰪮 "
 detect_extensions = ['csproj', 'fsproj', 'xproj', 'cs']
-format = "[$symbol ($version) ](mauve)"
+format = ' [](bold mauve)[󰪮 ($version )](bg:mauve fg:surface0)[](bold mauve)'
 
 [php]
-symbol = ""
-format = "[$symbol ($version)](mauve)"
+format = ' [](bold mauve)[ ($version )](bg:mauve fg:surface0)[](bold mauve)'
 
 [bun]
 symbol = ""
