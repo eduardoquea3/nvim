@@ -59,6 +59,8 @@ return {
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Cr>"] = { "accept", "fallback" },
           ["<C-n>"] = { "show", "fallback" },
+          ["<C-e>"] = { "accept", "fallback" },
+          ["<C-q>"] = { "cancel", "fallback" },
         },
         sources = {
           default = {
