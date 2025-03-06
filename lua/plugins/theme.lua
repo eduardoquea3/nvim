@@ -76,12 +76,26 @@ return {
     "olimorris/onedarkpro.nvim",
     priority = 1000,
     config = function()
-      require("onedarkpro").setup({
+      require("onedarkpro").setup {
         highlights = {
           PmenuSel = { bg = "#4e5469" },
-        }
-      })
+        },
+        plugins = {
+          nvim_lsp = true,
+          treesitter = true,
+          blink_cmp = true,
+          diffview = true,
+          gitsigns = true,
+          lsp_saga = true,
+          mason = true,
+          snacks = true,
+          toggleterm = true,
+          trouble = true,
+          which_key = true,
+          vim_dadbod_ui = true,
+        },
+      }
       vim.cmd.colorscheme "onedark_dark"
     end,
-  }
+  },
 }
