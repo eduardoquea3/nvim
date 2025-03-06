@@ -107,6 +107,14 @@ return {
           end,
           desc = "Save",
         },
+        {
+          "<C-p>s",
+          function()
+            vim.cmd "wall"
+            vim.notify "Saved all"
+          end,
+          desc = "Save All",
+        },
       },
     }
     -- require "config.keymap"

@@ -6,7 +6,6 @@ return {
     { "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Bufferline cycle prev", mode = "n" },
     { "<M-/>", "<cmd>BufferLinePick<cr>", desc = "Bufferline pick", mode = "n" },
     { "<M-c>", "<cmd>BufferLinePickClose<cr>", desc = "Bufferline close", mode = "n" },
-    { "<C-k>w", "<cmd>BufferLineCloseOthers<cr>", desc = "Bufferline close others", mode = "n" },
   },
   opts = {
     options = {

@@ -102,7 +102,7 @@ return {
       desc = "Notification Picker",
     },
     {
-      "<c-k>w",
+      "<c-p>w",
       function()
         Snacks.bufdelete.all()
       end,
