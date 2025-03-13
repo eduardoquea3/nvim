@@ -15,8 +15,8 @@ return {
   },
   -- ts_ls = {},
   vtsls = {},
-  pylsp = {},
-  -- pyright = {},
+  -- pylsp = {},
+  pyright = {},
 
   -- kotlin_language_server = {},
 
