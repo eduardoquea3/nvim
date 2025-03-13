@@ -56,7 +56,7 @@ return {
       format.setup(opts)
       local conf = vim.fn.stdpath "config"
       format.formatters.stylua = {
-        prepend_args = { "--config-path", conf .. "/stylua.toml" },
+        args = { "--config-path=" .. conf .. "/stylua.toml" },
       }
     end,
   },

@@ -8,7 +8,17 @@ return {
     },
     "tpope/vim-dotenv",
   },
-  keys = { { "<leader><leader>db", ":tab DBUI<cr>", desc = "Open Database client" } },
+  keys = {
+    { "<leader><leader>db", ":tab DBUI<cr>", desc = "Open Database client" },
+    {
+      "<leader>e",
+      "<PLUG>(DBUI_ExecuteQuery)",
+      desc = "Run query",
+      silent = true,
+      noremap = false,
+      mode = "x",
+    },
+  },
   init = function()
     vim.g.db_ui_use_nvim_notify = 1
     vim.g.db_ui_use_nerd_fonts = 1
