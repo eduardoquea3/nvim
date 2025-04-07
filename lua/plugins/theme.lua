@@ -2,9 +2,9 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    -- priority = 1000,
+    priority = 1000,
     -- enabled = false,
-    lazy = true,
+    -- lazy = true,
     config = function()
       require("catppuccin").setup {
         color_overrides = {
@@ -38,8 +38,9 @@ return {
           },
         },
         no_italic = true,
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
+          blink_cmp = true,
           cmp = true,
           notify = true,
           treesitter = true,
@@ -74,7 +75,8 @@ return {
   },
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000,
+    -- priority = 1000,
+    lazy = true,
     config = function()
       require("onedarkpro").setup {
         highlights = {
