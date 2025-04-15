@@ -1,13 +1,16 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
+  dependencies = {
+    "folke/snacks.nvim",
+  },
   keys = {
     { "<leader>a", ":WhichKey<cr>", desc = "Mostrar Atajos" },
   },
   config = function()
     local wk = require "which-key"
-    local function has_neotree()
-      return vim.fn.bufwinnr "neo-tree" ~= -1
+    local function has_open_tree()
+      return vim.fn.bufwinnr "snacks_picker_list" ~= -1
     end
     wk.setup {}
     wk.add {
@@ -24,26 +27,27 @@ return {
         function()
           local splits = vim.fn.winnr "$"
           local bufs = #vim.fn.getbufinfo { buflisted = 1 }
-          local neotree = has_neotree()
+          local tree_open = has_open_tree()
+          local snacks = require "snacks"
 
-          if bufs > 1 and neotree then
-            vim.cmd "Neotree toggle"
+          if bufs > 1 and tree_open then
+            snacks.explorer()
             vim.api.nvim_buf_delete(0, { force = true })
             return
           end
 
           if bufs == 1 and splits == 1 then
+            snacks.bufdelete()
+            return
+          end
+
+          if bufs == 1 and tree_open then
+            snacks.explorer()
             vim.api.nvim_buf_delete(0, { force = true })
             return
           end
 
-          if bufs == 1 and neotree then
-            vim.cmd "Neotree toggle"
-            vim.api.nvim_buf_delete(0, { force = true })
-            return
-          end
-
-          if bufs == 1 and splits > 1 and not neotree then
+          if bufs == 1 and splits > 1 and not tree_open then
             vim.cmd "close"
             return
           end
@@ -54,12 +58,16 @@ return {
         end,
         desc = "Split delete",
       },
-      { "<A-j>", ":m .+1<cr>==", desc = "Move down line" },
-      { "<A-k>", ":m .-2<cr>==", desc = "Move up line" },
+      { "<A-j>", "<cmd>execute 'move .+'  . v:count1<cr>==", desc = "Move down line" },
+      { "<A-k>", "<cmd>execute 'move .-'  . (v:count1 + 1)<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
       { "<C-j>", "<C-w>j", desc = "Movement split" },
       { "<C-k>", "<C-w>k", desc = "Movement split" },
       { "<C-l>", "<C-w>l", desc = "Movement split" },
+      { "<C-Up>", "<cmd>resize +2<cr>", desc = "Increase Window Height" },
+      { "<C-Down>", "<cmd>resize -2<cr>", desc = "Decrease Window Height" },
+      { "<C-Left>", "<cmd>vertical resize -2<cr>", desc = "Decrease Window Height" },
+      { "<C-Right>", "<cmd>vertical resize +2<cr>", desc = "Increase Window Height" },
       { "<A-a>", "ggVG", desc = "Select all" },
       {
         mode = { "n", "v" },
@@ -79,6 +87,8 @@ return {
       {
         mode = "v",
         { "<leader>/", "gc", desc = "Toggle Comment", remap = true },
+        { "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", desc = "Move Down" },
+        { "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", desc = "Move Up" },
       },
       {
         mode = "i",
@@ -86,8 +96,8 @@ return {
         { "<A-j>", "<down>", desc = "Movement" },
         { "<A-k>", "<up>", desc = "Movement" },
         { "<A-l>", "<right>", desc = "Movement" },
-        { "<C-j>", "<Esc><cmd>m .+7<cr>==a", desc = "Movement down line" },
-        { "<C-k>", "<Esc><cmd>m .4<cr>==a", desc = "Movement up line" },
+        { "<C-j>", "<esc><cmd>m .+1<cr>==gi", desc = "Movement down line" },
+        { "<C-k>", "<esc><cmd>m .-2<cr>==gi", desc = "Movement up line" },
         { "<right>", "", desc = "Null" },
         { "<left>", "", desc = "Null" },
         { "<down>", "", desc = "Null" },

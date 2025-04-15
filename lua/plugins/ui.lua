@@ -7,6 +7,7 @@ return {
       { ":" },
     },
     opts = {
+      notify = { enabled = false },
       cmdline = {
         enabled = true,
       },

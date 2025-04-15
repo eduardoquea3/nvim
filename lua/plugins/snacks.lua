@@ -42,6 +42,15 @@ return {
           },
         },
       },
+      sources = {
+        explorer = {
+          layout = {
+            layout = {
+              position = "right",
+            },
+          },
+        },
+      },
     },
     styles = {
       notification = {
@@ -111,9 +120,7 @@ return {
     {
       "<leader>e",
       function()
-        Snacks.explorer.open {
-          layout = { layout = { position = "right" } },
-        }
+        Snacks.explorer()
       end,
       desc = "Explorer",
     },

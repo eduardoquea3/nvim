@@ -197,6 +197,9 @@ return {
             border = "rounded",
           },
         },
+        fuzzy = {
+          implementation = "prefer_rust",
+        }
       }
     end,
   },

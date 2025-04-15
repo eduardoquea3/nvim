@@ -10,11 +10,11 @@ return {
       },
     },
   },
-  bashls = {
-    filetypes = { "sh", "zsh" },
-  },
-  -- ts_ls = {},
-  vtsls = {},
+  -- bashls = {
+  --   filetypes = { "sh", "zsh" },
+  -- },
+  ts_ls = {},
+  -- vtsls = {},
   -- pylsp = {},
   pyright = {},
 
