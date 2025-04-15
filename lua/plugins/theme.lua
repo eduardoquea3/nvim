@@ -38,7 +38,7 @@ return {
           -- },
         },
         no_italic = true,
-        transparent_background = false,
+        transparent_background = true,
         integrations = {
           blink_cmp = true,
           diffview = true,
