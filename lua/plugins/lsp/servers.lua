@@ -13,8 +13,8 @@ return {
   bashls = {
     filetypes = { "sh", "zsh" },
   },
-  -- ts_ls = {},
-  vtsls = {},
+  ts_ls = {},
+  -- vtsls = {},
   -- pylsp = {},
   pyright = {},
 
