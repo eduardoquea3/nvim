@@ -3,8 +3,8 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    -- enabled = false,
-    -- lazy = true,
+    enabled = false,
+    lazy = true,
     config = function()
       require("catppuccin").setup {
         color_overrides = {
@@ -98,6 +98,14 @@ return {
         },
       }
       vim.cmd.colorscheme "onedark_dark"
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    -- lazy = true,
+    config = function()
+      vim.cmd.colorscheme "kanagawa"
     end,
   },
 }
