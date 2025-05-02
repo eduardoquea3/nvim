@@ -1,34 +1,28 @@
 return {
   {
     "OXY2DEV/markview.nvim",
-    -- lazy = false,
+    lazy = false,
     -- enabled = false,
     ft = "markdown",
     dependencies = {
-      {
-        "nvim-treesitter/nvim-treesitter",
-        ft = "markdown",
-      },
-      {
-        "nvim-tree/nvim-web-devicons",
-        ft = "markdown",
-      },
+      "saghen/blink.cmp",
     },
-    config = function()
-      local mark = require "markview"
-      -- local presets = require "markview.presets"
-      local headings = require "eduardo.markdown.heading"
-
-      mark.setup {
-        headings = headings,
-      }
-      vim.cmd "Markview enableAll"
-
-      vim.keymap.set("n", "<leader>m", function()
-        vim.cmd "Markview toggleAll"
-        vim.notify "Markview toggled"
-      end, { desc = "Toggle Markview" })
-    end,
+    config = true,
+    -- config = function()
+    --   local mark = require "markview"
+    --   -- local presets = require "markview.presets"
+    --   local headings = require "eduardo.markdown.heading"
+    --
+    --   mark.setup {
+    --     headings = headings,
+    --   }
+    --   vim.cmd "Markview enableAll"
+    --
+    --   vim.keymap.set("n", "<leader>m", function()
+    --     vim.cmd "Markview toggleAll"
+    --     vim.notify "Markview toggled"
+    --   end, { desc = "Toggle Markview" })
+    -- end,
   },
   {
     "OXY2DEV/helpview.nvim",

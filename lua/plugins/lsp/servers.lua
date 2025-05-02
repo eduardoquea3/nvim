@@ -10,9 +10,9 @@ return {
       },
     },
   },
-  -- bashls = {
-  --   filetypes = { "sh", "zsh" },
-  -- },
+  bashls = {
+    filetypes = { "sh", "zsh" },
+  },
   ts_ls = {},
   -- vtsls = {},
   -- pylsp = {},

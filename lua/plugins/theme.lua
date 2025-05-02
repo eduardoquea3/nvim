@@ -4,7 +4,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     enabled = false,
-    -- lazy = true,
+    lazy = true,
     config = function()
       require("catppuccin").setup {
         color_overrides = {
@@ -96,12 +96,9 @@ return {
   {
     "rebelot/kanagawa.nvim",
     priority = 1000,
-    opts = {
-      compile = true,
-    },
-    config = function(_, opts)
-      require("kanagawa").setup(opts)
-      vim.cmd.colorscheme "kanagawa-wave"
+    -- lazy = true,
+    config = function()
+      vim.cmd.colorscheme "kanagawa"
     end,
   },
 }
