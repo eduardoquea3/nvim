@@ -168,6 +168,12 @@ function M.load_defaults()
             require("conform").format { async = true }
             vim.notify "Formateado"
           end, "Formatear archivo")
+          map("gk", function()
+            vim.diagnostic.goto_prev()
+          end, "Go to previous diagnostic")
+          map("gj", function()
+            vim.diagnostic.goto_next()
+          end, "Go to next diagnostic")
         end,
       },
     },

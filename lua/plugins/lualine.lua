@@ -46,7 +46,7 @@ return {
         lualine_c = {
           "fancy_mode",
           "fancy_branch",
-          "filename",
+          { "filename", symbols = { modified = " ", readonly = " ", unnamed = " ", newfile = " " } },
           {
             "fancy_diagnostics",
             sources = { "nvim_lsp" },
@@ -56,7 +56,7 @@ return {
         },
         lualine_x = {
           "fancy_macro",
-          "fancy_lsp_servers",
+          -- "fancy_lsp_servers",
           -- component.lsp,
           component.spaces,
           "fancy_diff",
