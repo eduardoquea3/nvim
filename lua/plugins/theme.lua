@@ -97,8 +97,21 @@ return {
     "rebelot/kanagawa.nvim",
     priority = 1000,
     -- lazy = true,
+    enabled = false,
     config = function()
       vim.cmd.colorscheme "kanagawa"
+    end,
+  },
+  {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("kanso").setup {
+        compile = true,
+        theme = "ink",
+      }
+      vim.cmd.colorscheme "kanso"
     end,
   },
 }
