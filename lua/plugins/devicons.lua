@@ -9,6 +9,11 @@ return {
           color = "#4d80ff",
           name = "http",
         },
+        ["css"] = {
+          icon = "",
+          color = "#4d9dfe",
+          name = "css",
+        },
       },
       override_by_filename = {
         [".luacheckrc"] = {

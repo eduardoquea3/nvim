@@ -3,8 +3,8 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    { "williamboman/mason.nvim", config = true, cmd = "Mason" },
-    "williamboman/mason-lspconfig.nvim",
+    { "mason-org/mason.nvim", config = true, cmd = "Mason" },
+    "mason-org/mason-lspconfig.nvim",
     { "rachartier/tiny-code-action.nvim" },
     {
       "nvimdev/lspsaga.nvim",
@@ -30,19 +30,10 @@ return {
     }
     require("lspconfig.ui.windows").default_options.border = "rounded"
 
-    local mason_lspconfig = require "mason-lspconfig"
-
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-    local handlers = require "plugins.lsp.handlers"
-    mason_lspconfig.setup_handlers {
-      function(server_name)
-        require("lspconfig")[server_name].setup {
-          handlers = handlers,
-          capabilities = capabilities,
-        }
-      end,
-    }
+    for server, config in pairs(require "plugins.lsp.servers") do
+      vim.lsp.enable(server)
+      vim.lsp.config(server, config)
+    end
 
     require("lspsaga").setup {
       symbol_in_winbar = {

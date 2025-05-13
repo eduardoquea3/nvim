@@ -45,6 +45,17 @@ return {
     version = "*",
     opts = function()
       local icons = require "eduardo.icons"
+      local config_capabilities = {
+        textDocument = {
+          foldingRange = {
+            dynamicRegistration = false,
+            lineFoldingOnly = true,
+          },
+        },
+      }
+      vim.lsp.config("*", {
+        capabilities = require("blink.cmp").get_lsp_capabilities(config_capabilities),
+      })
       return {
         cmdline = {
           enabled = true,
@@ -199,7 +210,7 @@ return {
         },
         fuzzy = {
           implementation = "prefer_rust",
-        }
+        },
       }
     end,
   },

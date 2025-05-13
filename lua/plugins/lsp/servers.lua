@@ -10,15 +10,10 @@ return {
       },
     },
   },
-  bashls = {
-    filetypes = { "sh", "zsh" },
-  },
+  bashls = {},
   ts_ls = {},
-  -- vtsls = {},
-  -- pylsp = {},
+  pylsp = {},
   pyright = {},
-
-  -- kotlin_language_server = {},
 
   astro = {},
   cssls = {},
@@ -27,7 +22,4 @@ return {
   },
   html = {},
   tailwindcss = {},
-  -- intelephense = {},
-  -- phpactor = {},
-  -- powershell_es = {},
 }

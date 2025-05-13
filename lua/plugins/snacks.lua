@@ -7,6 +7,7 @@ return {
     scroll = { enabled = true },
     bigfile = { enabled = true },
     terminal = { enabled = true },
+    image = { enabled = true },
     dashboard = {
       enabled = true,
       -- preset = {
