@@ -13,7 +13,7 @@ return {
   bashls = {},
   ts_ls = {},
   pylsp = {},
-  pyright = {},
+  -- pyright = {},
 
   astro = {},
   cssls = {},
