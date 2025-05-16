@@ -133,6 +133,7 @@ return {
           },
           menu = {
             border = "rounded",
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
             draw = {
               columns = {
                 { "kind_icon" },

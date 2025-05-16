@@ -22,6 +22,11 @@ return {
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
       { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
+      { "<leader>m", function ()
+        local colors = require("kanso.colors").setup()
+        local theme = colors.theme
+        vim.notify("colorscheme " .. theme.ui.bg)
+      end, desc = "Split delete" },
       {
         "<C-w>",
         function()

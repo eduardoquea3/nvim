@@ -7,36 +7,6 @@ return {
     lazy = true,
     config = function()
       require("catppuccin").setup {
-        color_overrides = {
-          -- mocha = {
-          --   rosewater = "#ea6962",
-          --   flamingo = "#ea6962",
-          --   red = "#ea6962",
-          --   maroon = "#ea6962",
-          --   pink = "#d3869b",
-          --   mauve = "#d3869b",
-          --   peach = "#e78a4e",
-          --   yellow = "#d8a657",
-          --   green = "#a9b665",
-          --   teal = "#89b482",
-          --   sky = "#89b482",
-          --   sapphire = "#89b482",
-          --   blue = "#7daea3",
-          --   lavender = "#7daea3",
-          --   text = "#ebdbb2",
-          --   subtext1 = "#d5c4a1",
-          --   subtext0 = "#bdae93",
-          --   overlay2 = "#a89984",
-          --   overlay1 = "#928374",
-          --   overlay0 = "#595959",
-          --   surface2 = "#4d4d4d",
-          --   surface1 = "#404040",
-          --   surface0 = "#292929",
-          --   base = "#1d2021",
-          --   mantle = "#191b1c",
-          --   crust = "#141617",
-          -- },
-        },
         no_italic = true,
         transparent_background = true,
         integrations = {
@@ -108,10 +78,15 @@ return {
     priority = 1000,
     config = function()
       require("kanso").setup {
-        compile = true,
-        theme = "ink",
+        overrides = function(colors)
+          local palette = colors.palette
+          return {
+            BlinkCmpMenu = { bg = "none" },
+            BlinkCmpDoc = { bg = "none" },
+          }
+        end,
       }
-      vim.cmd.colorscheme "kanso"
+      vim.cmd.colorscheme "kanso-zen"
     end,
   },
 }
