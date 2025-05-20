@@ -1,7 +1,7 @@
 return {
   {
     "saghen/blink.cmp",
-    event = { "User FileOpened", "CmdlineEnter" },
+    event = { "User FileOpened" },
     dependencies = {
       {
         "saghen/blink.compat",

@@ -1,7 +1,7 @@
 ---@diagnostic disable: missing-fields
 return {
   "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { "User FileOpened" },
   dependencies = {
     { "mason-org/mason.nvim", config = true, cmd = "Mason" },
     "mason-org/mason-lspconfig.nvim",

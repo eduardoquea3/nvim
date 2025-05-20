@@ -8,25 +8,7 @@ return {
     bigfile = { enabled = true },
     terminal = { enabled = true },
     image = { enabled = true },
-    dashboard = {
-      enabled = true,
-      -- preset = {
-      --   keys = {
-      --     { icon = "", key = "f", desc = "Find File", action = ":lua Snacks.picker.smart({filter = {cwd = true}})" },
-      --     { icon = "󰬴", key = "w", desc = "Live Grep", action = ":lua Snacks.picker.recent()" },
-      --     { icon = "󰒲", key = "l", desc = "Lazy", action = ":Lazy" },
-      --     { icon = "", key = "s", desc = "Restart Session", action = ":lua require('persistence').load()" },
-      --     { icon = "", key = "q", desc = "Quit Neovim", action = ":qa" },
-      --   },
-      -- },
-      -- sections = {
-      --   { section = "header" },
-      --   { icon = "", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-      --   { icon = "", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-      --   { icon = "", title = "Projects", section = "projects", indent = 2, padding = 1 },
-      --   { section = "startup" },
-      -- },
-    },
+    dashboard = { enabled = true },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
@@ -62,6 +44,13 @@ return {
     lazygit = { enabled = true },
   },
   keys = {
+    {
+      "<C-w>",
+      function()
+        Snacks.bufdelete.delete()
+      end,
+      desc = "Split delete",
+    },
     {
       "<leader>fB",
       function()
@@ -110,6 +99,13 @@ return {
         Snacks.picker.notifications()
       end,
       desc = "Notification Picker",
+    },
+    {
+      "<c-p>W",
+      function()
+        Snacks.bufdelete.other()
+      end,
+      desc = "Delete All Other Buffers",
     },
     {
       "<c-p>w",

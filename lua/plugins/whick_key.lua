@@ -22,47 +22,6 @@ return {
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
       { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
-      { "<leader>m", function ()
-        local colors = require("kanso.colors").setup()
-        local theme = colors.theme
-        vim.notify("colorscheme " .. theme.ui.bg)
-      end, desc = "Split delete" },
-      {
-        "<C-w>",
-        function()
-          local splits = vim.fn.winnr "$"
-          local bufs = #vim.fn.getbufinfo { buflisted = 1 }
-          local tree_open = has_open_tree()
-          local snacks = require "snacks"
-
-          if bufs > 1 and tree_open then
-            snacks.explorer()
-            vim.api.nvim_buf_delete(0, { force = true })
-            return
-          end
-
-          if bufs == 1 and splits == 1 then
-            snacks.bufdelete()
-            return
-          end
-
-          if bufs == 1 and tree_open then
-            snacks.explorer()
-            vim.api.nvim_buf_delete(0, { force = true })
-            return
-          end
-
-          if bufs == 1 and splits > 1 and not tree_open then
-            vim.cmd "close"
-            return
-          end
-
-          if bufs > 1 then
-            vim.cmd "bp | bd #"
-          end
-        end,
-        desc = "Split delete",
-      },
       { "<A-j>", "<cmd>execute 'move .+'  . v:count1<cr>==", desc = "Move down line" },
       { "<A-k>", "<cmd>execute 'move .-'  . (v:count1 + 1)<cr>==", desc = "Move up line" },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
