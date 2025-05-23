@@ -36,11 +36,12 @@ alias la='eza --icons -A'
 alias ns='nvim ~/.bashrc'
 alias ss='source ~/.bashrc'
 alias lg='lazygit'
-alias sa="spicetify apply"
-alias su="spicetify update"
-alias sb="spicetify backup apply"
+alias sa='spicetify apply'
+alias su='spicetify update'
+alias sb='spicetify backup apply'
 alias bi='brave --incognito'
 alias n='nvim'
+alias pd='podman'
 
 bind '"\C-e":"\C-m"'
 

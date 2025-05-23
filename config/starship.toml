@@ -52,7 +52,7 @@ symbol = ' '
 
 [character]
 success_symbol = '[](bold green) '
-error_symbol = '[](bold red) '
+error_symbol = '[](bold red) '
 
 [directory]
 disabled = false
@@ -72,11 +72,11 @@ renamed = " 󰑕 \\(${count}\\)"
 modified = "  \\(${count}\\)"
 staged = "  \\(${count}\\)"
 untracked = "  \\(${count}\\)"
-format = "( [](peach)[$all_status$ahead_behind](bg:peach fg:surface0)[](peach)) "
+format = "( [$all_status$ahead_behind](fg:peach)) "
 
 [git_branch]
 symbol = " "
-format = " [](peach)[$symbol$branch](bg:peach fg:surface0)[](peach)"
+format = " [$symbol$branch](fg:peach)"
 
 [package]
 display_private = true
@@ -86,21 +86,21 @@ format = " [ ](yellow)[$version](text)"
 #=== languages ===
 
 [nodejs]
-format = " [](bold green)[ ($version )](bg:green fg:surface0)[](bold green)"
+format = " [ ($version )](fg:green)"
 
 [python]
 pyenv_prefix = 'venv '
 python_binary = ["python", "python2", "python3"]
-format = '([ \($virtualenv\)](peach)) [](bold blue)[ ${pyenv_prefix}(${version})](bg:blue fg:surface0)[](bold blue)'
+format = '([ \($virtualenv\)](peach)) [ ${pyenv_prefix}(${version})](fg:blue)'
 
 [lua]
-format = ' [](bold blue)[  ($version )](bg:blue fg:surface0)[](bold blue)'
+format = ' [  ($version )](fg:blue)'
 
 [rust]
-format = ' [](bold red)[ ($version )](bg:red fg:surface0)[](bold red)'
+format = ' [ ($version )](fg:red)'
 
 [java]
-format = ' [](bold red)[ ($version )](bg:red fg:surface0)[](bold red)'
+format = ' [ ($version )](fg:red)'
 
 [kotlin]
 detect_files = [
@@ -113,14 +113,14 @@ detect_files = [
   'build.boot',
   '.sdkmanrc',
 ]
-format = ' [](bold mauve)[ ($version )](bg:mauve fg:surface0)[](bold mauve)'
+format = ' [ ($version )](fg:mauve)'
 
 [dotnet]
 detect_extensions = ['csproj', 'fsproj', 'xproj', 'cs']
-format = ' [](bold mauve)[󰪮 ($version )](bg:mauve fg:surface0)[](bold mauve)'
+format = ' [󰪮 ($version )](fg:mauve)'
 
 [php]
-format = ' [](bold mauve)[ ($version )](bg:mauve fg:surface0)[](bold mauve)'
+format = ' [ ($version )](bg:mauve fg:surface0)'
 
 [bun]
-symbol = ""
+symbol = " "

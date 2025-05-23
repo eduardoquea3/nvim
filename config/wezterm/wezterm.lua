@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 -- local powershell = "C:\\Users\\eduar\\.scoop\\apps\\pwsh\\current\\pwsh.exe"
--- local arch = "C:\\Users\\eduar\\AppData\\Local\\Microsoft\\WindowsApps\\arch.exe"
+-- local ubuntu = "C:\\Users\\eduar\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu2404.exe"
 local bash = "U:\\Scoop\\shims\\bash.exe"
 
 local config = {}
@@ -11,20 +11,56 @@ if wezterm.config_builder then
 end
 
 -- config.default_prog = { powershell }
--- config.default_prog = { arch }
+-- config.default_prog = { ubuntu }
 config.default_prog = { bash }
 
-config.color_scheme = "Poimandres"
-config.line_height = 1.6
-config.cell_width = 1.10
+-- config.color_scheme = "Poimandres"
+config.force_reverse_video_cursor = true
+config.colors = {
+	foreground = "#C5C9C7",
+	background = "#14171d",
+
+	cursor_bg = "#14171d",
+	cursor_fg = "#C5C9C7",
+	cursor_border = "#C5C9C7",
+
+	selection_fg = "#C5C9C7",
+	selection_bg = "#393B42",
+
+	scrollbar_thumb = "#393B42",
+	split = "#393B42",
+
+	ansi = {
+		"#14171d",
+		"#C4746E",
+		"#8A9A7B",
+		"#C4B28A",
+		"#8BA4B0",
+		"#A292A3",
+		"#8EA4A2",
+		"#A4A7A4",
+	},
+	brights = {
+		"#A4A7A4",
+		"#E46876",
+		"#87A987",
+		"#E6C384",
+		"#7FB4CA",
+		"#938AA9",
+		"#7AA89F",
+		"#C5C9C7",
+	},
+}
+config.line_height = 1.0
+config.cell_width = 1.0
 config.font = wezterm.font_with_fallback({
 	-- { family = "DankMono Nerd Font", scale = 1.00, weight = "Regular" },
-	{ family = "JetBrainsMono Nerd Font", scale = 0.70 },
+	{ family = "JetBrainsMono Nerd Font", scale = 1.00 },
 })
-config.font_size = 16
-config.window_background_opacity = 0.95
-config.window_decorations = "RESIZE"
-config.window_close_confirmation = "AlwaysPrompt"
+config.font_size = 12
+config.window_background_opacity = 0.85
+config.window_decorations = "TITLE | RESIZE"
+config.window_close_confirmation = "NeverPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 config.disable_default_key_bindings = true
@@ -132,15 +168,31 @@ config.key_tables = {
 
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
-config.tab_bar_at_bottom = false
+config.tab_bar_at_bottom = true
 
 config.window_padding = {
-	left = 10,
+	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
 }
 
-config.front_end = "WebGpu"
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+tabline.setup({
+	options = {
+		theme = "Catppuccin Mocha",
+	},
+	sections = {
+		tabline_a = {},
+		tab_active = {
+			"index",
+			{ "process" },
+		},
+		tabline_x = {},
+		tabline_y = { "datetime" },
+		tabline_z = {},
+	},
+})
+tabline.apply_to_config(config)
 
 return config
