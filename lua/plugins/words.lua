@@ -9,25 +9,23 @@ return {
   },
   {
     "smoka7/multicursors.nvim",
-    lazy = true,
+    event = "VeryLazy",
     dependencies = {
-      "smoka7/hydra.nvim",
+      "nvimtools/hydra.nvim",
     },
-    opts = {
-      hint_config = false,
-      normal_keys = {
-        -- ["<C-l>"] = { method = require("multicursors.normal_mode").skip_create_up }
-        -- ['<C-q>'] = { method = nil },
-      },
-    },
-    cmd = { "MCstart", "MCvisual", "Mcclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
+    cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
     keys = {
       {
         mode = { "v", "n" },
-        "<A-d>",
+        "<Leader>m",
         "<cmd>MCstart<cr>",
         desc = "Create a selection for selected text or word under the cursor",
       },
     },
+    config = function()
+      require("multicursors").setup {
+        updatetime = 100,
+      }
+    end,
   },
 }
