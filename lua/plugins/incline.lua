@@ -1,8 +1,13 @@
 return {
   "b0o/incline.nvim",
   enabled = true,
+  event = "VeryLazy",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
+  },
+  keys = {
+    { "<Tab>", "<cmd>bnext<cr>", desc = "Cycle next buffer", mode = "n" },
+    { "<Tab>", "<cmd>bprevious<cr>", desc = "Cycle next buffer", mode = "n" },
   },
   config = function()
     local devicons = require "nvim-web-devicons"

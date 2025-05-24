@@ -1,7 +1,7 @@
 return {
   "folke/snacks.nvim",
-  event = "VimEnter",
   priority = 1000,
+  lazy = false,
   opts = {
     bufdelete = { enabled = true },
     -- scroll = { enabled = true },
@@ -27,6 +27,7 @@ return {
       },
       sources = {
         explorer = {
+          replace_netrw = true,
           layout = {
             layout = {
               position = "right",
