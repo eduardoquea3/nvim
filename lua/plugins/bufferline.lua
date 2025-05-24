@@ -1,6 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
   event = "User FileOpened",
+  enabled = false,
   keys = {
     { "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Bufferline cycle next", mode = "n" },
     { "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Bufferline cycle prev", mode = "n" },
