@@ -7,7 +7,7 @@ return {
   },
   keys = {
     { "<Tab>", "<cmd>bnext<cr>", desc = "Cycle next buffer", mode = "n" },
-    { "<Tab>", "<cmd>bprevious<cr>", desc = "Cycle next buffer", mode = "n" },
+    { "<S-Tab>", "<cmd>bprevious<cr>", desc = "Cycle next buffer", mode = "n" },
   },
   config = function()
     local devicons = require "nvim-web-devicons"
