@@ -4,7 +4,6 @@ return {
   dependencies = {
     { "mason-org/mason.nvim", config = true, cmd = "Mason" },
     "mason-org/mason-lspconfig.nvim",
-    { "rachartier/tiny-code-action.nvim" },
     {
       "nvimdev/lspsaga.nvim",
       dependencies = {
@@ -26,8 +25,22 @@ return {
       },
     }
     require("mason-lspconfig").setup {
-      ensure_installed = vim.tbl_keys(require "plugins.lsp.servers"),
+      ensure_installed = {
+        "jsonls",
+        "yamlls",
+        "lua_ls",
+        "bashls",
+        "ts_ls",
+        "pylsp",
+        "astro",
+        "cssls",
+        "emmet_ls",
+        "html",
+        "tailwindcss",
+      },
+      automatic_installation = true,
     }
+
     require("lspconfig.ui.windows").default_options.border = "rounded"
 
     require("lspsaga").setup {
