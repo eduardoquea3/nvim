@@ -88,6 +88,12 @@ return {
         },
       },
     }
+
+    wk.setup {
+      triggers = {
+        { "zz", mode = "n" },
+      },
+    }
     -- require "config.keymap"
   end,
 }
