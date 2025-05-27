@@ -4,7 +4,7 @@ return {
   lazy = false,
   opts = {
     bufdelete = { enabled = true },
-    -- scroll = { enabled = true },
+    scroll = { enabled = true },
     bigfile = { enabled = true },
     terminal = { enabled = true },
     image = { enabled = true },

@@ -1,7 +1,7 @@
 return {
   "b0o/incline.nvim",
   enabled = true,
-  event = "VeryLazy",
+  event = "User FileOpened",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },

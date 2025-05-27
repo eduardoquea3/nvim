@@ -1,25 +1,13 @@
 return {
   jsonls = {},
   yamlls = {},
-  lua_ls = {
-    settings = {
-      Lua = {
-        hint = {
-          enable = true,
-        },
-      },
-    },
-  },
+  lua_ls = {},
   bashls = {},
-  ts_ls = {},
+  vtsls = {},
   pylsp = {},
-  -- pyright = {},
-
   astro = {},
   cssls = {},
-  emmet_ls = {
-    -- filetypes = { "html", "astro", "javascriptreact", "aspx", "typescriptreact", "php", "jsp" },
-  },
+  emmet_ls = {},
   html = {},
   tailwindcss = {},
 }

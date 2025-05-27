@@ -1,4 +1,3 @@
----@diagnostic disable: missing-fields
 return {
   "neovim/nvim-lspconfig",
   event = { "User FileOpened" },
@@ -15,13 +14,14 @@ return {
     },
   },
   config = function()
+    local icons = require("eduardo.icons").ui
     require("mason").setup {
       ui = {
         border = "rounded",
         icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
+          package_installed = icons.Check,
+          package_pending = icons.DoubleChevronRight,
+          package_uninstalled = icons.Close,
         },
       },
     }
@@ -29,11 +29,6 @@ return {
       ensure_installed = vim.tbl_keys(require "plugins.lsp.servers"),
     }
     require("lspconfig.ui.windows").default_options.border = "rounded"
-
-    for server, config in pairs(require "plugins.lsp.servers") do
-      vim.lsp.enable(server)
-      vim.lsp.config(server, config)
-    end
 
     require("lspsaga").setup {
       symbol_in_winbar = {
@@ -44,4 +39,7 @@ return {
       },
     }
   end,
+  keys = {
+    { "<leader>lm", "<cmd>Mason<cr>", desc = "Prev diagnostic" },
+  },
 }

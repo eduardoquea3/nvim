@@ -9,7 +9,7 @@ return {
   },
   {
     "smoka7/multicursors.nvim",
-    event = "VeryLazy",
+    event = "User FileOpened",
     dependencies = {
       "nvimtools/hydra.nvim",
     },
@@ -17,14 +17,26 @@ return {
     keys = {
       {
         mode = { "v", "n" },
-        "<Leader>m",
+        -- "<Leader>m",
+        "<c-d>",
         "<cmd>MCstart<cr>",
         desc = "Create a selection for selected text or word under the cursor",
       },
     },
     config = function()
+      local normal = require "multicursors.normal_mode"
       require("multicursors").setup {
         updatetime = 100,
+        normal_keys = {
+          ["<c-d>"] = {
+            method = normal.find_next,
+            opts = { desc = "Goto next" },
+          },
+          ["q"] = {
+            method = normal.exit,
+            opts = { desc = "Exit" },
+          },
+        },
       }
     end,
   },

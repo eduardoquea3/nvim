@@ -9,9 +9,6 @@ return {
   },
   config = function()
     local wk = require "which-key"
-    local function has_open_tree()
-      return vim.fn.bufwinnr "snacks_picker_list" ~= -1
-    end
     wk.setup {}
     wk.add {
       { "/", "<cmd>SearchBoxIncSearch<cr>", desc = "Search", remap = true },
