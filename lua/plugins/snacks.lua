@@ -254,5 +254,12 @@ return {
         Snacks.toggle.treesitter():toggle()
       end,
     },
+    {
+      "<leader>fc",
+      function()
+        Snacks.picker.todo_comments()
+      end,
+      desc = "Todo Comments Picker",
+    },
   },
 }
