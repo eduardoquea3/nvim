@@ -55,14 +55,14 @@ return {
     {
       "<leader>fB",
       function()
-        Snacks.picker.help() {}
+        Snacks.picker.help {}
       end,
       desc = "Help Tag Picker",
     },
     {
       "<leader>fb",
       function()
-        Snacks.picker.buffers() {}
+        Snacks.picker.buffers {}
       end,
       desc = "Keymap Picker",
     },
