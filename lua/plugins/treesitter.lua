@@ -4,7 +4,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("nvim-treesitter.configs").setup {
-      -- sync_install = true,
+      sync_install = true,
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = {
@@ -17,17 +17,12 @@ return {
         },
       },
       ensure_installed = {
-        -- "c_sharp",
         "python",
         "html",
         "css",
-        -- "java",
         "javascript",
         "json",
         "lua",
-        -- "php",
-        -- "php_only",
-        -- "phpdoc",
         "toml",
         "luadoc",
         "typescript",
@@ -38,14 +33,9 @@ return {
         "http",
         "markdown",
         "markdown_inline",
-        -- "kotlin",
         "latex",
         "xml",
-        -- "graphql",
-        -- "vim",
-        -- "vimdoc",
-        -- "rust",
-        -- "powershell",
+        "graphql",
       },
     }
   end,

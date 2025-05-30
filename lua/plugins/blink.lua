@@ -38,9 +38,8 @@ return {
           max_width = 60,
         },
       },
-      "davidmh/cmp-nerdfonts",
-      "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-nvim-lua",
+      "MahanRahmati/blink-nerdfont.nvim",
     },
     version = "*",
     opts = function()
@@ -79,7 +78,7 @@ return {
             "path",
             "snippets",
             "buffer",
-            "nerdfonts",
+            "nerdfont",
           },
           per_filetype = {
             sql = { "snippets", "dadbod", "buffer" },
@@ -89,7 +88,7 @@ return {
               "path",
               "snippets",
               "buffer",
-              "nerdfonts",
+              "nerdfont",
               "nvim_lua",
             },
           },
@@ -108,14 +107,11 @@ return {
               name = "Dadbod",
               module = "vim_dadbod_completion.blink",
             },
-            nerdfonts = {
-              name = "nerdfonts",
-              module = "blink.compat.source",
-              min_keyword_length = 5,
-            },
-            cmdline = {
-              name = "cmdline",
-              module = "blink.compat.source",
+            nerdfont = {
+              name = "Nerd Fonts",
+              module = "blink-nerdfont",
+              score_offset = 15,
+              opts = { insert = true },
             },
             nvim_lua = {
               name = "nvim_lua",
