@@ -16,7 +16,6 @@ return {
   {
     "nvchad/menu",
     event = "User FileOpened",
-    -- lazy = true,
     config = function()
       vim.keymap.set("n", "<RightMouse>", function()
         vim.cmd.exec '"normal! \\<RightMouse>"'

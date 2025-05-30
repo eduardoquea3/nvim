@@ -2,7 +2,7 @@ return {
   "stevearc/oil.nvim",
   -- lazy = true,
   keys = {
-    -- { "<C-e>", "<cmd>Oil<cr>", desc = "Oil" },
+    { "<C-e>", "<cmd>Oil<cr>", desc = "Oil" },
   },
   opts = {
     keymaps = {
