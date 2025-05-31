@@ -67,7 +67,6 @@ return {
       {
         mode = "c",
         { "<C-l>", "<Esc>", desc = "Escape" },
-        { "<C-e>", "<cr>", desc = "Enter" },
       },
       {
         mode = { "n", "v", "i" },
@@ -95,6 +94,5 @@ return {
         { "zz", mode = "n" },
       },
     }
-    -- require "config.keymap"
   end,
 }

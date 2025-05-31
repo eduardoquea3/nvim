@@ -13,19 +13,15 @@ return {
     end
   end,
   enabled = true,
-  -- event = "VeryLazy",
   event = "User FileOpened",
-  -- event = { "BufReadPost", "BufNewFile", "VeryLazy" },
   config = function()
     local component = require "eduardo.lualine.component"
     require("lualine").setup {
       options = {
-        -- theme = require("neofusion.lualine"),
-        -- theme = "catppuccin",
         theme = "auto",
         globalstatus = true,
         icons_enabled = true,
-        component_separators = { left = "|", right = "|" },
+        component_separators = { left = "", right = "" },
         disabled_filetypes = {
           statusline = {
             "alfa-nvim",
@@ -44,28 +40,28 @@ return {
         lualine_a = {},
         lualine_b = {},
         lualine_c = {
-          "fancy_mode",
-          "fancy_branch",
-          { "filename", symbols = { modified = " ", readonly = " ", unnamed = " ", newfile = " " } },
-          {
-            "fancy_diagnostics",
-            sources = { "nvim_lsp" },
-            symbols = { error = " ", warn = " ", info = " " },
-          },
-          { "fancy_searchcount" },
+          component.mode,
+          { "branch", icon = "", color = { fg = "#d9833d" } },
+          -- { "filename", symbols = { modified = " ", readonly = " ", unnamed = " ", newfile = " " } },
+          -- {
+          --   "diagnostics",
+          --   sources = { "nvim_lsp" },
+          --   symbols = { error = " ", warn = " ", info = " " },
+          --   colored = true,
+          -- },
         },
         lualine_x = {
-          "fancy_macro",
-          -- "fancy_lsp_servers",
-          -- component.lsp,
+          "lsp_status",
+          component.macro,
           component.spaces,
-          "fancy_diff",
-          "fancy_location",
+          "searchcount",
+          -- { "diff", symbols = { added = " ", modified = " ", removed = " " } },
+          "location",
         },
         lualine_y = {},
         lualine_z = {},
       },
-      extensions = { "neo-tree", "lazy" },
+      extensions = { "lazy" },
     }
   end,
 }
