@@ -1,9 +1,5 @@
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = {
-    "meuter/lualine-so-fancy.nvim",
-    event = "User FileOpened",
-  },
   init = function()
     vim.g.lualine_laststatus = vim.o.laststatus
     if vim.fn.argc(-1) > 0 then
@@ -42,20 +38,12 @@ return {
         lualine_c = {
           component.mode,
           { "branch", icon = "", color = { fg = "#d9833d" } },
-          -- { "filename", symbols = { modified = " ", readonly = " ", unnamed = " ", newfile = " " } },
-          -- {
-          --   "diagnostics",
-          --   sources = { "nvim_lsp" },
-          --   symbols = { error = " ", warn = " ", info = " " },
-          --   colored = true,
-          -- },
         },
         lualine_x = {
           "lsp_status",
           component.macro,
           component.spaces,
           "searchcount",
-          -- { "diff", symbols = { added = " ", modified = " ", removed = " " } },
           "location",
         },
         lualine_y = {},
