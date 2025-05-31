@@ -3,7 +3,6 @@ return {
     "OXY2DEV/markview.nvim",
     -- lazy = false,
     -- enabled = false,
-    event = "User FileOpened",
     ft = "markdown",
     config = function()
       local headings = require("markview.presets").headings
