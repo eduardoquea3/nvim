@@ -1,7 +1,6 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    -- opts = true,
     event = "User FileOpened",
     config = function()
       require("gitsigns").setup {
@@ -14,8 +13,6 @@ return {
   },
   {
     "sindrets/diffview.nvim",
-    -- event = "User FileOpened",
-    cmd = { "DiffviewOpen" },
     config = true,
     keys = {
       { "<leader>gm", "<cmd>DiffviewOpen<cr>", desc = "Open Merge tool" },

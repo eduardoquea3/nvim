@@ -1,6 +1,5 @@
 local global = {
   opt = {
-    autowrite = true,
     breakindent = true,
     clipboard = "unnamed",
     cmdheight = 0,

@@ -1,6 +1,6 @@
 return {
   "supermaven-inc/supermaven-nvim",
-  event = "InsertEnter",
+  event = "User FileOpened",
   config = function()
     require("supermaven-nvim").setup {
       keymaps = {
