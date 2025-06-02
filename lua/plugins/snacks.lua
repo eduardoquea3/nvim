@@ -2,17 +2,22 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+  ---@type snacks.Config
   opts = {
     bufdelete = { enabled = true },
     scroll = { enabled = true },
     bigfile = { enabled = true },
-    terminal = { enabled = true },
+    scope = { enabled = true },
+    input = { enabled = true },
     image = { enabled = true },
     dashboard = { enabled = true },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    notifier = { enabled = true },
+    notifier = {
+      enabled = true,
+      timeout = 3000,
+    },
     notify = { enabled = true },
     explorer = { enabled = true },
     picker = {
@@ -76,7 +81,7 @@ return {
     {
       "<leader>ff",
       function()
-        Snacks.picker.files {}
+        Snacks.picker.smart {}
       end,
       desc = "File Picker",
     },
