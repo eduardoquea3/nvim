@@ -2,6 +2,9 @@ return {
   {
     "folke/ts-comments.nvim",
     opts = {},
-    event = "User FileOpened",
+    keys = {
+      "gcc",
+      "<leader>/",
+    },
   },
 }

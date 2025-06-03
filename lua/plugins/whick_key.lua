@@ -11,6 +11,8 @@ return {
     local wk = require "which-key"
     wk.setup {}
     wk.add {
+      { "<Tab>", "<cmd>bnext<cr>", desc = "Cycle next buffer" },
+      { "<S-Tab>", "<cmd>bprevious<cr>", desc = "Cycle next buffer" },
       { "/", "<cmd>SearchBoxIncSearch<cr>", desc = "Search", remap = true },
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
       { "ss", "<cmd>split<cr>", desc = "Horizontal Split buffer" },

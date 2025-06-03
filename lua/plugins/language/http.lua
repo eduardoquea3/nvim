@@ -1,7 +1,6 @@
 return {
   {
     "mistweaverco/kulala.nvim",
-    keys = { "<leader>hr", "<leader>hl", "<leader>hd" },
     ft = { "http", "rest" },
     opts = {
       global_keymaps = {

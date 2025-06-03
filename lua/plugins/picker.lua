@@ -1,13 +1,11 @@
 return {
   {
-    "NvChad/nvim-colorizer.lua",
+    "catgoose/nvim-colorizer.lua",
     event = "User FileOpened",
     config = function()
       require("colorizer").setup {
         filetypes = { "*" },
         user_default_options = {
-          RGB = true,
-          RRGGBB = true,
           names = false,
           RRGGBBAA = true,
           AARRGGBB = true,
@@ -15,16 +13,17 @@ return {
           hsl_fn = true,
           css = true,
           css_fn = true,
-          mode = "foreground",
+          mode = "virtualtext",
           tailwind = true,
+          tailwind_opts = {
+            update_names = true,
+          },
           sass = { enable = false, parsers = { "css" } },
-          virtualtext = "",
-          virtualtext_inline = true,
-          virtualtext_mode = "background",
-          always_update = false,
+          virtualtext = "󱓻",
+          virtualtext_inline = "before",
+          virtualtext_mode = "foreground",
+          always_update = true,
         },
-        buftypes = {},
-        user_commands = true,
       }
     end,
   },
