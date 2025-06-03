@@ -2,7 +2,12 @@ return {
   {
     "kylechui/nvim-surround",
     version = "*",
-    event = "User FileOpened",
+    keys = {
+      "ysi",
+      "ys",
+      "ds",
+      "cs",
+    },
     config = function()
       require("nvim-surround").setup {}
     end,
