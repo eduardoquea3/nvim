@@ -50,7 +50,7 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
-    event = "User FileOpened",
+    ft = { "html", "astro", "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
     config = function()
       require("nvim-ts-autotag").setup {
         opts = {

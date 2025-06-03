@@ -58,8 +58,6 @@ return {
   },
   {
     "folke/trouble.nvim",
-    -- event = "User FileOpened",
-    -- lazy = true,
     opts = {},
     cmd = "Trouble",
     keys = {
@@ -77,7 +75,58 @@ return {
   },
   {
     "folke/persistence.nvim",
-    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    event = "BufReadPre",
     opts = {},
+  },
+  {
+    "folke/noice.nvim",
+    event = "User FileOpened",
+    keys = {
+      { ":" },
+    },
+    opts = {
+      notify = { enabled = false },
+      cmdline = {
+        enabled = true,
+      },
+      lsp = {
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
+        },
+        progress = { enabled = true },
+        signature = {
+          opts = {
+            size = {
+              width = 40,
+              height = 15,
+            },
+          },
+        },
+      },
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            any = {
+              { find = "%d+L, %d+B" },
+              { find = "; after #%d+" },
+              { find = "; before #%d+" },
+            },
+          },
+          view = "mini",
+        },
+      },
+      presets = {
+        bottom_search = true,
+        command_palette = true,
+        long_message_to_split = true,
+        lsp_doc_border = true,
+      },
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
   },
 }
