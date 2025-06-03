@@ -26,38 +26,12 @@ return {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
       },
-      {
-        "xzbdmw/colorful-menu.nvim",
-        opts = {
-          ls = {
-            lua_ls = {
-              arguments_hl = "@comment",
-            },
-            vtsls = {
-              extra_info_hl = "@comment",
-            },
-          },
-          fallback_highlight = "@variable",
-          max_width = 60,
-        },
-      },
       "hrsh7th/cmp-nvim-lua",
       "MahanRahmati/blink-nerdfont.nvim",
     },
     version = "*",
     opts = function()
       local icons = require "eduardo.icons"
-      local config_capabilities = {
-        textDocument = {
-          foldingRange = {
-            dynamicRegistration = false,
-            lineFoldingOnly = true,
-          },
-        },
-      }
-      vim.lsp.config("*", {
-        capabilities = require("blink.cmp").get_lsp_capabilities(config_capabilities),
-      })
       return {
         cmdline = {
           enabled = true,
@@ -138,30 +112,6 @@ return {
                 { "kind_icon" },
                 { "label", gap = 1 },
                 { "kind" },
-              },
-              components = {
-                label = {
-                  width = { fill = true, max = 60 },
-                  text = function(ctx)
-                    local highlights_info = require("colorful-menu").blink_highlights(ctx)
-                    if highlights_info ~= nil then
-                      return highlights_info.label
-                    else
-                      return ctx.label
-                    end
-                  end,
-                  highlight = function(ctx)
-                    local highlights = {}
-                    local highlights_info = require("colorful-menu").blink_highlights(ctx)
-                    if highlights_info ~= nil then
-                      highlights = highlights_info.highlights
-                    end
-                    for _, idx in ipairs(ctx.label_matched_indices) do
-                      table.insert(highlights, { idx, idx + 1, group = "BlinkCmpLabelMatch" })
-                    end
-                    return highlights
-                  end,
-                },
               },
             },
           },
