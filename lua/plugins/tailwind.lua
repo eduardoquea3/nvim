@@ -3,7 +3,6 @@ return {
   name = "tailwind-tools",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
-    "nvim-telescope/telescope.nvim",
   },
   ft = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "astro" },
   config = function()
