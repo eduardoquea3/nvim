@@ -129,4 +129,15 @@ return {
       "MunifTanjim/nui.nvim",
     },
   },
+  {
+    "VonHeikemen/searchbox.nvim",
+    lazy = true,
+    cmd = { "SearchBox", "SearchBoxIncSearch" },
+    keys = {
+      { "<c-f>", "<cmd>SearchBoxIncSearch visual_mode=true<cr>", desc = "Search", mode = { "v" } },
+      { "<c-f>", "<cmd>SearchBoxIncSearch<cr>", desc = "Search" },
+      { "/", "<cmd>SearchBoxIncSearch<cr>", desc = "Search", remap = true },
+    },
+    dependencies = { "MunifTanjim/nui.nvim" },
+  },
 }
