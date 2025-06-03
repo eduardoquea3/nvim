@@ -26,7 +26,6 @@ return {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
       },
-      "hrsh7th/cmp-nvim-lua",
       "MahanRahmati/blink-nerdfont.nvim",
     },
     version = "*",
@@ -66,7 +65,6 @@ return {
               "snippets",
               "buffer",
               "nerdfont",
-              "nvim_lua",
             },
           },
           providers = {
@@ -89,10 +87,6 @@ return {
               module = "blink-nerdfont",
               score_offset = 15,
               opts = { insert = true },
-            },
-            nvim_lua = {
-              name = "nvim_lua",
-              module = "blink.compat.source",
             },
           },
         },
