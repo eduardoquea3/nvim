@@ -36,6 +36,7 @@ return {
         "latex",
         "xml",
         "graphql",
+        "regex",
       },
     }
   end,
