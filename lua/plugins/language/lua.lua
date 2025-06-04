@@ -2,7 +2,7 @@ return {
   {
     "mfussenegger/nvim-lint",
     dependencies = {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       {
         "rshkarin/mason-nvim-lint",
         opts = {
@@ -26,7 +26,7 @@ return {
     "stevearc/conform.nvim",
     ft = "lua",
     dependencies = {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       {
         "zapling/mason-conform.nvim",
         opts = {

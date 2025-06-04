@@ -11,7 +11,7 @@ return {
     "stevearc/conform.nvim",
     ft = { "html" },
     dependencies = {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       {
         "zapling/mason-conform.nvim",
         opts = {
