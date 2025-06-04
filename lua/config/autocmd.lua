@@ -156,6 +156,9 @@ function M.load_defaults()
           map("gj", function()
             vim.diagnostic.goto_next()
           end, "Go to next diagnostic")
+          map("gO", function()
+            Snacks.picker.lsp_symbols { layout = { preset = "vscode", preview = "main" } }
+          end, "Go to LSP Symbols")
         end,
       },
     },
