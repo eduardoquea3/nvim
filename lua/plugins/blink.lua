@@ -32,13 +32,6 @@ return {
     opts = function()
       local icons = require "eduardo.icons"
       return {
-        cmdline = {
-          enabled = true,
-          completion = {
-            ghost_text = { enabled = false },
-            menu = { auto_show = true },
-          },
-        },
         keymap = {
           preset = "default",
           ["<Tab>"] = { "select_next", "fallback" },
@@ -57,7 +50,6 @@ return {
             "nerdfont",
           },
           per_filetype = {
-            sql = { "snippets", "dadbod", "buffer" },
             lua = {
               "lazydev",
               "lsp",
@@ -77,10 +69,6 @@ return {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
               score_offset = 100,
-            },
-            dadbod = {
-              name = "Dadbod",
-              module = "vim_dadbod_completion.blink",
             },
             nerdfont = {
               name = "Nerd Fonts",
