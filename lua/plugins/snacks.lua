@@ -61,7 +61,17 @@ return {
     {
       "<leader>fb",
       function()
-        Snacks.picker.buffers {}
+        Snacks.picker.buffers {
+          win = {
+            input = {
+              keys = {
+                ["dd"] = "bufdelete",
+                ["<c-d>"] = { "bufdelete", mode = { "n", "i" } },
+              },
+            },
+            list = { keys = { ["dd"] = "bufdelete" } },
+          },
+        }
       end,
       desc = "Keymap Picker",
     },
