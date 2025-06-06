@@ -3,6 +3,15 @@ local M = {}
 function M.load_defaults()
   local definitions = {
     {
+      "FileType",
+      {
+        pattern = { "nofile", "codecompanion" },
+        callback = function()
+          vim.b.completion = false
+        end,
+      },
+    },
+    {
       "CursorHold",
       {
         callback = function()
