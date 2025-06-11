@@ -50,6 +50,9 @@ return {
             "nerdfont",
           },
           per_filetype = {
+            sql = { "snippets", "dadbod", "buffer" },
+            mysql = { "snippets", "dadbod", "buffer" },
+            plsql = { "snippets", "dadbod", "buffer" },
             lua = {
               "lazydev",
               "lsp",
@@ -69,6 +72,10 @@ return {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
               score_offset = 100,
+            },
+            dadbod = {
+              name = "Dadbod",
+              module = "vim_dadbod_completion.blink",
             },
             nerdfont = {
               name = "Nerd Fonts",
