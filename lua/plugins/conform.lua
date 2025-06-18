@@ -1,21 +1,32 @@
 return {
   "stevearc/conform.nvim",
-  keys = {
+  ft = {
+    "lua",
+    "css",
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "jsonc",
+    "json",
+    "python",
+    "toml",
+  },
+  dependencies = {
+    "mason-org/mason.nvim",
     {
-      "<A-s>",
-      function()
-        require("conform").format({
-          async = true,
-          timeout_ms = 500,
-          lsp_fallback = true,
-        }, function(err, did_edit)
-          if not err and did_edit then
-            vim.notify("Code formatted", vim.log.levels.INFO, { title = "Conform" })
-          end
-        end)
-      end,
-      mode = { "n", "v" },
-      desc = "Format buffer",
+      "zapling/mason-conform.nvim",
+      opts = {
+        ensure_installed = {
+          "stylua",
+          "prettier",
+          "biome",
+          "ruff_format",
+          "ruff_organize_imports",
+          "taplo",
+        },
+      },
     },
   },
   opts = {
@@ -33,4 +44,15 @@ return {
       toml = { "taplo" },
     },
   },
+  config = function(_, opts)
+    require("conform").setup(opts)
+
+    local map = function(keys, func, desc)
+      vim.keymap.set("n", keys, func, { desc = "LSP: " .. desc })
+    end
+    map("<a-s>", function()
+      require("conform").format { async = true }
+      vim.notify "Formateado"
+    end, "Formatear archivo")
+  end,
 }

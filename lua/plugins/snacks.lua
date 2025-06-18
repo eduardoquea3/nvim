@@ -2,7 +2,6 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     bufdelete = { enabled = true },
     input = { enabled = true },
@@ -85,7 +84,7 @@ return {
     {
       "<leader>ff",
       function()
-        Snacks.picker.smart {}
+        Snacks.picker.files {}
       end,
       desc = "File Picker",
     },

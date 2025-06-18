@@ -5,7 +5,8 @@
         "tmap",
         "imap",
         "vmap",
-        "cmap"
+        "cmap",
+        "Snacks"
     ],
     "diagnostics.disable": [
         "deprecated",

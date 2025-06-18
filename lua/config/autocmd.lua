@@ -125,7 +125,6 @@ function M.load_defaults()
           local map = function(keys, func, desc)
             vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
           end
-          local Snacks = require "snacks"
 
           map("gd", Snacks.picker.lsp_definitions, "Goto Definition")
           map("gD", Snacks.picker.lsp_declarations, "Goto Declaration")
@@ -146,10 +145,6 @@ function M.load_defaults()
 
           map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
-          map("<a-s>", function()
-            require("conform").format { async = true }
-            vim.notify "Formateado"
-          end, "Formatear archivo")
           map("gk", function()
             vim.diagnostic.goto_prev()
           end, "Go to previous diagnostic")
