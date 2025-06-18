@@ -1,5 +1,6 @@
 local autocmd = require "config.autocmd"
 autocmd.load_defaults()
+require "config.lsp"
 require "config.option"
 require "config.lazy"
 require "config.diagnostic"

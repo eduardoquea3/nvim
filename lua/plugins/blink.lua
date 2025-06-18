@@ -1,14 +1,10 @@
 return {
+  { "L3MON4D3/LuaSnip", keys = {} },
   {
     "saghen/blink.cmp",
     event = { "InsertEnter" },
+    version = "*",
     dependencies = {
-      {
-        "saghen/blink.compat",
-        version = "*",
-        opts = {},
-        lazy = true,
-      },
       {
         "folke/lazydev.nvim",
         ft = "lua",
@@ -22,16 +18,12 @@ return {
         },
       },
       "rafamadriz/friendly-snippets",
-      {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-      },
       "MahanRahmati/blink-nerdfont.nvim",
     },
-    version = "*",
-    opts = function()
+    config = function()
       local icons = require "eduardo.icons"
-      return {
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      require("blink.cmp").setup {
         keymap = {
           preset = "default",
           ["<Tab>"] = { "select_next", "fallback" },
@@ -50,9 +42,9 @@ return {
             "nerdfont",
           },
           per_filetype = {
-            sql = { "snippets", "dadbod", "buffer" },
-            mysql = { "snippets", "dadbod", "buffer" },
-            plsql = { "snippets", "dadbod", "buffer" },
+            sql = { "dadbod" },
+            mysql = { "dadbod" },
+            plsql = { "dadbod" },
             lua = {
               "lazydev",
               "lsp",
@@ -61,13 +53,9 @@ return {
               "buffer",
               "nerdfont",
             },
+            codecompanion = { "codecompanion" },
           },
           providers = {
-            snippets = {
-              opts = {
-                search_path = vim.fn.stdpath "config" .. "/snippets",
-              },
-            },
             lazydev = {
               name = "LazyDev",
               module = "lazydev.integrations.blink",
@@ -150,7 +138,9 @@ return {
         fuzzy = {
           implementation = "prefer_rust",
         },
+        snippets = { preset = "luasnip" },
       }
+      require("luasnip.loaders.from_vscode").lazy_load()
     end,
   },
 }

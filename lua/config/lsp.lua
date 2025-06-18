@@ -4,8 +4,19 @@ vim.filetype.add {
   },
   filename = {
     [".env"] = "sh",
-    [".envrc"] = "sh",
-    ["*.env"] = "sh",
-    ["*.envrc"] = "sh",
   },
+}
+
+vim.lsp.enable {
+  "jsonls",
+  "yamlls",
+  "lua_ls",
+  "bashls",
+  "ts_ls",
+  "pylsp",
+  "astro",
+  "cssls",
+  "emmet_ls",
+  "html",
+  "tailwindcss",
 }
