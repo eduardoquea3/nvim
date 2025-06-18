@@ -141,6 +141,9 @@ return {
         snippets = { preset = "luasnip" },
       }
       require("luasnip.loaders.from_vscode").lazy_load()
+      vim.lsp.config("*", {
+        capabilities = capabilities,
+      })
     end,
   },
 }
