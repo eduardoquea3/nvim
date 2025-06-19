@@ -1,6 +1,7 @@
 return {
   {
     "mason-org/mason.nvim",
+    event = "User FileOpened",
     keys = {
       { "<leader>lm", "<cmd>Mason<cr>", desc = "Open Mason" },
     },
@@ -20,6 +21,7 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
+    event = "User FileOpened",
     opts = {
       ensure_installed = {
         "jsonls",
