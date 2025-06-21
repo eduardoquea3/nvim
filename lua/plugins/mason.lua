@@ -1,40 +1,26 @@
 return {
   {
-    "mason-org/mason.nvim",
-    event = "User FileOpened",
-    keys = {
-      { "<leader>lm", "<cmd>Mason<cr>", desc = "Open Mason" },
-    },
-    opts = function()
-      local icons = require("eduardo.icons").ui
-      return {
-        ui = {
-          border = "rounded",
-          icons = {
-            package_installed = icons.Check,
-            package_pending = icons.DoubleChevronRight,
-            package_uninstalled = icons.Close,
-          },
-        },
-      }
-    end,
-  },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    event = "User FileOpened",
+    "williamboman/mason.nvim",
+    lazy = false,
+    cmd = "Mason",
+    keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {
       ensure_installed = {
-        "jsonls",
-        "yamlls",
-        "lua_ls",
-        "bashls",
-        "ts_ls",
-        "pylsp",
-        "astro",
-        "cssls",
-        "emmet_ls",
-        "html",
-        "tailwindcss",
+        "json-lsp",
+        "yaml-language-server",
+        "lua-language-server",
+        "bash-language-server",
+        "typescript-language-server",
+        "python-lsp-server",
+        "astro-language-server",
+        "css-lsp",
+        "emmet-language-server",
+        "html-lsp",
+        "tailwindcss-language-server",
+
+        "biome",
+        "selene",
+        "ruff",
       },
     },
   },

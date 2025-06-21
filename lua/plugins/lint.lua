@@ -1,7 +1,5 @@
 return {
   "mfussenegger/nvim-lint",
-  ft = { "javascript", "typescript", "javascriptreact", "typescriptreact", "json", "jsonc", "lua", "python" },
-  build = ":MasonInstall biome ruff selene",
   config = function()
     require("lint").linters_by_ft = {
       javascript = { "biome" },
