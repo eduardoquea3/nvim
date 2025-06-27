@@ -2,14 +2,14 @@ local M = {}
 
 function M.load_defaults()
   local definitions = {
-    {
-      "CursorHold",
-      {
-        callback = function()
-          vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
-        end,
-      },
-    },
+    -- {
+    --   "CursorHold",
+    --   {
+    --     callback = function()
+    --       vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+    --     end,
+    --   },
+    -- },
     {
       "FileType",
       {

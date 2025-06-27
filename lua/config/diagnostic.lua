@@ -1,6 +1,6 @@
 local icon = require "eduardo.icons"
 vim.diagnostic.config {
-  virtual_text = true,
+  virtual_text = false,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = icon.diagnostics.Error,
