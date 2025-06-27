@@ -1,7 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false,
+    event = "User FileOpened",
     cmd = "Mason",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {

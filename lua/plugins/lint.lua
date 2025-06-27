@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
+  event = "User FileOpened",
   config = function()
     require("lint").linters_by_ft = {
       javascript = { "biome" },
