@@ -3,6 +3,7 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    image = { enabled = true },
     bufdelete = { enabled = true },
     input = { enabled = true },
     dashboard = { enabled = true },
