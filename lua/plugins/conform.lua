@@ -1,58 +1,56 @@
 return {
   "stevearc/conform.nvim",
-  ft = {
-    "lua",
-    "css",
-    "html",
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "jsonc",
-    "json",
-    "python",
-    "toml",
-  },
-  dependencies = {
-    "mason-org/mason.nvim",
+  event = { "BufWritePre" },
+  cmd = { "ConformInfo" },
+  keys = {
     {
-      "zapling/mason-conform.nvim",
-      opts = {
-        ensure_installed = {
-          "stylua",
-          "prettier",
-          "biome",
-          "ruff_format",
-          "ruff_organize_imports",
-          "taplo",
-        },
-      },
+      "<a-s>",
+      function()
+        require("conform").format({ async = true }, function(err, did_edit)
+          if not err and did_edit then
+            vim.notify("Code formatted", vim.log.levels.INFO, { title = "Conform" })
+          end
+        end)
+      end,
+      mode = { "n", "v" },
+      desc = "Format buffer",
     },
   },
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      css = { "prettier" },
-      html = { "prettier" },
+
+      -- Web technologies
       javascript = { "biome" },
       typescript = { "biome" },
       javascriptreact = { "biome" },
       typescriptreact = { "biome" },
-      jsonc = { "biome" },
       json = { "biome" },
+      jsonc = { "biome" },
+      yaml = { "prettier" },
+      markdown = { "prettier" },
+      html = { "prettier" },
+      css = { "prettier" },
+      scss = { "prettier" },
+
+      -- Python
       python = { "ruff_format", "ruff_organize_imports" },
+
+      -- Shell
+      sh = { "shfmt" },
+      bash = { "shfmt" },
+
       toml = { "taplo" },
     },
+    default_format_opts = {
+      lsp_format = "fallback",
+    },
+    -- format_on_save = {
+    --     timeout_ms = 1000,
+    --     lsp_format = "fallback",
+    -- },
   },
-  config = function(_, opts)
-    require("conform").setup(opts)
-
-    local map = function(keys, func, desc)
-      vim.keymap.set("n", keys, func, { desc = "LSP: " .. desc })
-    end
-    map("<a-s>", function()
-      require("conform").format { async = true }
-      vim.notify "Formateado"
-    end, "Formatear archivo")
+  init = function()
+    vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
   end,
 }
