@@ -21,6 +21,7 @@ return {
         "emmet-language-server",
 
         -- format and lint python files
+        "biome",
         "ruff",
 
         -- Formatters (for conform.nvim and general use)

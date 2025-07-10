@@ -30,21 +30,21 @@ function M.load_defaults()
         end,
       },
     },
-    {
-      "FileType",
-      {
-        group = "_database",
-        pattern = {
-          "sql",
-          "mysql",
-          "plsql",
-        },
-        callback = function()
-          vim.cmd "lua require('cmp').setup.buffer({sources={{name='vim-dadbod-completion'},{ name = 'buffer' },}})"
-          vim.opt.wrap = true
-        end,
-      },
-    },
+    -- {
+    --   "FileType",
+    --   {
+    --     group = "_database",
+    --     pattern = {
+    --       "sql",
+    --       "mysql",
+    --       "plsql",
+    --     },
+    --     callback = function()
+    --       vim.cmd "lua require('cmp').setup.buffer({sources={{name='vim-dadbod-completion'},{ name = 'buffer' },}})"
+    --       vim.opt.wrap = true
+    --     end,
+    --   },
+    -- },
     {
       "FileType",
       {
@@ -134,13 +134,18 @@ function M.load_defaults()
           map("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
           map("K", "<cmd>Lspsaga hover_doc<cr>", "Hover Documentation")
           map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
-          map("<M-.>", vim.lsp.buf.code_action, "Code action")
-          vim.keymap.set(
-            "v",
-            "<leader>ca",
-            vim.lsp.buf.code_action,
-            { noremap = true, silent = true, buffer = event.buf, desc = "LSP: Code Action" }
-          )
+          map("<M-.>", function()
+            require("fastaction").code_action()
+          end, "Code action")
+          vim.keymap.set("v", "<leader>ca", function()
+            vim.keymap.set(
+              "v",
+              "<leader>ca",
+              vim.lsp.buf.code_action,
+              { noremap = true, silent = true, buffer = event.buf, desc = "LSP: Code Action" }
+            )
+            require("fastaction").range_code_action()
+          end, { noremap = true, silent = true, buffer = event.buf, desc = "LSP: Code Action" })
           map("<leader>r", "<cmd>Lspsaga rename<cr>", "Rename")
 
           map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
