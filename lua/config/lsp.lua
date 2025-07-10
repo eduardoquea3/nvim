@@ -8,6 +8,7 @@ vim.filetype.add {
 }
 
 vim.lsp.enable {
+  "biome",
   "jsonls",
   "yamlls",
   "lua_ls",

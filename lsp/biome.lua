@@ -15,4 +15,5 @@ return {
     "typescriptreact",
     "vue",
   },
+  root_markers = { "package.json", ".git", "biome.json" },
 }
