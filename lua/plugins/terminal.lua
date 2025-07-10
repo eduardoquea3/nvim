@@ -18,6 +18,10 @@ return {
       },
     },
     config = function()
+      local shell = "bash"
+      if vim.loop.os_uname().sysname == "Linux" then
+        shell = "zsh"
+      end
       require("toggleterm").setup {
         size = 20,
         -- open_mapping = [[<a-m>]],
@@ -29,7 +33,7 @@ return {
         persist_size = true,
         direction = "float",
         close_on_exit = true,
-        shell = "bash",
+        shell = shell,
         float_opts = {
           border = "rounded",
           winblend = 0,
