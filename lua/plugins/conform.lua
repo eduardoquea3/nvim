@@ -21,10 +21,10 @@ return {
       lua = { "stylua" },
 
       -- Web technologies
-      javascript = { "biome" },
-      typescript = { "biome" },
-      javascriptreact = { "biome" },
-      typescriptreact = { "biome" },
+      javascript = { "biome", "biome-check", "biome-organize-imports" },
+      typescript = { "biome", "biome-check", "biome-organize-imports" },
+      javascriptreact = { "biome", "biome-check", "biome-organize-imports" },
+      typescriptreact = { "biome", "biome-check", "biome-organize-imports" },
       json = { "biome" },
       jsonc = { "biome" },
       yaml = { "prettier" },
@@ -45,10 +45,9 @@ return {
     default_format_opts = {
       lsp_format = "fallback",
     },
-    -- format_on_save = {
-    --     timeout_ms = 1000,
-    --     lsp_format = "fallback",
-    -- },
+    format_on_save = {
+      lsp_fallback = true,
+    },
   },
   init = function()
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
