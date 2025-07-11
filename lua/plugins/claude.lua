@@ -3,6 +3,14 @@ return {
   enabled = function()
     return vim.loop.os_uname().sysname == "Linux"
   end,
+  keys = {
+    {
+      "<c-b>",
+      "<cmd>ClaudeCode<cr>",
+      mode = { "n", "t" },
+      desc = "Toggle Claude Code",
+    },
+  },
   dependencies = {
     "nvim-lua/plenary.nvim", -- Required for git operations
   },
@@ -12,6 +20,5 @@ return {
         position = "float",
       },
     }
-    vim.keymap.set({ "n", "t" }, "<c-b>", "<cmd>ClaudeCode<CR>", { desc = "Toggle Claude Code" })
   end,
 }

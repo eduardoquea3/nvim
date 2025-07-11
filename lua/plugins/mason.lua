@@ -1,10 +1,10 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false, -- Load immediately to ensure PATH is set
     cmd = "Mason",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
     build = ":MasonUpdate",
+    opts_extend = { "ensure_installed" },
     opts = {
       ensure_installed = {
         -- LSP servers (matching your vim.lsp.enable() config)
