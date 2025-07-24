@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local bash = "U:\\Scoop\\shims\\bash.exe"
+local bash = "C:\\Users\\eduar\\scoop\\shims\\bash.exe"
 
 local config = {}
 if wezterm.config_builder then
@@ -46,13 +46,13 @@ config.colors = {
 		"#C5C9C7",
 	},
 }
-config.line_height = 1.0
+config.line_height = 1.3
 config.cell_width = 1.0
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font", scale = 1.00 },
+	{ family = "JetBrains Mono", scale = 1.20 },
 })
-config.font_size = 12
-config.window_background_opacity = 1.00
+config.font_size = 10
+config.window_background_opacity = 0.90
 config.window_decorations = "TITLE | RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.scrollback_lines = 3000
@@ -163,6 +163,8 @@ config.key_tables = {
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = false
+config.enable_kitty_graphics = true
+-- config.term = "xterm-kitty"
 
 config.window_padding = {
 	left = 0,

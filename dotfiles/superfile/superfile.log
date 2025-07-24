@@ -247,3 +247,413 @@ time=2025-06-17T22:37:54.217-05:00 level=ERROR msg="Error render directory previ
 time=2025-06-17T22:37:54.368-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\AppData\\Local\\Datos de programa: Access is denied."
 time=2025-06-17T22:37:54.703-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\AppData\\Local\\Historial: Access is denied."
 time=2025-06-17T22:37:54.837-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\AppData\\Local\\Historial: Access is denied."
+time=2025-06-18T11:12:38.622-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:38.963-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:39.085-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:39.097-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:39.557-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:39.597-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:41.847-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:42.091-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:42.172-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:42.195-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:42.576-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T11:12:42.593-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T12:43:03.194-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T12:43:03.287-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T12:43:03.538-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T12:43:03.655-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T12:43:03.792-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T12:43:03.961-05:00 level=ERROR msg="Error render directory preview" error="open D:\\web\\jadal\\backend-backoffice\\node_modules: The process cannot access the file because it is being used by another process."
+time=2025-06-18T13:04:17.240-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:17.340-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:17.354-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:17.794-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:18.719-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:18.728-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:19.135-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:19.257-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:19.269-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:04:19.544-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:13.650-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:14.079-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:14.213-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:14.232-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:14.587-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:14.604-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:15.848-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:16.109-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:16.236-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:16.267-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:16.554-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-18T13:25:16.595-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-21T16:35:36.250-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-21T16:35:36.727-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-21T16:35:36.832-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-21T16:35:36.982-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-24T15:49:31.187-05:00 level=ERROR msg="Error while checking text file" error="open C:\\Users\\eduar\\NTUSER.DAT: The process cannot access the file because it is being used by another process."
+time=2025-06-24T15:49:31.650-05:00 level=ERROR msg="Error while checking text file" error="open C:\\Users\\eduar\\NTUSER.DAT: The process cannot access the file because it is being used by another process."
+time=2025-06-24T15:53:54.563-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:54.567-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:54.717-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:54.721-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.045-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.228-05:00 level=ERROR msg="Error while zip file" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.240-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.244-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.248-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:53:55.253-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:54:01.804-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:02.713-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:02.807-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:03.960-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.058-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.063-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.180-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.187-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.235-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.243-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.451-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.456-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.644-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:04.649-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.179-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.495-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.500-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.644-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.649-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.797-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.811-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.962-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:05.966-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.202-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.206-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.301-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.306-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.338-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.343-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.458-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.463-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.958-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:06.963-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:07.486-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:08.020-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:08.554-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:09.077-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:09.613-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:10.143-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:10.670-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:11.204-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:11.734-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:12.263-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:12.795-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:13.332-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:13.798-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:13.802-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:13.933-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:13.937-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.182-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.195-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.259-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.264-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.337-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.343-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.873-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.970-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:14.974-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\Documents\\My Pictures: The system cannot find the file specified."
+time=2025-06-24T15:54:15.348-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:54:15.500-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T15:54:16.201-05:00 level=ERROR msg="Error render directory preview" error="open C:\\Users\\eduar\\Documents\\My Music: Access is denied."
+time=2025-06-24T22:44:06.613-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-24T22:44:06.758-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-24T22:44:08.927-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-06-24T22:44:08.941-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T10:37:49.336-05:00 level=ERROR msg="Error render directory preview" error="open D:\\System Volume Information: Access is denied."
+time=2025-07-05T10:37:49.490-05:00 level=ERROR msg="Error render directory preview" error="open D:\\System Volume Information: Access is denied."
+time=2025-07-05T20:45:16.928-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\AppData\\Local\\nvim-data\\conform.log: The system cannot find the file specified."
+time=2025-07-05T20:45:17.716-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:17.724-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:17.991-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.104-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.112-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.378-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.386-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.708-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.833-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:18.841-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:19.288-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:19.296-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:20.342-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:20.464-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:20.472-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:20.937-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:20.946-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.213-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.221-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.238-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.253-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.261-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.270-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.280-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.288-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.296-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.304-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.313-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.321-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.329-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.337-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.345-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.354-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.622-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.631-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.638-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.647-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.656-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.664-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.672-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.680-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.689-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.697-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.705-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.713-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.720-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.728-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.737-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.744-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.752-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.760-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.767-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.775-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.786-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.794-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.833-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.873-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.890-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.899-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.921-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.942-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.951-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.963-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.971-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.980-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:22.988-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:23.011-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:23.026-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:23.061-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:25.754-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.298-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.318-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.332-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.341-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.350-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.358-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.366-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.374-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.382-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.390-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.397-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.406-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.413-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.422-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.429-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.438-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.446-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.517-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.586-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.652-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:26.671-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.065-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.309-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.480-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.576-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.652-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.705-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.756-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.804-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:28.866-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:29.587-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:29.595-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.293-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.305-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.312-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.320-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.328-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.335-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.343-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.351-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.359-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.366-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.375-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.383-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.391-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.398-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.407-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.415-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.445-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.539-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.555-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.566-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.602-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.618-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.635-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.648-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:30.668-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:35.196-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:36.378-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:36.387-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.013-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.042-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.050-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.058-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.066-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.074-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.082-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.090-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.098-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.106-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.114-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.122-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.130-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.138-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.146-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.154-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.162-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.172-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.190-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.454-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.486-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:37.530-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:39.882-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:40.628-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:41.319-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:41.421-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:42.272-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:42.280-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:59.424-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:59.597-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:59.672-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:59.799-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:45:59.812-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:00.177-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:00.186-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:00.212-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:02.110-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:05.433-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:07.449-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:07.459-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:56.999-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.150-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.289-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.397-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.406-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.785-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.794-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:57.819-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:58.859-05:00 level=ERROR msg="Error while checking text file" error="open C:\\Users\\eduar\\AppData\\Local\\nvim-data\\luasnip.log: The system cannot find the file specified."
+time=2025-07-05T20:46:58.874-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:59.332-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:59.387-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:59.399-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:59.746-05:00 level=ERROR msg="Max lines reached" maxLines=37
+time=2025-07-05T20:46:59.751-05:00 level=ERROR msg="Error get file info" error="CreateFile C:\\Users\\eduar\\AppData\\Local\\nvim-data\\mason.log: The system cannot find the file specified."
+time=2025-07-17T10:36:52.480-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:36:52.626-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:36:53.618-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:36:53.768-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:36:54.940-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:36:54.972-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:25.502-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:37:25.504-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:37:25.504-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:37:26.268-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:29.577-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:30.743-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:37:31.155-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:46.661-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:37:46.661-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:37:46.661-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:37:47.612-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:50.077-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:50.512-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:37:50.761-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:50.985-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:37:51.118-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:37:54.103-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:37:54.249-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:37:54.414-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:18.413-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:41:18.413-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:41:18.413-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:41:25.459-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:41:31.609-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:41:32.679-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:33.073-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:41:33.453-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:41:33.854-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:34.313-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:34.745-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:35.236-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:35.669-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:36.129-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:36.501-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:41:36.909-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:37.320-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:37.695-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:41:38.114-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:42:21.069-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:42:21.070-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:42:21.070-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:42:21.771-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:42:21.946-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:44:58.295-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:44:58.296-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:44:58.296-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:45:02.463-05:00 level=ERROR msg="Error render code highlight" error="exit status 1"
+time=2025-07-17T10:45:02.463-05:00 level=ERROR msg="Error render code highlight" error="exit status 1"
+time=2025-07-17T10:45:17.859-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:45:18.673-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:45:19.716-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:20.256-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:20.873-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:21.279-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:28.547-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:28.709-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:28.917-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:29.223-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:45:29.315-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:45:29.500-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:30.871-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T10:48:30.872-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:48:30.872-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T10:48:33.097-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:48:33.720-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:48:39.487-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:39.775-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:48:39.956-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:48:40.130-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:40.272-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:40.607-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:40.788-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:40.929-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:41.087-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:41.243-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T10:48:41.412-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T10:48:41.571-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T11:22:28.220-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T11:22:28.221-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:22:28.221-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:22:34.833-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T11:22:39.041-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T11:22:39.265-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T11:22:39.450-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T11:22:39.582-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T11:22:39.949-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T11:22:40.139-05:00 level=ERROR msg="exif error" error="exif: failed to find exif intro marker"
+time=2025-07-17T11:44:47.393-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T11:44:47.394-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:44:47.394-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:45:07.062-05:00 level=INFO msg="Using Windows default terminal cell size"
+time=2025-07-17T11:45:07.062-05:00 level=INFO msg="Successfully detected terminal cell size on Windows" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:45:07.062-05:00 level=INFO msg="Terminal cell size detection" pixels_per_column=8 pixels_per_row=16
+time=2025-07-17T11:45:16.108-05:00 level=ERROR msg="exif error" error=EOF
+time=2025-07-17T11:45:16.948-05:00 level=ERROR msg="exif error" error=EOF

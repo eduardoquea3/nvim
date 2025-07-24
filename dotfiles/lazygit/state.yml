@@ -1,13 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
     - C:\Users\eduar\AppData\Local\nvim
-    - M:\web\jadal\backoffice-pos
-    - M:\web\jadal\jadalDeportFront
-    - C:\Users\eduar\AppData\Local\nvim-data\lazy\multicursors.nvim
-    - M:\python\back-iproauto
-    - M:\web\jadal\jadalDeportBackoffice
+    - D:\web\jadal\pos-system
+    - D:\web\jadal\jadalDeportFront
+    - D:\web\jadal\backoffice-pos
 startuppopupversion: 5
-lastversion: 0.52.0
+lastversion: 0.53.0
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false

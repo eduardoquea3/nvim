@@ -1,4 +1,4 @@
-eval "$(fnm env --use-on-cd --shell bash)"
+# eval "$(fnm env --use-on-cd --shell bash)"
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -39,12 +39,17 @@ alias la='eza --icons -A'
 alias ns='nvim ~/.bashrc'
 alias ss='source ~/.bashrc'
 alias lg='lazygit'
+alias ld='lazydocker'
 alias sa='spicetify apply'
 alias su='spicetify update'
 alias sb='spicetify backup apply'
 alias bi='brave --incognito'
 alias n='nvim'
 alias pd='podman'
+alias wl='wsl -l -v'
+alias si="scoop install"
+alias srm="scoop uninstall"
+alias su="scoop update"
 
 bind '"\C-e":"\C-m"'
 
