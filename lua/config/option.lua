@@ -62,6 +62,7 @@ local global = {
   g = {
     mapleader = " ",
     maplocalleader = ",",
+    supermaven = true,
     snacks_animate = true,
     max_file = { size = 1024 * 100, lines = 10000 },
     autoformat_enabled = true,
