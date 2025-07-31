@@ -9,7 +9,8 @@ return {
     opts = {
       ensure_installed = {
         -- LSP servers (matching your vim.lsp.enable() config)
-        "lua-language-server", -- Lua LSP
+        -- "lua-language-server", -- Lua LSP
+        "emmylua_ls", -- Lua LSP
         "typescript-language-server", -- TypeScript LSP
         "tailwindcss-language-server", -- Tailwind CSS LSP
         "html-lsp", -- HTML LSP

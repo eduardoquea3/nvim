@@ -20,4 +20,5 @@ vim.lsp.enable {
   "emmet_ls",
   "html",
   "tailwindcss",
+  "emmylua_ls",
 }
