@@ -1,7 +1,7 @@
 return {
   "yetone/avante.nvim",
   event = "User FileOpened",
-  lazy = falsea,
+  lazy = false,
   version = false,
   opts = {
     provider = "claude",

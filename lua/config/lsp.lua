@@ -1,6 +1,7 @@
 vim.filetype.add {
   extension = {
     http = "http",
+    todo = "markdown",
   },
   filename = {
     [".env"] = "sh",

@@ -56,15 +56,6 @@ return {
         print("No linters configured for filetype: " .. vim.bo.filetype)
       else
         print("Linters for " .. vim.bo.filetype .. ": " .. table.concat(linters, ", "))
-
-        -- Show which tools are being used
-        if vim.bo.filetype == "php" then
-          if string.find(pint_cmd, "mason") then
-            print("Using Mason pint: " .. pint_cmd)
-          else
-            print("Using system pint: " .. pint_cmd)
-          end
-        end
       end
     end, { desc = "Show available linters for current filetype" })
   end,
