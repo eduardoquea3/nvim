@@ -107,6 +107,13 @@ return {
       desc = "Grep Picker",
     },
     {
+      "<leader>fp",
+      function()
+        Snacks.picker.projects()
+      end,
+      desc = "Project Picker",
+    },
+    {
       "<leader>fn",
       function()
         Snacks.picker.notifications()

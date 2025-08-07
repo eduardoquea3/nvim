@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("kanso").setup {
-        transparent = true,
+        transparent = false,
         overrides = function(colors)
           local palette = colors.palette
           return {

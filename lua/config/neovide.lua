@@ -1,9 +1,9 @@
-local default_font = "DankMono Nerd Font"
+local default_font = "VictorMono Nerd Font Mono"
 -- local default_font = "JetBrainsMono Nerd Font"
-local default_size = 10
+local default_size = 12
 
 vim.g.neovide_scale_factor = 1.2
-vim.g.neovide_transparency = 0.9
+vim.g.neovide_opacity = 0.9
 vim.g.neovide_refresh_rate = 60
 vim.g.neovide_refresh_rate_idle = 60
 vim.g.neovide_confirm_quit = true
@@ -32,7 +32,3 @@ for key, value in pairs(maps) do
     set_font(nil, value)
   end, { desc = "Font size " .. value })
 end
-
-require("catppuccin").setup {
-  transparent_background = false,
-}
