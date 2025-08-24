@@ -1,7 +1,6 @@
 return {
   cmd = { "biome", "lsp-proxy" },
   filetypes = {
-    "astro",
     "css",
     "graphql",
     "html",

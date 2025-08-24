@@ -9,6 +9,7 @@ vim.filetype.add {
 }
 
 vim.lsp.enable {
+  "astro",
   "biome",
   "jsonls",
   "yamlls",

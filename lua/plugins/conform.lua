@@ -32,6 +32,7 @@ return {
       html = { "prettier" },
       css = { "prettier" },
       scss = { "prettier" },
+      astro = { "prettier" },
 
       -- Python
       python = { "ruff_format", "ruff_organize_imports" },
