@@ -18,7 +18,8 @@ return {
         "json-lsp",
         "yaml-language-server",
         "bash-language-server",
-        "python-lsp-server",
+        -- "python-lsp-server",
+        "pyrefly",
         "astro-language-server",
         "emmet-language-server",
 

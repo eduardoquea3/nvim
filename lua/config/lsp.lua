@@ -16,7 +16,7 @@ vim.lsp.enable {
   "lua_ls",
   "bashls",
   "ts_ls",
-  "pylsp",
+  "pyrefly",
   "astro",
   "cssls",
   "emmet_ls",
