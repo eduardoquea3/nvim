@@ -17,6 +17,34 @@ return {
     },
   },
   opts = {
+    formatters = {
+      stylua = {
+        args = { "--config-path", vim.fn.stdpath "config" .. "/formatters/stylua.toml", "-" },
+      },
+      ruff_format = {
+        args = {
+          "format",
+          "--config",
+          vim.fn.stdpath "config" .. "/formatters/ruff.toml",
+          "--stdin-filename",
+          "$FILENAME",
+          "-",
+        },
+      },
+      ruff_organize_imports = {
+        args = {
+          "check",
+          "--select",
+          "I",
+          "--fix",
+          "--config",
+          vim.fn.stdpath "config" .. "/formatters/ruff.toml",
+          "--stdin-filename",
+          "$FILENAME",
+          "-",
+        },
+      },
+    },
     formatters_by_ft = {
       lua = { "stylua" },
 
