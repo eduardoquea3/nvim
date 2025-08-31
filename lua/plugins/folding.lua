@@ -3,10 +3,6 @@ return {
     "kevinhwang91/nvim-ufo",
     event = "User FileOpened",
     dependencies = "kevinhwang91/promise-async",
-    keys = {
-      { "<C-c>", "zc", desc = "Cerrar en el pliegue" },
-      { "<C-a>", "zo", desc = "Abrir en el pliegue" },
-    },
     opts = {
       open_fold_hl_timeout = 150,
       preview = {
