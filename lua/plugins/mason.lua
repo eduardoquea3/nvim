@@ -21,7 +21,7 @@ return {
         -- "python-lsp-server",
         "pyrefly",
         "astro-language-server",
-        "emmet-language-server",
+        "emmet-ls",
 
         -- format and lint python files
         "biome",

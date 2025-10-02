@@ -9,7 +9,12 @@ return {
   },
   config = function()
     local wk = require "which-key"
-    wk.setup {}
+    wk.setup {
+      triggers = {
+        { "<C-d>", mode = { "n", "v" } },
+        -- { "<C-j>", mode = { "n", "v" } },
+      },
+    }
     wk.add {
       { "<Tab>", "<cmd>bnext<cr>", desc = "Cycle next buffer" },
       { "<S-Tab>", "<cmd>bprevious<cr>", desc = "Cycle next buffer" },
