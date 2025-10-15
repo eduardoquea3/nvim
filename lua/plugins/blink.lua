@@ -94,6 +94,7 @@ return {
           },
         },
         appearance = {
+          highlight_ns = vim.api.nvim_create_namespace "blink_cmp",
           use_nvim_cmp_as_default = true,
           nerd_font_variant = "mono",
           kind_icons = {
@@ -145,5 +146,6 @@ return {
         capabilities = capabilities,
       })
     end,
+    opts_extend = { "sources.default" },
   },
 }
