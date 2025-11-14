@@ -77,6 +77,7 @@ local global = {
     semantic_tokens_enabled = true,
     ui_notifications_enabled = true,
     git_worktrees = nil,
+    indent_guide = true,
   },
 }
 
