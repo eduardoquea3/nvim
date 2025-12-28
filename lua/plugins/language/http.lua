@@ -30,5 +30,25 @@ return {
         ["Find request"] = false, -- set to false to disable
       },
     },
+    config = function(_, opts)
+      require("kulala").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+      require("kulala").setup(opts)
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "http", "rest" },
+        callback = function()
+          vim.keymap.set("n", "n", function()
+            require("kulala").jump_next()
+          end, { buffer = true })
+          vim.keymap.set("n", "p", function()
+            require("kulala").jump_prev()
+          end, { buffer = true })
+        end,
+      })
+    end,
   },
 }
