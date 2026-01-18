@@ -4,9 +4,9 @@ return {
   version = false,
   event = { "BufReadPost", "BufNewFile" },
   config = function()
-    require("nvim-treesitter.configs").setup {
+    require("nvim-treesitter.config").setup {
       sync_install = false,
-      ignore_install = { "javascript" },
+
       modules = {},
       highlight = {
         enable = true,
@@ -34,7 +34,6 @@ return {
         "luadoc",
         "typescript",
         "tsx",
-        "json",
         "astro",
         "yaml",
         "http",

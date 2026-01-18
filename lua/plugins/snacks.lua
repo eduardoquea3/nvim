@@ -36,6 +36,29 @@ return {
             },
           },
         },
+        files = {
+          cmd = "rg",
+          args = {
+            "--files",
+            "--no-messages",
+            "--color",
+            "never",
+            "-g",
+            "!.git",
+          },
+        },
+        grep = {
+          cmd = "rg",
+          args = {
+            "--color",
+            "never",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--glob",
+            "!.git",
+          },
+        },
       },
       formatters = {
         file = {
