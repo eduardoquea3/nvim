@@ -21,7 +21,7 @@ return {
       { "<Esc>", "<cmd>nohlsearch<cr>", desc = "No show results" },
       { "ss", "<cmd>split<cr>", desc = "Horizontal Split buffer" },
       { "sv", "<cmd>vsplit<cr>", desc = "Vertical Split buffer" },
-      { "<leader>/", "gcc", desc = "Toggle Comment", remap = true },
+      { "<C-/>", "gcc", desc = "Toggle Comment", remap = true },
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
       { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
@@ -53,7 +53,7 @@ return {
       },
       {
         mode = "v",
-        { "<leader>/", "gc", desc = "Toggle Comment", remap = true },
+        { "<C-/>", "gc", desc = "Toggle Comment", remap = true },
         { "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", desc = "Move Down" },
         { "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", desc = "Move Up" },
       },
