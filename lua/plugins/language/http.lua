@@ -41,11 +41,14 @@ return {
       vim.api.nvim_create_autocmd("FileType", {
         pattern = { "http", "rest" },
         callback = function()
-          vim.keymap.set("n", "n", function()
+          vim.keymap.set("n", "<c-n>", function()
             require("kulala").jump_next()
           end, { buffer = true })
-          vim.keymap.set("n", "p", function()
+          vim.keymap.set("n", "<c-p>", function()
             require("kulala").jump_prev()
+          end, { buffer = true })
+          vim.keymap.set("n", "<c-a>", function()
+            require("kulala").run_all()
           end, { buffer = true })
         end,
       })
