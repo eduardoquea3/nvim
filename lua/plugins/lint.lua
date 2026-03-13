@@ -5,8 +5,6 @@ return {
     local lint = require "lint"
 
     -- Configure custom linters using Mason-managed tools
-    local mason_bin_dir = vim.fn.stdpath "data" .. "/mason/bin"
-
     -- Configure linters by filetype (using Mason-managed tools)
     lint.linters_by_ft = {
       -- JavaScript/TypeScript
@@ -31,17 +29,6 @@ return {
 
     -- Auto-lint on save and text changes
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-
-    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-      group = lint_augroup,
-      callback = function()
-        -- Only lint if linters are available for this filetype
-        local linters = lint.linters_by_ft[vim.bo.filetype]
-        if linters and #linters > 0 then
-          lint.try_lint()
-        end
-      end,
-    })
 
     -- Manual linting command
     vim.keymap.set("n", "<leader>ll", function()

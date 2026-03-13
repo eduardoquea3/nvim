@@ -24,7 +24,7 @@ return {
         "emmet-ls",
 
         -- format and lint python files
-        "biome",
+        -- "biome",
         "ruff",
 
         -- Formatters (for conform.nvim and general use)

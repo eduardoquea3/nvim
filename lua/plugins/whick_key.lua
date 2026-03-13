@@ -25,8 +25,8 @@ return {
       { "<leader>b", group = "Buffer or Split" },
       { "<leader>bd", "<cmd>bd<cr>", desc = "Buffer delete" },
       { "<leader>bs", "<cmd>close<cr>", desc = "Split delete" },
-      { "<A-j>", "<cmd>execute 'move .+'  . v:count1<cr>==", desc = "Move down line" },
-      { "<A-k>", "<cmd>execute 'move .-'  . (v:count1 + 1)<cr>==", desc = "Move up line" },
+      { "<A-j>", "<cmd>execute 'move .+'  . v:count1<cr>==", desc = "Move down line", mode = { "n" } },
+      { "<A-k>", "<cmd>execute 'move .-'  . (v:count1 + 1)<cr>==", desc = "Move up line", mode = { "n" } },
       { "<C-h>", "<C-w>h", desc = "Movement split" },
       { "<C-j>", "<C-w>j", desc = "Movement split" },
       { "<C-k>", "<C-w>k", desc = "Movement split" },
@@ -54,15 +54,11 @@ return {
       {
         mode = "v",
         { "<C-/>", "gc", desc = "Toggle Comment", remap = true },
-        { "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", desc = "Move Down" },
-        { "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", desc = "Move Up" },
+        { "<A-s>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", desc = "Move Down" },
+        { "<A-w>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", desc = "Move Up" },
       },
       {
         mode = "i",
-        { "<A-h>", "<left>", desc = "Movement" },
-        { "<A-j>", "<down>", desc = "Movement" },
-        { "<A-k>", "<up>", desc = "Movement" },
-        { "<A-l>", "<right>", desc = "Movement" },
         { "<C-j>", "<esc><cmd>m .+1<cr>==gi", desc = "Movement down line" },
         { "<C-k>", "<esc><cmd>m .-2<cr>==gi", desc = "Movement up line" },
         { "<right>", "", desc = "Null" },
@@ -75,7 +71,7 @@ return {
         { "<C-l>", "<Esc>", desc = "Escape" },
       },
       {
-        mode = { "n", "v", "i" },
+        mode = { "n", "i" },
         {
           "<c-s>",
           function()
