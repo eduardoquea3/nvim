@@ -1,4 +1,11 @@
-local blink = require "blink.cmp"
+local ok, blink = pcall(require, "blink.cmp")
+
+local blink_capabilities = {}
+
+if ok then
+  blink_capabilities = blink.get_lsp_capabilities()
+end
+
 return {
   cmd = { "lua-language-server" },
   filetypes = { "lua" },
@@ -31,16 +38,10 @@ return {
       },
     },
   },
-  capabilities = vim.tbl_deep_extend(
-    "force",
-    {},
-    vim.lsp.protocol.make_client_capabilities(),
-    blink.get_lsp_capabilities(),
-    {
-      fileOperations = {
-        didRename = true,
-        willRename = true,
-      },
-    }
-  ),
+  capabilities = vim.tbl_deep_extend("force", {}, vim.lsp.protocol.make_client_capabilities(), blink_capabilities, {
+    fileOperations = {
+      didRename = true,
+      willRename = true,
+    },
+  }),
 }

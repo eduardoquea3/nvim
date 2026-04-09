@@ -24,4 +24,5 @@ vim.lsp.enable {
   "tailwindcss",
   "emmylua_ls",
   "kulala_ls",
+  "prismals",
 }
