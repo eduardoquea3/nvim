@@ -87,3 +87,5 @@ for scope, table in pairs(global) do
   end
 end
 vim.opt.fillchars:append { eob = " " }
+vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.wo[0][0].foldmethod = "expr"
