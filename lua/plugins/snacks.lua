@@ -32,7 +32,7 @@ return {
           replace_netrw = true,
           layout = {
             layout = {
-              position = "left",
+              position = "right",
             },
           },
         },
@@ -91,7 +91,7 @@ return {
       desc = "Split delete",
     },
     {
-      "<leader>fB",
+      "<leader>fd",
       function()
         Snacks.picker.help {}
       end,
@@ -122,7 +122,8 @@ return {
       desc = "Keymap Picker",
     },
     {
-      "<leader>ff",
+      -- "<leader>ff",
+      "<C-p>",
       function()
         Snacks.picker.files {}
       end,
@@ -136,14 +137,16 @@ return {
       desc = "Recent Picker",
     },
     {
-      "<leader>fw",
+      -- "<leader>fw",
+      "g/",
       function()
         Snacks.picker.grep()
       end,
       desc = "Grep Picker",
     },
     {
-      "<leader>fp",
+      --   "<leader>fp",
+      "<C-r>",
       function()
         Snacks.picker.projects()
       end,
@@ -157,14 +160,14 @@ return {
       desc = "Notification Picker",
     },
     {
-      "<c-p>W",
+      "<c-k>W",
       function()
         Snacks.bufdelete.other()
       end,
       desc = "Delete All Other Buffers",
     },
     {
-      "<c-p>w",
+      "<c-k>w",
       function()
         Snacks.bufdelete.all()
       end,

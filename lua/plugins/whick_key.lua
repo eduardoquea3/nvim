@@ -39,6 +39,7 @@ return {
       {
         mode = { "n", "v" },
         { "<leader>q", "<cmd>confirm qall<cr>", desc = "Quit" },
+        { "<C-S-x>", "<cmd>Lazy<cr>", desc = "Open Lazy" },
       },
       {
         mode = { "v", "i" },
@@ -67,10 +68,6 @@ return {
         -- { "<up>", "", desc = "Null" },
       },
       {
-        mode = "c",
-        { "<C-l>", "<Esc>", desc = "Escape" },
-      },
-      {
         mode = { "n", "i" },
         {
           "<c-s>",
@@ -81,7 +78,12 @@ return {
           desc = "Save",
         },
         {
-          "<C-p>s",
+          "<C-S-p>",
+          "<cmd>call feedkeys(':')<cr>",
+          desc = "Command Palette",
+        },
+        {
+          "<C-k>s",
           function()
             vim.cmd "wall"
             vim.notify "Saved all"
