@@ -16,6 +16,7 @@ return {
     config = true,
     keys = {
       { "<leader>gm", "<cmd>DiffviewOpen<cr>", desc = "Open Merge tool" },
+      { "<leader>gc", "<cmd>DiffviewClose<cr>", desc = "Close Merge tool" },
     },
   },
 }
