@@ -122,8 +122,8 @@ return {
       desc = "Keymap Picker",
     },
     {
-      -- "<leader>ff",
-      "<C-p>",
+      "<leader>ff",
+      -- "<C-p>",
       function()
         Snacks.picker.files {}
       end,
