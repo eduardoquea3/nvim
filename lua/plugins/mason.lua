@@ -25,6 +25,8 @@ return {
 
         -- format and lint python files
         -- "biome",
+        "oxlint",
+        "oxfmt",
         "ruff",
 
         -- Formatters (for conform.nvim and general use)
