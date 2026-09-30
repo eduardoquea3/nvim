@@ -1,7 +1,8 @@
 return {
   {
-    "mistweaverco/kulala.nvim",
-    ft = { "http", "rest" },
+    url = "https://gitlab.com/eduardoquea3/kulala.nvim.git",
+    ft = { "http", "rest", "javascript", "lua" },
+    event = { "SessionLoadPost", "VimLeavePre" },
     opts = {
       global_keymaps = {
         ["Send request"] = { -- sets global mapping
@@ -31,11 +32,6 @@ return {
       },
     },
     config = function(_, opts)
-      require("kulala").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
       require("kulala").setup(opts)
 
       vim.api.nvim_create_autocmd("FileType", {
@@ -43,11 +39,11 @@ return {
         callback = function()
           vim.keymap.set("n", "<c-n>", function()
             require("kulala").jump_next()
-            vim.cmd("normal! zz")
+            vim.cmd "normal! zz"
           end, { buffer = true })
           vim.keymap.set("n", "<c-p>", function()
             require("kulala").jump_prev()
-            vim.cmd("normal! zz")
+            vim.cmd "normal! zz"
           end, { buffer = true })
           vim.keymap.set("n", "<c-a>", function()
             require("kulala").run_all()
