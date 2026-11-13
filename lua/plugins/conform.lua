@@ -129,6 +129,9 @@ return {
       scss = { "prettier" },
       astro = { "prettier" },
 
+      -- Go
+      go = { "gofmt" },
+
       -- Python
       python = { "ruff_format", "ruff_organize_imports" },
 

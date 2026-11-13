@@ -12,6 +12,7 @@ return {
         -- "lua-language-server", -- Lua LSP
         "emmylua_ls", -- Lua LSP
         "typescript-language-server", -- TypeScript LSP
+        "angular-language-server", -- Angular template and component LSP
         "tailwindcss-language-server", -- Tailwind CSS LSP
         "html-lsp", -- HTML LSP
         "css-lsp", -- CSS LSP
@@ -22,6 +23,7 @@ return {
         "pyrefly",
         "astro-language-server",
         "emmet-ls",
+        "gopls",
 
         -- format and lint python files
         -- "biome",
