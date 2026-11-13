@@ -25,4 +25,5 @@ vim.lsp.enable {
   "tailwindcss",
   "emmylua_ls",
   "prismals",
+  "gopls",
 }

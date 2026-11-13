@@ -23,6 +23,7 @@ return {
         "pyrefly",
         "astro-language-server",
         "emmet-ls",
+        "gopls",
 
         -- format and lint python files
         -- "biome",
