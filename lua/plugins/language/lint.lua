@@ -1,6 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
-  event = { "BufReadPre", "BufNewFile" },
+  event = "InsertEnter",
   config = function()
     local lint = require "lint"
     local toolchain = require "config.toolchain"

@@ -30,14 +30,21 @@ This is a modern Neovim configuration built with Lua, organized into a modular p
 ### Core Structure
 - **init.lua**: Entry point that loads all configuration modules
 - **lua/config/**: Core configuration modules (autocmd, lsp, options, diagnostic, neovide)
-- **lua/plugins/**: Plugin specifications organized by functionality
-- **lua/plugins/language/**: Language-specific plugin configurations
+- **lua/plugins/**: Plugin specifications organized by responsibility:
+  - **ai/**: Claude, OpenCode, and Supermaven integrations
+  - **database/**: Database tools
+  - **editing/**: Editing, commenting, folding, indentation, and text toggles
+  - **git/**: Git integration
+  - **language/**: Completion, formatting/linting, LSP, Markdown, Mason, and language tooling
+  - **navigation/**: Snacks navigation/picker and which-key
+  - **terminal/**: Terminal integration
+  - **ui/**: Themes, statusline, icons, visual enhancements, and screenshots
 - **lua/eduardo/**: Custom utilities and components (icons, lualine components)
 - **lsp/**: Individual LSP server configurations
 - **snippets/**: Custom snippets for various languages
 
 ### Key Configuration Patterns
-- **Plugin loading**: Uses Lazy.nvim with imports from `plugins/` and `plugins/language/`
+- **Plugin loading**: Uses explicit Lazy.nvim imports for each responsibility folder under `lua/plugins/`
 - **LSP setup**: Centralized in `lua/config/lsp.lua` with individual server configs in `lsp/`
 - **Formatting**: Managed by conform.nvim with format-on-save enabled
 - **Linting**: Handled by nvim-lint with auto-lint on save and text changes
@@ -56,12 +63,14 @@ This is a modern Neovim configuration built with Lua, organized into a modular p
 - **Python**: 76 character line length, skip magic trailing comma (ruff.toml)
 
 ### Plugin Categories
-- **LSP**: Mason, nvim-lspconfig, lspsaga for enhanced LSP experience
-- **Completion**: blink.cmp for completion engine
-- **Formatting/Linting**: conform.nvim, nvim-lint with Mason tool management
-- **UI**: lualine, incline, snacks.nvim for status line and notifications
-- **Git**: Various git integration plugins
-- **Language-specific**: Treesitter, astro, tailwind, markdown support
+- **AI**: Claude, OpenCode, and Supermaven
+- **Database**: Database tooling
+- **Editing**: Auto-tagging, boolean toggles, commenting, folding, indentation, word highlighting, and toggles
+- **Git**: Git integration
+- **Language**: blink.cmp, Conform, nvim-lint, lspsaga, Markdown, Mason, Tailwind, Treesitter, and the HTTP/JSON/YAML tools
+- **Navigation**: Snacks picker/navigation and which-key
+- **Terminal**: Terminal integration
+- **UI**: CodeSnap, devicons, Folke utilities, Incline, Lualine, NvChad UI, picker UI, rainbow delimiters, themes, and Tiny
 
 ### Development Workflow
 1. Plugins are managed via Lazy.nvim with lazy loading for performance
