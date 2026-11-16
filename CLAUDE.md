@@ -46,7 +46,7 @@ This is a modern Neovim configuration built with Lua, organized into a modular p
 ### Key Configuration Patterns
 - **Plugin loading**: Uses explicit Lazy.nvim imports for each responsibility folder under `lua/plugins/`
 - **LSP setup**: Centralized in `lua/config/lsp.lua` with individual server configs in `lsp/`
-- **Formatting**: Managed by conform.nvim with format-on-save enabled
+- **Formatting**: Conform formats on `<Alt-S>` in normal or visual mode; saving does not format automatically
 - **Linting**: Handled by nvim-lint with auto-lint on save and text changes
 - **Tool management**: Mason.nvim ensures LSP servers, formatters, and linters are installed
 
@@ -75,7 +75,7 @@ This is a modern Neovim configuration built with Lua, organized into a modular p
 ### Development Workflow
 1. Plugins are managed via Lazy.nvim with lazy loading for performance
 2. LSP servers, formatters, and linters are auto-installed via Mason
-3. Format-on-save is enabled for all supported file types
+3. Use `<Alt-S>` to format supported files; saving does not format automatically
 4. Linting runs automatically on save and text changes
 5. Global leader key is `<space>`, local leader is `,`
 

@@ -35,7 +35,6 @@ end
 
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
   cmd = { "ConformInfo" },
   keys = {
     {
@@ -145,14 +144,4 @@ return {
       lsp_format = "fallback",
     },
   },
-  init = function()
-    vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = vim.api.nvim_create_augroup("conform_format", { clear = true }),
-      callback = function(args)
-        format_and_notify(args.buf, false)
-      end,
-    })
-  end,
 }
