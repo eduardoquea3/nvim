@@ -22,6 +22,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Mason Tool Management
 - **Mason interface**: `<leader>cm` to open Mason
 - **Auto-install**: Tools are automatically installed via Mason configuration
+- Go: Mason manages `gopls` and `golangci-lint`; `gofmt` is supplied with the Go toolchain.
+- Rust: Mason manages `rust-analyzer` and `rustfmt`; Clippy is supplied with the Rust toolchain and is run by rust-analyzer.
 
 ## Architecture Overview
 
@@ -56,6 +58,8 @@ This is a modern Neovim configuration built with Lua, organized into a modular p
 - **Python**: ruff formatter/linter, python-lsp-server
 - **Web**: HTML/CSS/JSON support with prettier and tailwindcss-language-server
 - **Shell**: shellcheck linter, shfmt formatter, bash-language-server
+- **Go**: `gofmt` formatter, `golangci-lint` diagnostics on save (or `<leader>ll` manually), and `gopls` with staticcheck
+- **Rust**: `rustfmt` formatter and rust-analyzer diagnostics via Clippy (`check.command = "clippy"`); no Rust nvim-lint entry
 
 ### Code Style Configuration
 - **Lua**: 2-space indents, 120 column width, Unix line endings (stylua.toml)

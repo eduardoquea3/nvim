@@ -26,4 +26,5 @@ vim.lsp.enable {
   "emmylua_ls",
   "prismals",
   "gopls",
+  "rust_analyzer",
 }

@@ -15,6 +15,9 @@ return {
       bash = { "shellcheck" },
       zsh = { "shellcheck" },
 
+      -- Go
+      go = { "golangcilint" },
+
       -- python
       python = { "ruff" },
     }
@@ -48,6 +51,10 @@ return {
     vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave", "TextChanged", "TextChangedI" }, {
       group = lint_augroup,
       callback = function(args)
+        -- golangci-lint is a project-wide check; avoid running it on every edit.
+        if vim.bo[args.buf].filetype == "go" and args.event ~= "BufWritePost" then
+          return
+        end
         lint_buffer(args.buf)
       end,
     })

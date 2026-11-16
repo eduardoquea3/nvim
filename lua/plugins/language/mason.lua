@@ -24,6 +24,9 @@ return {
         "astro-language-server",
         "emmet-ls",
         "gopls",
+        "rust-analyzer",
+        "golangci-lint",
+        "rustfmt",
 
         -- format and lint python files
         -- "biome",
