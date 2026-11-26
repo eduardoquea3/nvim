@@ -2,6 +2,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     lazy = true,
+    enabled = false,
     keys = {
       { "<M-1>", "<cmd>ToggleTerm direction=horizontal<cr>", mode = { "n", "t" }, desc = "Open Terminal" },
       {
