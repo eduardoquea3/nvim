@@ -10,7 +10,8 @@ local global = {
     cursorline = true,
     expandtab = true,
     foldenable = true,
-    foldexpr = "nvim_treesitter#foldexpr()",
+    foldexpr = "v:lua.vim.treesitter.foldexpr()",
+    foldlevel = 99,
     foldlevelstart = 99,
     foldmethod = "expr",
     foldcolumn = "0",
@@ -87,5 +88,3 @@ for scope, table in pairs(global) do
   end
 end
 vim.opt.fillchars:append { eob = " " }
-vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.wo[0][0].foldmethod = "expr"
