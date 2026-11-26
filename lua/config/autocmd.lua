@@ -132,7 +132,7 @@ function M.load_defaults()
           map("gi", Snacks.picker.lsp_implementations, "Goto Implementation")
 
           map("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
-          map("K", "<cmd>Lspsaga hover_doc<cr>", "Hover Documentation")
+          map("K", vim.lsp.buf.hover, "Hover Documentation")
           map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
           map("<M-.>", vim.lsp.buf.code_action, "Code action")
           vim.keymap.set(
@@ -141,7 +141,7 @@ function M.load_defaults()
             vim.lsp.buf.code_action,
             { noremap = true, silent = true, buffer = event.buf, desc = "LSP: Code Action" }
           )
-          map("<leader>r", "<cmd>Lspsaga rename<cr>", "Rename")
+          map("<leader>r", vim.lsp.buf.rename, "Rename")
 
           map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
