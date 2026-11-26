@@ -8,3 +8,4 @@ require "config.diagnostic"
 if vim.g.neovide then
   require "config.neovide"
 end
+vim.env.CC = "gcc"   -- o "zig cc"
